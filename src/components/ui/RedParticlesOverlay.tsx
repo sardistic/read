@@ -43,12 +43,14 @@ export const RedParticlesOverlay = () => {
             const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
             if (prefersReducedMotion) return; // No particles
 
+            const speedMultiplier = isMobile ? 0.4 : 1; // 40% speed on mobile
+
             for (let i = 0; i < particleCount; i++) {
                 particles.push({
                     x: Math.random() * canvas.width,
                     y: Math.random() * canvas.height,
-                    vx: 0.2 + Math.random() * 0.8, // Slower, more ambient float
-                    vy: (Math.random() - 0.5) * 0.5,
+                    vx: (0.2 + Math.random() * 0.8) * speedMultiplier, // Slower, more ambient float
+                    vy: ((Math.random() - 0.5) * 0.5) * speedMultiplier,
                     size: Math.random() * 1.5 + 0.5,
                     alpha: 0.2 + Math.random() * 0.5
                 });

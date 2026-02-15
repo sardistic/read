@@ -45,12 +45,14 @@ export const SandDunesOverlay = () => {
             const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
             if (prefersReducedMotion) return; // No particles
 
+            const speedMultiplier = isMobile ? 0.3 : 1; // 30% speed on mobile
+
             for (let i = 0; i < particleCount; i++) {
                 particles.push({
                     x: Math.random() * canvas.width,
                     y: Math.random() * canvas.height,
-                    vx: 0.5 + Math.random() * 1.5, // Natural wind
-                    vy: (Math.random() - 0.5) * 0.5,
+                    vx: (0.5 + Math.random() * 1.5) * speedMultiplier, // Natural wind
+                    vy: ((Math.random() - 0.5) * 0.5) * speedMultiplier,
                     size: Math.random() * 2,
                     alpha: 0.1 + Math.random() * 0.3
                 });
