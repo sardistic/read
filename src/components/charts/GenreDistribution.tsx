@@ -25,26 +25,27 @@ interface Link {
     strength: number; // Shared books count
 }
 
+// Dynamic Galaxy Palette
+const GALAXY_COLORS: Record<string, string> = {
+    'Science Fiction': '#4cc9f0',
+    'Fantasy': '#f72585',
+    'Horror': '#7209b7',
+    'Mystery & Thriller': '#4361ee',
+    'History & Memoir': '#ffd166',
+    'Science & Thought': '#06d6a0',
+    'Society & Business': '#ef476f',
+    'Spirituality': '#b5179e',
+    'Arts & Poetry': '#560bad',
+    'Comics & Manga': '#3a0ca3',
+    'Romance': '#ff4d6d',
+    'Other': '#adb5bd'
+};
+
 export const GenreDistribution = ({ works }: { works: Work[] }) => {
     const containerRef = useRef<HTMLDivElement>(null);
     const canvasRef = useRef<SVGSVGElement>(null);
     const [tooltipToken, setTooltipToken] = useState<{ x: number, y: number, content: string } | null>(null);
 
-    // Dynamic Galaxy Palette
-    const GALAXY_COLORS: Record<string, string> = {
-        'Science Fiction': '#4cc9f0',
-        'Fantasy': '#f72585',
-        'Horror': '#7209b7',
-        'Mystery & Thriller': '#4361ee',
-        'History & Memoir': '#ffd166',
-        'Science & Thought': '#06d6a0',
-        'Society & Business': '#ef476f',
-        'Spirituality': '#b5179e',
-        'Arts & Poetry': '#560bad',
-        'Comics & Manga': '#3a0ca3',
-        'Romance': '#ff4d6d',
-        'Other': '#adb5bd'
-    };
 
     // State for Simulation
     const [nodes, setNodes] = useState<Node[]>([]);
@@ -336,7 +337,7 @@ export const GenreDistribution = ({ works }: { works: Work[] }) => {
                     })}
 
                     {/* Links */}
-                    {initialLinks.map((link, i) => {
+                    {initialLinks.map((link: Link, i: number) => {
                         const source = nodes.find((n: Node) => n.id === link.source);
                         const target = nodes.find((n: Node) => n.id === link.target);
                         if (!source || !target) return null;
