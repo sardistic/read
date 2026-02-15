@@ -3,6 +3,7 @@ import React from 'react';
 import styles from './GlassHeader.module.css';
 
 import { Work } from '@/lib/types';
+import { RedParticlesOverlay } from './RedParticlesOverlay';
 
 interface GlassHeaderProps {
     currentRead?: Work;
@@ -32,9 +33,9 @@ export const GlassHeader: React.FC<GlassHeaderProps> = ({ currentRead }) => {
                     </nav>
                 </div>
 
-                {/* Center / Right-ish: Currently Reading Widget */}
                 {currentRead && (
                     <div className={styles.readingWidget}>
+                        <RedParticlesOverlay />
                         <div className={styles.readingCover} style={{ backgroundImage: `url(${currentRead.coverImage})` }} />
                         <div className={styles.readingInfo}>
                             <span className={styles.readingLabel}>Reading Now</span>

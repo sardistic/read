@@ -67,7 +67,7 @@ export default async function Home() {
               <MetricCard
                 label="Total Works"
                 value={totalWorks}
-                subValue={`${works.filter(w => w.type === 'book').length} Books, ${works.filter(w => w.type === 'audiobook').length} Audio`}
+              // subValue removed as requested
               />
             </Link>
             <MetricCard
@@ -103,59 +103,9 @@ export default async function Home() {
             </div> */}
 
             <div className={styles.readingList}>
-              {/* Moved to Header */}
-              {/* {currentlyReading.map(work => (
-                <Link href={`/book/${work.id}`} key={work.id} style={{ textDecoration: 'none' }}>
-                  <PaperCard
-                    elevation="md"
-                    interactive
-                    className={styles.readingCard}
-                    enableSand
-                    style={{
-                      position: 'relative',
-                      overflow: 'hidden'
-                    }}
-                  >
-                    {work.coverImage && (
-                      <>
-                        <div style={{
-                          position: 'absolute',
-                          inset: 0,
-                          backgroundImage: `url(${work.coverImage})`,
-                          backgroundSize: 'cover',
-                          backgroundPosition: 'center 20%',
-                          zIndex: 0
-                        }} />
-                        <SandDunesOverlay />
-                      </>
-                    )}
-                    <div className={styles.cardContent} style={{ position: 'relative', zIndex: 2 }}>
-                      <div>
-                        <h3 className={styles.workTitle} style={{ color: work.coverImage ? '#e0e0e0' : undefined }}>{work.title}</h3>
-                        <p className={styles.workAuthor} style={{ color: work.coverImage ? '#aaaaaa' : undefined }}>{work.author}</p>
-                        <div className={styles.tags}>
-                          {work.genres.slice(0, 3).map(g => (
-                            <span key={g} className={styles.tag} style={{
-                              borderColor: work.coverImage ? 'rgba(255,255,255,0.2)' : undefined,
-                              color: work.coverImage ? '#cccccc' : undefined
-                            }}>{g}</span>
-                          ))}
-                        </div>
-                      </div>
-                      <div className={styles.statusBadge}>In Progress</div>
-                    </div>
-                  </PaperCard>
-                </Link>
-              ))} */}
-
-              {currentlyReading.length === 0 && (
-                <PaperCard elevation="sm" className={styles.emptyState}>
-                  <p>Not reading anything right now.</p>
-                </PaperCard>
-              )}
+              {/* <RecentHistory moved up to fill space> */}
+              <RecentHistory works={readWorks} />
             </div>
-
-            <RecentHistory works={readWorks} />
 
           </div>
 
