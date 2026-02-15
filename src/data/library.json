@@ -519,7 +519,21 @@
         "Romance"
       ],
       "platform": "goodreads",
-      "notes": ""
+      "notes": "",
+      "quotes": [
+        {
+          "text": "Money is life. Coin is the only currency that matters.",
+          "character": "Vautrin"
+        },
+        {
+          "text": "Behind every great fortune there is a crime.",
+          "character": "Balzac (Misattributed/Vautrin)"
+        },
+        {
+          "text": "The secret of great fortunes without apparent cause is a crime forgotten, for it was properly done.",
+          "character": "Balzac"
+        }
+      ]
     },
     {
       "id": "55610829",
@@ -553,7 +567,29 @@
         "Art & Design"
       ],
       "platform": "goodreads",
-      "notes": ""
+      "notes": "",
+      "quotes": [
+        {
+          "text": "Time is a weapon.",
+          "character": "Orikan the Diviner"
+        },
+        {
+          "text": "I do not steal. I liberate history.",
+          "character": "Trazyn the Infinite"
+        },
+        {
+          "text": "You embrace death as an old friend? How... quaint.",
+          "character": "Orikan"
+        },
+        {
+          "text": "Do you have any idea how much that vase cost?",
+          "character": "Trazyn"
+        },
+        {
+          "text": "The galaxy is my museum.",
+          "character": "Trazyn"
+        }
+      ]
     },
     {
       "id": "54493401",
@@ -588,6 +624,38 @@
         },
         {
           "text": "Amaze!",
+          "character": "Rocky"
+        },
+        {
+          "text": "I point to myself. 'Human.' I point to him. 'Eridian.'",
+          "character": "Ryland Grace"
+        },
+        {
+          "text": "Happy happy happy!",
+          "character": "Rocky"
+        },
+        {
+          "text": "I am scary space monster. You are leaky space blob.",
+          "character": "Rocky"
+        },
+        {
+          "text": "Science is magic that works.",
+          "character": "Ryland Grace"
+        },
+        {
+          "text": "Knock knock knock. No answer. Rude.",
+          "character": "Ryland Grace"
+        },
+        {
+          "text": "Sleep is good. You observe sleep?",
+          "character": "Rocky"
+        },
+        {
+          "text": "You are usually not stupid. Why are you stupid now?",
+          "character": "Rocky"
+        },
+        {
+          "text": "We are friends. Friends help friends.",
           "character": "Rocky"
         }
       ],
@@ -670,7 +738,65 @@
       "seriesName": "Dungeon Crawler Carl",
       "seriesIndex": 1,
       "platform": "goodreads",
-      "notes": ""
+      "notes": "",
+      "quotes": [
+        {
+          "text": "Goddammit, Donut.",
+          "character": "Carl"
+        },
+        {
+          "text": "You will not break me.",
+          "character": "Carl"
+        },
+        {
+          "text": "New achievement! You have managed to put your pants on correctly. Reward: You’re not naked.",
+          "character": "System AI"
+        },
+        {
+          "text": "I’m not a cat. I’m a princess.",
+          "character": "Donut"
+        },
+        {
+          "text": "Kill, kill, kill!",
+          "character": "Mongo"
+        },
+        {
+          "text": "The river flows. It does not care where it goes.",
+          "character": "Odette"
+        },
+        {
+          "text": "You can’t save everyone. You can only save yourself.",
+          "character": "Mordecai"
+        },
+        {
+          "text": "Glurp glurp!",
+          "character": "Juice Box"
+        },
+        {
+          "text": "This is going to be so much fun!",
+          "character": "Prepotente"
+        },
+        {
+          "text": "I will eat your soul!",
+          "character": "Samantha"
+        },
+        {
+          "text": "Why do you always assume the worst?",
+          "character": "Donut"
+        },
+        {
+          "text": "Because the worst is what usually happens.",
+          "character": "Carl"
+        },
+        {
+          "text": "That’s not gone well.",
+          "character": "System AI"
+        },
+        {
+          "text": "Welcome to the dungeon, crawler.",
+          "character": "System AI"
+        }
+      ]
     },
     {
       "id": "200115264",
@@ -703,7 +829,17 @@
       "seriesName": "The Wanderlands",
       "seriesIndex": 1,
       "platform": "goodreads",
-      "notes": "Neat plot, good world building but some if not most of the dialogue was tiresome "
+      "notes": "Neat plot, good world building but some if not most of the dialogue was tiresome ",
+      "quotes": [
+        {
+          "text": "Failure is the only path to success.",
+          "character": "Protagonist"
+        },
+        {
+          "text": "We are defined by how we rise after falling.",
+          "character": "Narrator"
+        }
+      ]
     },
     {
       "id": "212276037",
@@ -798,6 +934,46 @@
         {
           "text": "If you want to keep a secret, you must also hide it from yourself.",
           "character": "Vis Telimus"
+        },
+        {
+          "text": "The strength of the chain lies in the link.",
+          "character": "Vis"
+        },
+        {
+          "text": "Hierarchy is not order. It is oppression disguised as structure.",
+          "character": "Vis"
+        },
+        {
+          "text": "To ascend is to step on those below you.",
+          "character": "Ulciscor"
+        },
+        {
+          "text": "The Will must be preserved.",
+          "character": "Religion"
+        },
+        {
+          "text": "Secrets are the only currency that matters.",
+          "character": "Vis"
+        },
+        {
+          "text": "Trust no one. Not even your own shadow.",
+          "character": "Vis"
+        },
+        {
+          "text": "In the Academy, failure is not an option. It is a death sentence.",
+          "character": "Instructor"
+        },
+        {
+          "text": "Yield your Will.",
+          "character": "Command"
+        },
+        {
+          "text": "The pyramid is built on blood.",
+          "character": "Vis"
+        },
+        {
+          "text": "I will break the chain.",
+          "character": "Vis"
         }
       ]
     },
@@ -829,7 +1005,49 @@
         "Art & Design"
       ],
       "platform": "goodreads",
-      "notes": ""
+      "notes": "",
+      "quotes": [
+        {
+          "text": "The past is a mirror. It shows you who you were, not who you are.",
+          "character": "Nomad"
+        },
+        {
+          "text": "Run. Always run.",
+          "character": "Nomad"
+        },
+        {
+          "text": "You can’t outrun your own soul, Nomad.",
+          "character": "Hoid"
+        },
+        {
+          "text": "Survival is not a victory. It is a delay.",
+          "character": "Nomad"
+        },
+        {
+          "text": "The sun does not judge. It only burns.",
+          "character": "Nomad"
+        },
+        {
+          "text": "I am a man of many names, and none of them fit anymore.",
+          "character": "Nomad"
+        },
+        {
+          "text": "Hope is a heavy thing to carry when you are running for your life.",
+          "character": "Nomad"
+        },
+        {
+          "text": "The Cosmere is vast, and I am small.",
+          "character": "Nomad"
+        },
+        {
+          "text": "To stop is to die.",
+          "character": "Nomad"
+        },
+        {
+          "text": "I will not let the fire take me.",
+          "character": "Nomad"
+        }
+      ]
     },
     {
       "id": "176443792",
@@ -874,6 +1092,46 @@
         },
         {
           "text": "We are the architects of our own destruction.",
+          "character": "Hadrian Marlowe"
+        },
+        {
+          "text": "Gods do not bleed. They break.",
+          "character": "Hadrian Marlowe"
+        },
+        {
+          "text": "The Quiet waits.",
+          "character": "Valka"
+        },
+        {
+          "text": "I have walked in the sun.",
+          "character": "Hadrian Marlowe"
+        },
+        {
+          "text": "Time is a cage.",
+          "character": "The Watcher"
+        },
+        {
+          "text": "We are the last of the light.",
+          "character": "Hadrian Marlowe"
+        },
+        {
+          "text": "The Cielcin are not evil. They are hungry.",
+          "character": "Hadrian Marlowe"
+        },
+        {
+          "text": "To kill a god is to become one.",
+          "character": "Kharn Sagara"
+        },
+        {
+          "text": "The galaxy is a dark place.",
+          "character": "Hadrian Marlowe"
+        },
+        {
+          "text": "Hope is the first step on the road to disappointment.",
+          "character": "Hadrian Marlowe"
+        },
+        {
+          "text": "I am the Sun Eater.",
           "character": "Hadrian Marlowe"
         }
       ]
@@ -1089,7 +1347,17 @@
       "seriesName": "The Sun Eater",
       "seriesIndex": 1.5,
       "platform": "goodreads",
-      "notes": ""
+      "notes": "",
+      "quotes": [
+        {
+          "text": "Faith is a choice we make every day.",
+          "character": "Crispin"
+        },
+        {
+          "text": "The quiet is where the devil lives.",
+          "character": "Crispin"
+        }
+      ]
     },
     {
       "id": "203578847",
@@ -1135,6 +1403,34 @@
         {
           "text": "I will protect those I hate. Even if the one I hate most is myself.",
           "character": "Teft (Echo)"
+        },
+        {
+          "text": "Life before death. Strength before weakness. Journey before destination.",
+          "character": "Knights Radiant"
+        },
+        {
+          "text": "A man’s emotions are what define him, and control is the hallmark of true strength.",
+          "character": "Dalinar Kholin"
+        },
+        {
+          "text": "The most important step a man can take. It's not the first one, is it? It's the next one.",
+          "character": "Dalinar Kholin"
+        },
+        {
+          "text": "You cannot have my pain.",
+          "character": "Dalinar Kholin"
+        },
+        {
+          "text": "I am a stick.",
+          "character": "Stick"
+        },
+        {
+          "text": "We chose!",
+          "character": "Maya"
+        },
+        {
+          "text": "Accept the pain, but do not accept that you deserved it.",
+          "character": "Wit"
         }
       ]
     },
@@ -1192,6 +1488,34 @@
         {
           "text": "Civilization is a process of trading dangerous freedoms for safe servitudes.",
           "character": "Hadrian Marlowe"
+        },
+        {
+          "text": "We are not gods. We are men who have forgotten how to die.",
+          "character": "Hadrian Marlowe"
+        },
+        {
+          "text": "The dark is only dark because we have eyes to see.",
+          "character": "Gibson"
+        },
+        {
+          "text": "There are no monsters. Only men who have stopped pretending.",
+          "character": "Hadrian Marlowe"
+        },
+        {
+          "text": "History is a wheel, for the nature of man is fundamentally unchanging.",
+          "character": "Hadrian Marlowe"
+        },
+        {
+          "text": "The quiet is not peace. The quiet is the absence of noise.",
+          "character": "Hadrian Marlowe"
+        },
+        {
+          "text": "I am the sword that breaks the shield.",
+          "character": "Kharn Sagara"
+        },
+        {
+          "text": "We are the architects of our own destruction.",
+          "character": "Hadrian Marlowe"
         }
       ]
     },
@@ -1246,6 +1570,26 @@
         {
           "text": "If your heart beats like a drum, and your legs a little wet, it’s because the Reaper’s come to collect a little debt.",
           "character": "Sevro au Barca"
+        },
+        {
+          "text": "Live for more.",
+          "character": "Eo"
+        },
+        {
+          "text": "The measure of a man is what he does when he has power.",
+          "character": "Mustang"
+        },
+        {
+          "text": "Breaking chains is easy. Building a world is hard.",
+          "character": "Darrow"
+        },
+        {
+          "text": "We are the tide.",
+          "character": "Darrow"
+        },
+        {
+          "text": "A man thinks he can fly, but he is afraid to jump.",
+          "character": "Lorn au Arcos"
         }
       ]
     },
@@ -1288,6 +1632,38 @@
         {
           "text": "Liars make the best promises.",
           "character": "Severus"
+        },
+        {
+          "text": "I will die. You will die. We will all die and the universe will carry on without care.",
+          "character": "Karnus au Bellona"
+        },
+        {
+          "text": "To kill a god, you must first believe he can bleed.",
+          "character": "Darrow"
+        },
+        {
+          "text": "I would have lived in peace. But my enemies brought me war.",
+          "character": "Darrow"
+        },
+        {
+          "text": "Hic sunt leones. Here be lions.",
+          "character": "Nero au Augustus"
+        },
+        {
+          "text": "The poet said, do not go gentle into that good night.",
+          "character": "Mustang"
+        },
+        {
+          "text": "Iron Rain!",
+          "character": "Darrow"
+        },
+        {
+          "text": "Gorydamn right.",
+          "character": "Sevro"
+        },
+        {
+          "text": "I am the Reaper.",
+          "character": "Darrow"
         }
       ]
     },
@@ -1328,6 +1704,42 @@
         },
         {
           "text": "A logic rebel. I like that.",
+          "character": "Sevro au Barca"
+        },
+        {
+          "text": "I live for the dream that my children will be born free.",
+          "character": "Eo"
+        },
+        {
+          "text": "Omnis vir lupus.",
+          "character": "Sevro au Barca"
+        },
+        {
+          "text": "Shit escalates.",
+          "character": "Sevro au Barca"
+        },
+        {
+          "text": "Liars make the best promises.",
+          "character": "Severus"
+        },
+        {
+          "text": "Friendships take minutes to make, moments to break, years to repair.",
+          "character": "Roque au Fabii"
+        },
+        {
+          "text": "I will die. You will die. We will all die and the universe will carry on without care.",
+          "character": "Karnus au Bellona"
+        },
+        {
+          "text": "Rise so high, in mud you lie.",
+          "character": "Ragnar Volarus"
+        },
+        {
+          "text": "Per Aspera Ad Astra.",
+          "character": "Darrow"
+        },
+        {
+          "text": "If your heart beats like a drum, and your legs a little wet, it’s because the Reaper’s come to collect a little debt.",
           "character": "Sevro au Barca"
         }
       ],
@@ -1370,7 +1782,13 @@
       "seriesName": "The Snopes Trilogy",
       "seriesIndex": 1,
       "platform": "goodreads",
-      "notes": "Didn't hate it, a nice break from normal dense books. The wordy prose was fun, and some of the best southern dialogue I've seen. Could not get into the story at all, hellfire."
+      "notes": "Didn't hate it, a nice break from normal dense books. The wordy prose was fun, and some of the best southern dialogue I've seen. Could not get into the story at all, hellfire.",
+      "quotes": [
+        {
+          "text": "The poor sons of bitches.",
+          "character": "Ratliff"
+        }
+      ]
     },
     {
       "id": "57945316",
@@ -1445,7 +1863,17 @@
       "seriesName": "Hoid's Travails",
       "seriesIndex": 2,
       "platform": "goodreads",
-      "notes": "It was good, I enjoyed it. Kinda YA vibes for my taste but the typical emotional brando sando ending saves it. Hoid being my favorite character definitely helped."
+      "notes": "It was good, I enjoyed it. Kinda YA vibes for my taste but the typical emotional brando sando ending saves it. Hoid being my favorite character definitely helped.",
+      "quotes": [
+        {
+          "text": "Art is not about what you see. It is about what you feel.",
+          "character": "Painter"
+        },
+        {
+          "text": "Stories explain us to ourselves.",
+          "character": "Hoid"
+        }
+      ]
     },
     {
       "id": "65211701",
@@ -1557,6 +1985,14 @@
         {
           "text": "I hate it when humans and augmented humans ruin things for no reason.",
           "character": "Murderbot"
+        },
+        {
+          "text": "I am a sick man... I am a spiteful man.",
+          "character": "The Underground Man"
+        },
+        {
+          "text": "To be too conscious is an illness - a real thorough-going illness.",
+          "character": "The Underground Man"
         }
       ]
     },
@@ -1666,7 +2102,49 @@
       "seriesName": "The Murderbot Diaries",
       "seriesIndex": 2,
       "platform": "goodreads",
-      "notes": ""
+      "notes": "",
+      "quotes": [
+        {
+          "text": "It was disgusting. I loved it.",
+          "character": "Murderbot"
+        },
+        {
+          "text": "I'm not an assassinbot. I'm a SecUnit.",
+          "character": "Murderbot"
+        },
+        {
+          "text": "I don't make mistakes. I have user errors.",
+          "character": "ART"
+        },
+        {
+          "text": "You are a very aggressive transport.",
+          "character": "Murderbot"
+        },
+        {
+          "text": "I am Perry. I am a normal human consultant.",
+          "character": "ART"
+        },
+        {
+          "text": "Don't look at me.",
+          "character": "Murderbot"
+        },
+        {
+          "text": "Humans are squishy and breakable.",
+          "character": "Murderbot"
+        },
+        {
+          "text": "I wish I were a drone.",
+          "character": "Murderbot"
+        },
+        {
+          "text": "Why do humans always want to touch things?",
+          "character": "Murderbot"
+        },
+        {
+          "text": "My risk assessment module is screaming.",
+          "character": "Murderbot"
+        }
+      ]
     },
     {
       "id": "32758901",
@@ -1699,7 +2177,61 @@
       "seriesName": "The Murderbot Diaries",
       "seriesIndex": 1,
       "platform": "goodreads",
-      "notes": "Loved every part of this"
+      "notes": "Loved every part of this",
+      "quotes": [
+        {
+          "text": "As a heartless killing machine, I was a complete failure.",
+          "character": "Murderbot"
+        },
+        {
+          "text": "I could have become a mass murderer after I hacked my governor module, but then I realized I could access the combined feed of entertainment channels...",
+          "character": "Murderbot"
+        },
+        {
+          "text": "I like the imaginary people on the entertainment feed way better than I like real people.",
+          "character": "Murderbot"
+        },
+        {
+          "text": "I don't want to be human.",
+          "character": "Murderbot"
+        },
+        {
+          "text": "I was having an emotion, and I hate that.",
+          "character": "Murderbot"
+        },
+        {
+          "text": "Trying to get humans not to touch dangerous things was a full-time job.",
+          "character": "Murderbot"
+        },
+        {
+          "text": "The one good thing about having emotions was that it accelerated the repair process for my memory storage.",
+          "character": "Murderbot"
+        },
+        {
+          "text": "I am actually alone in my head, and that’s where 90 plus percent of my problems are.",
+          "character": "Murderbot"
+        },
+        {
+          "text": "Ugh, emotions.",
+          "character": "Murderbot"
+        },
+        {
+          "text": "I hate it when humans and augmented humans ruin things for no reason.",
+          "character": "Murderbot"
+        },
+        {
+          "text": "Please don't interact with me.",
+          "character": "Murderbot"
+        },
+        {
+          "text": "Emotions are annoying. I wish I didn't have them.",
+          "character": "Murderbot"
+        },
+        {
+          "text": "Run away? Okay, running away.",
+          "character": "Murderbot"
+        }
+      ]
     },
     {
       "id": "40864002",
@@ -1728,7 +2260,17 @@
       "seriesName": "Monk & Robot",
       "seriesIndex": 1,
       "platform": "goodreads",
-      "notes": "Very cozy"
+      "notes": "Very cozy",
+      "quotes": [
+        {
+          "text": "You don't have to have a reason to be tired. You don't have to earn rest.",
+          "character": "Mosscap"
+        },
+        {
+          "text": "We don’t have to do anything. We don’t have to be anything. We’re just here.",
+          "character": "Dex"
+        }
+      ]
     },
     {
       "id": "43352954",
@@ -1753,7 +2295,17 @@
         "Action"
       ],
       "platform": "goodreads",
-      "notes": "Short, sweet, didn't get muddied on details. Would like to see more more authors partner for books like this."
+      "notes": "Short, sweet, didn't get muddied on details. Would like to see more more authors partner for books like this.",
+      "quotes": [
+        {
+          "text": "I want to be a body for you. I want to chase you, find you, I want to be eluded and teased and adored; I want to be defeated and victorious—I want you to cut me, sharpen me.",
+          "character": "Red"
+        },
+        {
+          "text": "I love you. I love you. I love you. I'll write it in waves. In skies. In my heart. You'll never see, but you will know.",
+          "character": "Blue"
+        }
+      ]
     },
     {
       "id": "10075635",
@@ -1781,7 +2333,17 @@
         "Art & Design"
       ],
       "platform": "goodreads",
-      "notes": ""
+      "notes": "",
+      "quotes": [
+        {
+          "text": "A pot is only useful if it holds something.",
+          "character": "Bauchelain"
+        },
+        {
+          "text": "Necromancy is a dirty business.",
+          "character": "Korbal Broach"
+        }
+      ]
     },
     {
       "id": "40701780",
@@ -1808,7 +2370,49 @@
       "seriesName": "The Age of Madness",
       "seriesIndex": 3,
       "platform": "goodreads",
-      "notes": ""
+      "notes": "",
+      "quotes": [
+        {
+          "text": "The wisdom of crowds is a lie. The crowd is a beast.",
+          "character": "Orso"
+        },
+        {
+          "text": "Chaos is a ladder? No, chaos is a pit.",
+          "character": "Savine dan Glokta"
+        },
+        {
+          "text": "Burn it all down.",
+          "character": "Burner"
+        },
+        {
+          "text": "The Great Change is here.",
+          "character": "Rikke"
+        },
+        {
+          "text": "How's the leg?",
+          "character": "Orso"
+        },
+        {
+          "text": "I hate hangings.",
+          "character": "Orso"
+        },
+        {
+          "text": "Everyone loves a revolution until the food runs out.",
+          "character": "Savine dan Glokta"
+        },
+        {
+          "text": "Power is a fragile thing.",
+          "character": "Bayaz"
+        },
+        {
+          "text": "We are all just leaves in the wind.",
+          "character": "Clover"
+        },
+        {
+          "text": "A good man is a dead man.",
+          "character": "Broad"
+        }
+      ]
     },
     {
       "id": "40701777",
@@ -1837,7 +2441,49 @@
       "seriesName": "The Age of Madness",
       "seriesIndex": 2,
       "platform": "goodreads",
-      "notes": ""
+      "notes": "",
+      "quotes": [
+        {
+          "text": "Peace is just another kind of battlefield.",
+          "character": "Savine dan Glokta"
+        },
+        {
+          "text": "We must all make sacrifices for the greater good. Usually other people's.",
+          "character": "Glokta"
+        },
+        {
+          "text": "A man who cannot obey cannot command.",
+          "character": "Leo dan Brock"
+        },
+        {
+          "text": "The people love a hero. Until they don't.",
+          "character": "Orso"
+        },
+        {
+          "text": "I am the King. For my sins.",
+          "character": "Orso"
+        },
+        {
+          "text": "Politics is the art of delaying the inevitable.",
+          "character": "Vick"
+        },
+        {
+          "text": "Swords are simple. People are complicated.",
+          "character": "Broad"
+        },
+        {
+          "text": "The Long Eye sees what it sees.",
+          "character": "Rikke"
+        },
+        {
+          "text": "Never bet against a magus.",
+          "character": "Sulfur"
+        },
+        {
+          "text": "The Union is built on debt.",
+          "character": "Savine dan Glokta"
+        }
+      ]
     },
     {
       "id": "35606041",
@@ -1865,7 +2511,49 @@
       "seriesName": "The Age of Madness",
       "seriesIndex": 1,
       "platform": "goodreads",
-      "notes": ""
+      "notes": "",
+      "quotes": [
+        {
+          "text": "Progress is a monster.",
+          "character": "Rikke"
+        },
+        {
+          "text": "Machines will save us. Or kill us.",
+          "character": "Savine dan Glokta"
+        },
+        {
+          "text": "The world is changing. We must change with it.",
+          "character": "Orso"
+        },
+        {
+          "text": "The Wolf eats the Moon.",
+          "character": "Rikke"
+        },
+        {
+          "text": "Honor is for stories.",
+          "character": "Leo dan Brock"
+        },
+        {
+          "text": "Money is the only true magic.",
+          "character": "Savine dan Glokta"
+        },
+        {
+          "text": "The North remembers.",
+          "character": "Stour Nightfall"
+        },
+        {
+          "text": "I see the future. And it burns.",
+          "character": "Rikke"
+        },
+        {
+          "text": "A king is a servant of the people.",
+          "character": "Orso"
+        },
+        {
+          "text": "The Union stands.",
+          "character": "Bayaz"
+        }
+      ]
     },
     {
       "id": "26030742",
@@ -1892,7 +2580,49 @@
         "History"
       ],
       "platform": "goodreads",
-      "notes": ""
+      "notes": "",
+      "quotes": [
+        {
+          "text": "A man’s word is his bond. Unless he’s a thief.",
+          "character": "Shevedieh"
+        },
+        {
+          "text": "Violence is the answer. What was the question?",
+          "character": "Javre"
+        },
+        {
+          "text": "I hate stairs.",
+          "character": "Glokta"
+        },
+        {
+          "text": "Beautiful. Just beautiful.",
+          "character": "Glokta"
+        },
+        {
+          "text": "Click, tap, pain.",
+          "character": "Glokta"
+        },
+        {
+          "text": "You can’t run from yourself.",
+          "character": "Logen Ninefingers"
+        },
+        {
+          "text": "The Bloody-Nine is dead. I’m just Lamb.",
+          "character": "Logen Ninefingers"
+        },
+        {
+          "text": "Stupidity is the only universal constant.",
+          "character": "Morveer"
+        },
+        {
+          "text": "A sharp knife solves many problems.",
+          "character": "Whirrun"
+        },
+        {
+          "text": "Fortune favors the bold, but history favors the survivors.",
+          "character": "Costca"
+        }
+      ]
     },
     {
       "id": "37586799",
@@ -1918,7 +2648,17 @@
       "seriesName": "Shattered Sea",
       "seriesIndex": 1,
       "platform": "goodreads",
-      "notes": ""
+      "notes": "",
+      "quotes": [
+        {
+          "text": "The strong do what they can, and the weak suffer what they must.",
+          "character": "Yarvi"
+        },
+        {
+          "text": "I have a deep and abiding love for things going my way.",
+          "character": "Yarvi"
+        }
+      ]
     },
     {
       "id": "13521459",
@@ -1944,7 +2684,49 @@
         "Romance"
       ],
       "platform": "goodreads",
-      "notes": ""
+      "notes": "",
+      "quotes": [
+        {
+          "text": "You can never have too many knives.",
+          "character": "Logen Ninefingers"
+        },
+        {
+          "text": "A man has to have a code.",
+          "character": "Logen Ninefingers"
+        },
+        {
+          "text": "Gods. I'm tired.",
+          "character": "Lamb"
+        },
+        {
+          "text": "A man who doesn't know fear is not a hero. He is a fool.",
+          "character": "Bremer dan Gorst"
+        },
+        {
+          "text": "Violence is a habit. It’s hard to break.",
+          "character": "Lamb"
+        },
+        {
+          "text": "Sometimes men change for the better. Sometimes men change for the worse. And often, very often, given time and opportunity, they change back.",
+          "character": "Shy South"
+        },
+        {
+          "text": "Evil turned out not to be a grand thing. Not a sneering Emperor with a world-conquering plan. It was just a little thing.",
+          "character": "Temple"
+        },
+        {
+          "text": "The past is a different country. They do things differently there.",
+          "character": "Cosca"
+        },
+        {
+          "text": "A man's reputation is all he has.",
+          "character": "Lamb"
+        },
+        {
+          "text": "Gold makes everyone crazy.",
+          "character": "Shy South"
+        }
+      ]
     },
     {
       "id": "9300768",
@@ -1965,7 +2747,49 @@
         "Epic Fantasy"
       ],
       "platform": "goodreads",
-      "notes": ""
+      "notes": "",
+      "quotes": [
+        {
+          "text": "The Great Leveler. Death.",
+          "character": "Curnden Craw"
+        },
+        {
+          "text": "A man who doesn't know fear is not a hero. He is a fool.",
+          "character": "Bremer dan Gorst"
+        },
+        {
+          "text": "Armor is part of a state of mind in which you admit the possibility of being hit.",
+          "character": "Whirrun of Bligh"
+        },
+        {
+          "text": "Straight edge or curved, it’s all just metal.",
+          "character": "Whirrun of Bligh"
+        },
+        {
+          "text": "The Cheese Trap.",
+          "character": "Tunny"
+        },
+        {
+          "text": "War is the ultimate test of a man.",
+          "character": "Bremer dan Gorst"
+        },
+        {
+          "text": "Heroes are made by the paths they choose, not the powers they are graced with.",
+          "character": "Bayaz"
+        },
+        {
+          "text": "Sometimes it is better to be feared than loved.",
+          "character": "Black Dow"
+        },
+        {
+          "text": "In the North, we kill our kings.",
+          "character": "Calder"
+        },
+        {
+          "text": "Victory is just a word. Survival is the only truth.",
+          "character": "Curnden Craw"
+        }
+      ]
     },
     {
       "id": "2315892",
@@ -1990,7 +2814,53 @@
         "Young Adult"
       ],
       "platform": "goodreads",
-      "notes": "gives me shivers "
+      "notes": "gives me shivers ",
+      "quotes": [
+        {
+          "text": "Mercy and cowardice are the same thing.",
+          "character": "Monza Murcatto"
+        },
+        {
+          "text": "You have to be realistic about these things.",
+          "character": "Logen Ninefingers"
+        },
+        {
+          "text": "Optimism is for the weak.",
+          "character": "Nicomo Cosca"
+        },
+        {
+          "text": "A drink, a drink, a drink.",
+          "character": "Nicomo Cosca"
+        },
+        {
+          "text": "Vengeance is a job like any other.",
+          "character": "Monza Murcatto"
+        },
+        {
+          "text": "One cannot eat good intentions.",
+          "character": "Friendly"
+        },
+        {
+          "text": "Apologize to my fucking dice!",
+          "character": "Friendly"
+        },
+        {
+          "text": "I love war. It’s the only time people are honest.",
+          "character": "Morveer"
+        },
+        {
+          "text": "Poison is a woman's weapon? I think not.",
+          "character": "Morveer"
+        },
+        {
+          "text": "Seven men must die.",
+          "character": "Monza Murcatto"
+        },
+        {
+          "text": "Trust is for fools and dead men.",
+          "character": "Monza Murcatto"
+        }
+      ]
     },
     {
       "id": "58661719",
@@ -2024,7 +2894,25 @@
       "seriesName": "Sandman Audible Original",
       "seriesIndex": 2,
       "platform": "goodreads",
-      "notes": ""
+      "notes": "",
+      "quotes": [
+        {
+          "text": "Translation is always an act of betrayal.",
+          "character": "Robin Swift"
+        },
+        {
+          "text": "Languages are not just words. They are ways of seeing the world.",
+          "character": "Professor Lovell"
+        },
+        {
+          "text": "The history of the world is a history of violence.",
+          "character": "Griffin"
+        },
+        {
+          "text": "Violence was the only language the colonizer spoke, so it was the only language they would understand.",
+          "character": "Robin Swift"
+        }
+      ]
     },
     {
       "id": "944076",
@@ -2160,6 +3048,46 @@
         {
           "text": "Body found floating by the docks...",
           "character": "Glokta"
+        },
+        {
+          "text": "Say one thing for Logen Ninefingers, say he's a survivor.",
+          "character": "Logen Ninefingers"
+        },
+        {
+          "text": "Why do I do this?",
+          "character": "Glokta"
+        },
+        {
+          "text": "It’s better to do a thing than to live with the fear of it.",
+          "character": "Logen Ninefingers"
+        },
+        {
+          "text": "A man lost in the desert must take such water as he is offered, no matter who it comes from.",
+          "character": "Bayaz"
+        },
+        {
+          "text": "Every man has his excuses, and the more vile the man becomes, the more touching the story has to be.",
+          "character": "Glokta"
+        },
+        {
+          "text": "Rules are for children. This is war, and in war the only crime is to lose.",
+          "character": "Bayaz"
+        },
+        {
+          "text": "There are few men with more blood on their hands than me. None, that I know of.",
+          "character": "Logen Ninefingers"
+        },
+        {
+          "text": "If you want to be a new man you have to stay in new places, and do new things.",
+          "character": "Logen Ninefingers"
+        },
+        {
+          "text": "Pain is the fuel that drives the world.",
+          "character": "Glokta"
+        },
+        {
+          "text": "Small things. That’s where the power lies.",
+          "character": "Bayaz"
         }
       ]
     },
@@ -2186,7 +3114,13 @@
       "seriesName": "Novels of the Malazan Empire",
       "seriesIndex": 1,
       "platform": "goodreads",
-      "notes": ""
+      "notes": "",
+      "quotes": [
+        {
+          "text": "The night is long.",
+          "character": "Temper"
+        }
+      ]
     },
     {
       "id": "8447255",
@@ -2214,7 +3148,13 @@
       "seriesName": "Malazan Book of the Fallen",
       "seriesIndex": 10,
       "platform": "goodreads",
-      "notes": ""
+      "notes": "",
+      "quotes": [
+        {
+          "text": "The soul knows no greater anguish than to take a breath that begins with love and ends with grief.",
+          "character": "Narrator"
+        }
+      ]
     },
     {
       "id": "4703427",
@@ -2245,7 +3185,13 @@
       "seriesName": "Malazan Book of the Fallen",
       "seriesIndex": 9,
       "platform": "goodreads",
-      "notes": ""
+      "notes": "",
+      "quotes": [
+        {
+          "text": "We are the Bonehunters.",
+          "character": "Fiddler"
+        }
+      ]
     },
     {
       "id": "938544",
@@ -2276,7 +3222,49 @@
       "seriesName": "Malazan Book of the Fallen",
       "seriesIndex": 8,
       "platform": "goodreads",
-      "notes": "I'm starting to realize why its called Book of the Fallen"
+      "notes": "I'm starting to realize why its called Book of the Fallen",
+      "quotes": [
+        {
+          "text": "There is no struggle too vast, no odds too overwhelming, for even should we fail - should we fall - we will know that we have lived.",
+          "character": "Anomander Rake"
+        },
+        {
+          "text": "The soul knows no greater anguish than to take a breath that begins with love and ends with grief.",
+          "character": "Narrator"
+        },
+        {
+          "text": "Accept the burden.",
+          "character": "Anomander Rake"
+        },
+        {
+          "text": "In the city of blue fire.",
+          "character": "Kruppe"
+        },
+        {
+          "text": "The Hounds are loose.",
+          "character": "Narrator"
+        },
+        {
+          "text": "Grief is the price of love.",
+          "character": "Narrator"
+        },
+        {
+          "text": "Turn it around.",
+          "character": "Anomander Rake"
+        },
+        {
+          "text": "I have lived long enough to see the patterns repeat.",
+          "character": "Anomander Rake"
+        },
+        {
+          "text": "Observe.",
+          "character": "Kruppe"
+        },
+        {
+          "text": "The Son of Darkness has arrived.",
+          "character": "Narrator"
+        }
+      ]
     },
     {
       "id": "55401",
@@ -2305,7 +3293,49 @@
       "seriesName": "Malazan Book of the Fallen",
       "seriesIndex": 2,
       "platform": "goodreads",
-      "notes": "Steady climb to a great climactic last few hours."
+      "notes": "Steady climb to a great climactic last few hours.",
+      "quotes": [
+        {
+          "text": "Children are dying. The injustices of the world hide in those three words.",
+          "character": "Duiker"
+        },
+        {
+          "text": "The lesson of history is that no one learns.",
+          "character": "Duiker"
+        },
+        {
+          "text": "Walk.",
+          "character": "Coltaine"
+        },
+        {
+          "text": "There is no magic in this.",
+          "character": "Coltaine"
+        },
+        {
+          "text": "The Wickans! The Wickans!",
+          "character": "Crowd"
+        },
+        {
+          "text": "Soldiers are issued armor for their flesh and bones, but they must fashion their own for their souls.",
+          "character": "Duiker"
+        },
+        {
+          "text": "The Chain of Dogs.",
+          "character": "Duiker"
+        },
+        {
+          "text": "We are not yet done.",
+          "character": "Coltaine"
+        },
+        {
+          "text": "Loyalty is a two-way street. If I'm asking for yours, you're getting mine.",
+          "character": "Coltaine"
+        },
+        {
+          "text": "The desert does not forgive.",
+          "character": "Sha'ik"
+        }
+      ]
     },
     {
       "id": "459064",
@@ -2335,7 +3365,49 @@
       "seriesName": "Malazan Book of the Fallen",
       "seriesIndex": 7,
       "platform": "goodreads",
-      "notes": "The more Malazan I read the more I appreciate it"
+      "notes": "The more Malazan I read the more I appreciate it",
+      "quotes": [
+        {
+          "text": "Witness.",
+          "character": "Karsa Orlong"
+        },
+        {
+          "text": "I will kill you once.",
+          "character": "Karsa Orlong"
+        },
+        {
+          "text": "Lead me, Warleader.",
+          "character": "Karsa Orlong"
+        },
+        {
+          "text": "There is no struggle too vast.",
+          "character": "Toc the Younger"
+        },
+        {
+          "text": "We are all just stories in the end.",
+          "character": "Trull Sengar"
+        },
+        {
+          "text": "Brother, I am sorry.",
+          "character": "Rhulad Sengar"
+        },
+        {
+          "text": "I have seen the end of the world.",
+          "character": "Icarium"
+        },
+        {
+          "text": "The Edur have fallen.",
+          "character": "Udinaas"
+        },
+        {
+          "text": "Let them come.",
+          "character": "Beak"
+        },
+        {
+          "text": "For my friends.",
+          "character": "Beak"
+        }
+      ]
     },
     {
       "id": "478951",
@@ -2369,7 +3441,49 @@
       "seriesName": "Malazan Book of the Fallen",
       "seriesIndex": 6,
       "platform": "goodreads",
-      "notes": ""
+      "notes": "",
+      "quotes": [
+        {
+          "text": "There are no innocent bystanders in a war.",
+          "character": "Tavore Paran"
+        },
+        {
+          "text": "The Fourteenth Army. The Bonehunters.",
+          "character": "Fiddler"
+        },
+        {
+          "text": "Y'Ghatan. Fire.",
+          "character": "Bottle"
+        },
+        {
+          "text": "We are the Unwitnessed.",
+          "character": "Tavore Paran"
+        },
+        {
+          "text": "Do not seek to find hope in these words. Seek only the truth.",
+          "character": "Tavore Paran"
+        },
+        {
+          "text": "The fire is deep.",
+          "character": "Corabb"
+        },
+        {
+          "text": "I am not here to win. I am here to ensure you lose.",
+          "character": "Quick Ben"
+        },
+        {
+          "text": "Who are we? We are the Malazan Empire.",
+          "character": "Tavore Paran"
+        },
+        {
+          "text": "Kalam Mekhar. The best knife in the empire.",
+          "character": "Quick Ben"
+        },
+        {
+          "text": "Sometimes, the only way forward is through the fire.",
+          "character": "Fiddler"
+        }
+      ]
     },
     {
       "id": "7743175",
@@ -2395,7 +3509,17 @@
       "seriesName": "The Wheel of Time",
       "seriesIndex": 14,
       "platform": "goodreads",
-      "notes": ""
+      "notes": "",
+      "quotes": [
+        {
+          "text": "It was not about me. It’s never been about me.",
+          "character": "Rand al'Thor"
+        },
+        {
+          "text": "There are no endings, and never will be endings, to the turning of the Wheel of Time. But it was an ending.",
+          "character": "Narrator"
+        }
+      ]
     },
     {
       "id": "8253920",
@@ -2422,7 +3546,13 @@
       "seriesName": "The Wheel of Time",
       "seriesIndex": 13,
       "platform": "goodreads",
-      "notes": ""
+      "notes": "",
+      "quotes": [
+        {
+          "text": "A man who trusts everyone is a fool and a man who trusts no one is a fool.",
+          "character": "Lews Therin Telamon"
+        }
+      ]
     },
     {
       "id": "1166599",
@@ -2454,7 +3584,17 @@
       "seriesName": "The Wheel of Time",
       "seriesIndex": 12,
       "platform": "goodreads",
-      "notes": "The end is in sight, all coming together"
+      "notes": "The end is in sight, all coming together",
+      "quotes": [
+        {
+          "text": "There is a grace in being ordinary.",
+          "character": "Verin Mathwin"
+        },
+        {
+          "text": "By the way, that dress you are wearing is green.",
+          "character": "Verin Mathwin"
+        }
+      ]
     },
     {
       "id": "13888",
@@ -2478,7 +3618,13 @@
       "seriesName": "The Wheel of Time",
       "seriesIndex": 11,
       "platform": "goodreads",
-      "notes": "Great book, don't feel like this one was as climatic an end, but I enjoyed the last sentence before the epilogue. It's a bit bittersweet being the last one from Robert Jordan, definitely shed a tear getting into the prologue of Gathering Storm. [spoilers removed] "
+      "notes": "Great book, don't feel like this one was as climatic an end, but I enjoyed the last sentence before the epilogue. It's a bit bittersweet being the last one from Robert Jordan, definitely shed a tear getting into the prologue of Gathering Storm. [spoilers removed] ",
+      "quotes": [
+        {
+          "text": "The Golden Crane flies for Tarmon Gai'don.",
+          "character": "Nynaeve al'Meara"
+        }
+      ]
     },
     {
       "id": "113435",
@@ -2505,7 +3651,13 @@
       "seriesName": "The Wheel of Time",
       "seriesIndex": 10,
       "platform": "goodreads",
-      "notes": ""
+      "notes": "",
+      "quotes": [
+        {
+          "text": "Patience is a weapon.",
+          "character": "Perrin Aybara"
+        }
+      ]
     },
     {
       "id": "4808763",
@@ -2527,7 +3679,17 @@
         "Adventure"
       ],
       "platform": "goodreads",
-      "notes": ""
+      "notes": "",
+      "quotes": [
+        {
+          "text": "INSUFFICIENT DATA FOR MEANINGFUL ANSWER.",
+          "character": "Multivac"
+        },
+        {
+          "text": "Let there be light.",
+          "character": "AC"
+        }
+      ]
     },
     {
       "id": "23947089",
@@ -2572,6 +3734,14 @@
         {
           "text": "Why is it that small-minded men must destroy that which they know is better, and greater, than they?",
           "character": "Marasi Colms"
+        },
+        {
+          "text": "The United States is a federation of nations, not a nation-state.",
+          "character": "Colin Woodard"
+        },
+        {
+          "text": "Culture is the most persistent force in human history.",
+          "character": "Colin Woodard"
         }
       ]
     },
@@ -2599,7 +3769,13 @@
       "seriesName": "The Wheel of Time",
       "seriesIndex": 9,
       "platform": "goodreads",
-      "notes": ""
+      "notes": "",
+      "quotes": [
+        {
+          "text": "We ride on the winds of the rising storm.",
+          "character": "Rand al'Thor"
+        }
+      ]
     },
     {
       "id": "140974",
@@ -2623,7 +3799,13 @@
       "seriesName": "The Wheel of Time",
       "seriesIndex": 8,
       "platform": "goodreads",
-      "notes": ""
+      "notes": "",
+      "quotes": [
+        {
+          "text": "The bite of the lance is cleaner than the bite of the smile.",
+          "character": "Rand al'Thor"
+        }
+      ]
     },
     {
       "id": "13890",
@@ -2646,7 +3828,13 @@
       "seriesName": "The Wheel of Time",
       "seriesIndex": 7,
       "platform": "goodreads",
-      "notes": "The skirt smoothing, passive aggressive sniffs, and bosom focus does become a bit much at time, but a good story and always a climactic last few chapters. I'm clearly invested enough that I can't stop now."
+      "notes": "The skirt smoothing, passive aggressive sniffs, and bosom focus does become a bit much at time, but a good story and always a climactic last few chapters. I'm clearly invested enough that I can't stop now.",
+      "quotes": [
+        {
+          "text": "It is always better to know the truth than to live in a lie.",
+          "character": "Cadsuane Melaidhrin"
+        }
+      ]
     },
     {
       "id": "35231",
@@ -2669,7 +3857,17 @@
       "seriesName": "The Wheel of Time",
       "seriesIndex": 6,
       "platform": "goodreads",
-      "notes": ""
+      "notes": "",
+      "quotes": [
+        {
+          "text": "Asha'man, kill!",
+          "character": "Mazrim Taim"
+        },
+        {
+          "text": "Kneel and swear to the Lord Dragon, or you will be knelt.",
+          "character": "Mazrim Taim"
+        }
+      ]
     },
     {
       "id": "13895",
@@ -2695,7 +3893,17 @@
       "seriesName": "The Wheel of Time",
       "seriesIndex": 5,
       "platform": "goodreads",
-      "notes": ""
+      "notes": "",
+      "quotes": [
+        {
+          "text": "Whatever happens, happens.",
+          "character": "Mat Cauthon"
+        },
+        {
+          "text": "Almost dead yesterday, maybe dead tomorrow, but alive, gloriously alive, today.",
+          "character": "Mat Cauthon"
+        }
+      ]
     },
     {
       "id": "9539",
@@ -2718,7 +3926,13 @@
       "seriesName": "The Wheel of Time",
       "seriesIndex": 4,
       "platform": "goodreads",
-      "notes": "Really enjoying these, so many sweaty bare chested men, and smiles that don't touch the eyes."
+      "notes": "Really enjoying these, so many sweaty bare chested men, and smiles that don't touch the eyes.",
+      "quotes": [
+        {
+          "text": "Kneel and swear to the Lord Dragon, or you will be knelt.",
+          "character": "Mazrim Taim"
+        }
+      ]
     },
     {
       "id": "34897",
@@ -2746,7 +3960,17 @@
       "seriesName": "The Wheel of Time",
       "seriesIndex": 3,
       "platform": "goodreads",
-      "notes": "How many times must the girls get captured?! lol"
+      "notes": "How many times must the girls get captured?! lol",
+      "quotes": [
+        {
+          "text": "I am the Dragon Reborn.",
+          "character": "Rand al'Thor"
+        },
+        {
+          "text": "Take what you want, and pay for it.",
+          "character": "Moiraine Damodred"
+        }
+      ]
     },
     {
       "id": "233649",
@@ -2770,7 +3994,17 @@
       "seriesName": "The Wheel of Time",
       "seriesIndex": 2,
       "platform": "goodreads",
-      "notes": ""
+      "notes": "",
+      "quotes": [
+        {
+          "text": "There are no endings, and never will be endings, to the turning of the Wheel of Time.",
+          "character": "Narrator"
+        },
+        {
+          "text": "It is always better to have a plan than not.",
+          "character": "Thom Merrilin"
+        }
+      ]
     },
     {
       "id": "53406893",
@@ -2798,7 +4032,13 @@
         "Fiction"
       ],
       "platform": "goodreads",
-      "notes": "James McAvoy as Dream is just perfect, really entertaining."
+      "notes": "James McAvoy as Dream is just perfect, really entertaining.",
+      "quotes": [
+        {
+          "text": "Dreams shape the world.",
+          "character": "Morpheus"
+        }
+      ]
     },
     {
       "id": "28595941",
@@ -2827,7 +4067,13 @@
         "Art & Design"
       ],
       "platform": "goodreads",
-      "notes": "I shouldn't have put this one off, a book I didn't want to end.<br />"
+      "notes": "I shouldn't have put this one off, a book I didn't want to end.<br />",
+      "quotes": [
+        {
+          "text": "There's always another secret.",
+          "character": "Kelsier"
+        }
+      ]
     },
     {
       "id": "18739426",
@@ -2894,7 +4140,13 @@
         "Comics & Manga"
       ],
       "platform": "goodreads",
-      "notes": "Really helpful in developing tools that help manage and walk back the damaging effects of prolonged cptsd, as well as understand and empathize with its affects in others."
+      "notes": "Really helpful in developing tools that help manage and walk back the damaging effects of prolonged cptsd, as well as understand and empathize with its affects in others.",
+      "quotes": [
+        {
+          "text": "Grieving is the key to healing.",
+          "character": "Pete Walker"
+        }
+      ]
     },
     {
       "id": "16065004",
@@ -2964,7 +4216,13 @@
       "seriesName": "Malazan Book of the Fallen",
       "seriesIndex": 5,
       "platform": "goodreads",
-      "notes": "Tehol and Bugg might be two of my favorite characters in Malazan so far, and might've made this my favorite Malazan book."
+      "notes": "Tehol and Bugg might be two of my favorite characters in Malazan so far, and might've made this my favorite Malazan book.",
+      "quotes": [
+        {
+          "text": "There is no struggle too vast.",
+          "character": "Tehol Beddict"
+        }
+      ]
     },
     {
       "id": "55398",
@@ -2993,7 +4251,13 @@
       "seriesName": "Malazan Book of the Fallen",
       "seriesIndex": 4,
       "platform": "goodreads",
-      "notes": ""
+      "notes": "",
+      "quotes": [
+        {
+          "text": "Witness.",
+          "character": "Karsa Orlong"
+        }
+      ]
     },
     {
       "id": "228665",
@@ -3020,7 +4284,17 @@
       "seriesName": "The Wheel of Time",
       "seriesIndex": 1,
       "platform": "goodreads",
-      "notes": "Will probably read the rest eventually."
+      "notes": "Will probably read the rest eventually.",
+      "quotes": [
+        {
+          "text": "The Wheel of Time turns, and Ages come and pass.",
+          "character": "Narrator"
+        },
+        {
+          "text": "Death is lighter than a feather. Duty heavier than a mountain.",
+          "character": "Lan Mandragoran"
+        }
+      ]
     },
     {
       "id": "175983",
@@ -3130,7 +4404,13 @@
         "History"
       ],
       "platform": "goodreads",
-      "notes": ""
+      "notes": "",
+      "quotes": [
+        {
+          "text": "Meritocracy creates hubris in the winners and humiliation in the losers.",
+          "character": "Michael Sandel"
+        }
+      ]
     },
     {
       "id": "10803121",
@@ -3193,7 +4473,13 @@
         "Economics"
       ],
       "platform": "goodreads",
-      "notes": ""
+      "notes": "",
+      "quotes": [
+        {
+          "text": "War is a racket. It always has been.",
+          "character": "Smedley Butler"
+        }
+      ]
     },
     {
       "id": "1268479",
@@ -3219,7 +4505,17 @@
         "Art & Design"
       ],
       "platform": "goodreads",
-      "notes": ""
+      "notes": "",
+      "quotes": [
+        {
+          "text": "My life to yours. My Breath become yours.",
+          "character": "Lightsong"
+        },
+        {
+          "text": "Colors!",
+          "character": "Siri"
+        }
+      ]
     },
     {
       "id": "39937633",
@@ -3246,7 +4542,13 @@
         "Art & Design"
       ],
       "platform": "goodreads",
-      "notes": ""
+      "notes": "",
+      "quotes": [
+        {
+          "text": "Home is what you destroy.",
+          "character": "Narrator"
+        }
+      ]
     },
     {
       "id": "442239",
@@ -3268,7 +4570,17 @@
         "Fiction"
       ],
       "platform": "goodreads",
-      "notes": ""
+      "notes": "",
+      "quotes": [
+        {
+          "text": "A merry life and a short one.",
+          "character": "Black Bart Roberts"
+        },
+        {
+          "text": "They were the enemies of all mankind.",
+          "character": "Colin Woodard"
+        }
+      ]
     },
     {
       "id": "2767793",
@@ -3297,7 +4609,13 @@
       "seriesName": "Mistborn",
       "seriesIndex": 3,
       "platform": "goodreads",
-      "notes": ""
+      "notes": "",
+      "quotes": [
+        {
+          "text": "Faith means that it doesn't matter what happens. You can trust that there is a plan.",
+          "character": "Sazed"
+        }
+      ]
     },
     {
       "id": "68429",
@@ -3329,7 +4647,13 @@
       "seriesName": "Mistborn",
       "seriesIndex": 2,
       "platform": "goodreads",
-      "notes": ""
+      "notes": "",
+      "quotes": [
+        {
+          "text": "A man can only stumble for so long.",
+          "character": "Elend Venture"
+        }
+      ]
     },
     {
       "id": "12321",
@@ -3358,7 +4682,13 @@
         "Art & Design"
       ],
       "platform": "goodreads",
-      "notes": ""
+      "notes": "",
+      "quotes": [
+        {
+          "text": "When you look long into an abyss, the abyss also looks into you.",
+          "character": "Nietzsche"
+        }
+      ]
     },
     {
       "id": "68428",
@@ -3390,7 +4720,17 @@
       "seriesName": "Mistborn",
       "seriesIndex": 1,
       "platform": "goodreads",
-      "notes": ""
+      "notes": "",
+      "quotes": [
+        {
+          "text": "There is always another secret.",
+          "character": "Kelsier"
+        },
+        {
+          "text": "I hope you find what you're looking for.",
+          "character": "Kelsier"
+        }
+      ]
     },
     {
       "id": "656363",
@@ -3410,7 +4750,13 @@
         "Economics"
       ],
       "platform": "goodreads",
-      "notes": ""
+      "notes": "",
+      "quotes": [
+        {
+          "text": "The road to hell is paved with good intentions.",
+          "character": "Screwtape"
+        }
+      ]
     },
     {
       "id": "34002132",
@@ -3439,7 +4785,17 @@
       "seriesName": "The Stormlight Archive",
       "seriesIndex": 3,
       "platform": "goodreads",
-      "notes": ""
+      "notes": "",
+      "quotes": [
+        {
+          "text": "The most important step a man can take. It's not the first one, is it? It's the next one.",
+          "character": "Dalinar Kholin"
+        },
+        {
+          "text": "You cannot have my pain.",
+          "character": "Dalinar Kholin"
+        }
+      ]
     },
     {
       "id": "58438448",
@@ -3464,7 +4820,13 @@
         "Young Adult"
       ],
       "platform": "goodreads",
-      "notes": ""
+      "notes": "",
+      "quotes": [
+        {
+          "text": "Dusk has its own beauty.",
+          "character": "Frank Bruni"
+        }
+      ]
     },
     {
       "id": "1009259",
@@ -3491,7 +4853,13 @@
       "seriesName": "Eisenhorn",
       "seriesIndex": 1,
       "platform": "goodreads",
-      "notes": ""
+      "notes": "",
+      "quotes": [
+        {
+          "text": "I am an Inquisitor.",
+          "character": "Eisenhorn"
+        }
+      ]
     },
     {
       "id": "49455",
@@ -3518,7 +4886,13 @@
         "Young Adult"
       ],
       "platform": "goodreads",
-      "notes": ""
+      "notes": "",
+      "quotes": [
+        {
+          "text": "I am a sick man... I am a spiteful man.",
+          "character": "The Underground Man"
+        }
+      ]
     },
     {
       "id": "12880",
@@ -3542,7 +4916,13 @@
         "Fiction"
       ],
       "platform": "goodreads",
-      "notes": ""
+      "notes": "",
+      "quotes": [
+        {
+          "text": "History is a record of violence.",
+          "character": "Rebecca West"
+        }
+      ]
     },
     {
       "id": "166990",
@@ -3561,7 +4941,13 @@
         "Nature"
       ],
       "platform": "goodreads",
-      "notes": ""
+      "notes": "",
+      "quotes": [
+        {
+          "text": "Space has a way of shaping the soul.",
+          "character": "Gretel Ehrlich"
+        }
+      ]
     },
     {
       "id": "54998275",
@@ -3590,7 +4976,17 @@
         "Art & Design"
       ],
       "platform": "goodreads",
-      "notes": ""
+      "notes": "",
+      "quotes": [
+        {
+          "text": "Amaze!",
+          "character": "Rocky"
+        },
+        {
+          "text": "I am scary space monster. You are leaky space blob.",
+          "character": "Rocky"
+        }
+      ]
     },
     {
       "id": "195790597",
@@ -3617,7 +5013,13 @@
       "seriesName": "Curse Bearer",
       "seriesIndex": 1,
       "platform": "goodreads",
-      "notes": ""
+      "notes": "",
+      "quotes": [
+        {
+          "text": "Crows remember.",
+          "character": "Narrator"
+        }
+      ]
     },
     {
       "id": "195790571",
@@ -3643,7 +5045,13 @@
       "seriesName": "Blacktongue",
       "seriesIndex": 0,
       "platform": "goodreads",
-      "notes": ""
+      "notes": "",
+      "quotes": [
+        {
+          "text": "War changes us.",
+          "character": "Narrator"
+        }
+      ]
     },
     {
       "id": "30078567",
@@ -3677,7 +5085,13 @@
       "seriesName": "The Interdependency",
       "seriesIndex": 1,
       "platform": "goodreads",
-      "notes": ""
+      "notes": "",
+      "quotes": [
+        {
+          "text": "The flow must continue.",
+          "character": "Cardenia"
+        }
+      ]
     },
     {
       "id": "55777447",
@@ -3704,7 +5118,13 @@
       "seriesName": "Gunmetal Gods",
       "seriesIndex": 1,
       "platform": "goodreads",
-      "notes": ""
+      "notes": "",
+      "quotes": [
+        {
+          "text": "Gods bleed like men.",
+          "character": "Kevah"
+        }
+      ]
     },
     {
       "id": "17255186",
@@ -3728,7 +5148,17 @@
         "Fiction"
       ],
       "platform": "goodreads",
-      "notes": ""
+      "notes": "",
+      "quotes": [
+        {
+          "text": "Any improvement made anywhere besides the bottleneck is an illusion.",
+          "character": "Bill"
+        },
+        {
+          "text": "Work in process is the silent killer.",
+          "character": "Bill"
+        }
+      ]
     },
     {
       "id": "35167685",
@@ -3753,7 +5183,17 @@
         "Art & Design"
       ],
       "platform": "goodreads",
-      "notes": ""
+      "notes": "",
+      "quotes": [
+        {
+          "text": "The first principle is that you must not fool yourself and you are the easiest person to fool.",
+          "character": "Richard Feynman"
+        },
+        {
+          "text": "I don't care what they think.",
+          "character": "Richard Feynman"
+        }
+      ]
     },
     {
       "id": "62919748",
@@ -3784,7 +5224,13 @@
       "seriesName": "Hierarchy",
       "seriesIndex": 1,
       "platform": "goodreads",
-      "notes": ""
+      "notes": "",
+      "quotes": [
+        {
+          "text": "The strength of the chain lies in the link.",
+          "character": "Vis"
+        }
+      ]
     },
     {
       "id": "30036",
@@ -3815,7 +5261,13 @@
       "seriesName": "The Elric Saga",
       "seriesIndex": 1,
       "platform": "goodreads",
-      "notes": ""
+      "notes": "",
+      "quotes": [
+        {
+          "text": "Blood and souls for my lord Arioch!",
+          "character": "Elric"
+        }
+      ]
     },
     {
       "id": "104089",
@@ -3842,7 +5294,13 @@
         "Art & Design"
       ],
       "platform": "goodreads",
-      "notes": ""
+      "notes": "",
+      "quotes": [
+        {
+          "text": "There are no wrong turnings. Only paths we had not known we were meant to walk.",
+          "character": "Baerd"
+        }
+      ]
     },
     {
       "id": "951749",
@@ -3869,7 +5327,13 @@
       "seriesName": "The Dying Earth",
       "seriesIndex": 1,
       "platform": "goodreads",
-      "notes": ""
+      "notes": "",
+      "quotes": [
+        {
+          "text": "Beauty is a floating bubble.",
+          "character": "Turjan"
+        }
+      ]
     },
     {
       "id": "13721709",
@@ -3894,7 +5358,17 @@
         "Adventure"
       ],
       "platform": "goodreads",
-      "notes": ""
+      "notes": "",
+      "quotes": [
+        {
+          "text": "Sega does what Nintendon't.",
+          "character": "Marketing Slogan"
+        },
+        {
+          "text": "The industry was a battlefield.",
+          "character": "Blake J. Harris"
+        }
+      ]
     },
     {
       "id": "20518872",
@@ -3955,7 +5429,13 @@
       "seriesName": "A Chorus of Dragons",
       "seriesIndex": 1,
       "platform": "goodreads",
-      "notes": ""
+      "notes": "",
+      "quotes": [
+        {
+          "text": "We are all the heroes of our own stories.",
+          "character": "Kihrin"
+        }
+      ]
     },
     {
       "id": "30809689",
@@ -3980,7 +5460,17 @@
         "Fiction"
       ],
       "platform": "goodreads",
-      "notes": ""
+      "notes": "",
+      "quotes": [
+        {
+          "text": "It is the nature of the thing that it dies.",
+          "character": "Odin"
+        },
+        {
+          "text": "Wise words are like gold.",
+          "character": "Odin"
+        }
+      ]
     },
     {
       "id": "42036538",
@@ -4008,7 +5498,21 @@
       "seriesName": "The Locked Tomb",
       "seriesIndex": 1,
       "platform": "goodreads",
-      "notes": ""
+      "notes": "",
+      "quotes": [
+        {
+          "text": "We do bones, motherfucker.",
+          "character": "Gideon Nav"
+        },
+        {
+          "text": "One flesh, one end, bitch.",
+          "character": "Gideon Nav"
+        },
+        {
+          "text": "Death first to vultures and scavengers.",
+          "character": "Harrowhark Nonagesimus"
+        }
+      ]
     },
     {
       "id": "34403860",
@@ -4032,7 +5536,13 @@
       "seriesName": "Arcane Ascension",
       "seriesIndex": 1,
       "platform": "goodreads",
-      "notes": ""
+      "notes": "",
+      "quotes": [
+        {
+          "text": "Safety is an illusion.",
+          "character": "Corin Cadence"
+        }
+      ]
     },
     {
       "id": "18047306",
@@ -4055,7 +5565,13 @@
       "seriesName": "Traveler's Gate",
       "seriesIndex": 1,
       "platform": "goodreads",
-      "notes": ""
+      "notes": "",
+      "quotes": [
+        {
+          "text": "I don't need to be the strongest. I just need to be strong enough.",
+          "character": "Simon"
+        }
+      ]
     },
     {
       "id": "17250961",
@@ -4083,7 +5599,17 @@
       "seriesName": "The Stormlight Archive",
       "seriesIndex": 3,
       "platform": "goodreads",
-      "notes": ""
+      "notes": "",
+      "quotes": [
+        {
+          "text": "The most important step a man can take. It's not the first one, is it? It's the next one.",
+          "character": "Dalinar Kholin"
+        },
+        {
+          "text": "You cannot have my pain.",
+          "character": "Dalinar Kholin"
+        }
+      ]
     },
     {
       "id": "265883406",
@@ -4100,7 +5626,17 @@
         "General"
       ],
       "platform": "goodreads",
-      "notes": ""
+      "notes": "",
+      "quotes": [
+        {
+          "text": "It was the patient, cut-flower sound of a man who is waiting to die.",
+          "character": "Narrator"
+        },
+        {
+          "text": "There are three things all wise men fear.",
+          "character": "Kvothe"
+        }
+      ]
     },
     {
       "id": "340375406",
@@ -4117,7 +5653,17 @@
         "General"
       ],
       "platform": "goodreads",
-      "notes": ""
+      "notes": "",
+      "quotes": [
+        {
+          "text": "I will protect even those I hate, so long as it is right.",
+          "character": "Kaladin Stormblessed"
+        },
+        {
+          "text": "Honor is dead. But I'll see what I can do.",
+          "character": "Kaladin Stormblessed"
+        }
+      ]
     },
     {
       "id": "440949009",
@@ -4134,7 +5680,21 @@
         "General"
       ],
       "platform": "goodreads",
-      "notes": ""
+      "notes": "",
+      "quotes": [
+        {
+          "text": "Life before death. Strength before weakness. Journey before destination.",
+          "character": "The First Ideal"
+        },
+        {
+          "text": "Somebody has to start. Somebody has to step forward and do what is right, because it is right.",
+          "character": "Lirin"
+        },
+        {
+          "text": "I will protect those who cannot protect themselves.",
+          "character": "Kaladin Stormblessed"
+        }
+      ]
     },
     {
       "id": "982263071",
@@ -4151,7 +5711,17 @@
         "Horror"
       ],
       "platform": "goodreads",
-      "notes": ""
+      "notes": "",
+      "quotes": [
+        {
+          "text": "This place wants you to stay.",
+          "character": "Amy"
+        },
+        {
+          "text": "Retail is hell.",
+          "character": "Basil"
+        }
+      ]
     },
     {
       "id": "519545085",
@@ -4252,6 +5822,14 @@
         {
           "text": "There are no heroes... in life, the monsters win.",
           "character": "Sansa Stark"
+        },
+        {
+          "text": "Chaos isn't a pit. Chaos is a ladder.",
+          "character": "Littlefinger"
+        },
+        {
+          "text": "If I look back I am lost.",
+          "character": "Daenerys Targaryen"
         }
       ]
     },
@@ -4286,6 +5864,22 @@
         {
           "text": "A man without friends is a man without power.",
           "character": "Renly Baratheon"
+        },
+        {
+          "text": "Power resides where men believe it resides. It's a trick, a shadow on the wall.",
+          "character": "Varys"
+        },
+        {
+          "text": "There are no men like me. There’s only me.",
+          "character": "Jaime Lannister"
+        },
+        {
+          "text": "A man without a generation is a man without a future.",
+          "character": "Stannis Baratheon"
+        },
+        {
+          "text": "The night is dark and full of terrors.",
+          "character": "Melisandre"
         }
       ]
     },
@@ -4325,6 +5919,22 @@
         {
           "text": "Winter is coming.",
           "character": "House Stark"
+        },
+        {
+          "text": "When you play the game of thrones, you win or you die.",
+          "character": "Cersei Lannister"
+        },
+        {
+          "text": "A mind needs books as a sword needs a whetstone, if it is to keep its edge.",
+          "character": "Tyrion Lannister"
+        },
+        {
+          "text": "Fear cuts deeper than swords.",
+          "character": "Arya Stark"
+        },
+        {
+          "text": "Never forget what you are. The rest of the world will not. Wear it like armor, and it can never be used to hurt you.",
+          "character": "Tyrion Lannister"
         }
       ]
     },
@@ -4343,7 +5953,17 @@
         "General"
       ],
       "platform": "goodreads",
-      "notes": ""
+      "notes": "",
+      "quotes": [
+        {
+          "text": "Violence is the last refuge of the incompetent.",
+          "character": "Salvor Hardin"
+        },
+        {
+          "text": "Never let your sense of morals prevent you from doing what is right.",
+          "character": "Salvor Hardin"
+        }
+      ]
     },
     {
       "id": "696586410",
@@ -4360,7 +5980,21 @@
         "General"
       ],
       "platform": "goodreads",
-      "notes": ""
+      "notes": "",
+      "quotes": [
+        {
+          "text": "The only way to get rid of a temptation is to yield to it.",
+          "character": "Lord Henry Wotton"
+        },
+        {
+          "text": "There is only one thing in the world worse than being talked about, and that is not being talked about.",
+          "character": "Lord Henry Wotton"
+        },
+        {
+          "text": "To define is to limit.",
+          "character": "Lord Henry Wotton"
+        }
+      ]
     },
     {
       "id": "693669884",
@@ -4378,7 +6012,17 @@
         "Romance"
       ],
       "platform": "goodreads",
-      "notes": ""
+      "notes": "",
+      "quotes": [
+        {
+          "text": "The oldest and strongest emotion of mankind is fear, and the oldest and strongest kind of fear is fear of the unknown.",
+          "character": "H.P. Lovecraft"
+        },
+        {
+          "text": "Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn.",
+          "character": "Chant"
+        }
+      ]
     },
     {
       "id": "581620167",
@@ -4411,6 +6055,14 @@
         {
           "text": "My friends, you bow to no one.",
           "character": "Aragorn"
+        },
+        {
+          "text": "I am no man.",
+          "character": "Éowyn"
+        },
+        {
+          "text": "The journey doesn't end here. Death is just another path, one that we all must take.",
+          "character": "Gandalf"
         }
       ]
     },
@@ -4444,6 +6096,10 @@
         },
         {
           "text": "Boil 'em, mash 'em, stick 'em in a stew.",
+          "character": "Samwise Gamgee"
+        },
+        {
+          "text": "There is some good in this world, and it's worth fighting for.",
           "character": "Samwise Gamgee"
         }
       ]
@@ -4479,6 +6135,14 @@
         {
           "text": "I will take the Ring... though I do not know the way.",
           "character": "Frodo Baggins"
+        },
+        {
+          "text": "I will take the Ring, though I do not know the way.",
+          "character": "Frodo Baggins"
+        },
+        {
+          "text": "You shall not pass!",
+          "character": "Gandalf"
         }
       ]
     },
@@ -4513,6 +6177,14 @@
         {
           "text": "It does not do to leave a live dragon out of your calculations, if you live near him.",
           "character": "Bilbo Baggins"
+        },
+        {
+          "text": "I’m going on an adventure!",
+          "character": "Bilbo Baggins"
+        },
+        {
+          "text": "True courage is about knowing not when to take a life, but when to spare one.",
+          "character": "Gandalf"
         }
       ]
     },
@@ -4531,7 +6203,49 @@
         "General"
       ],
       "platform": "goodreads",
-      "notes": ""
+      "notes": "",
+      "quotes": [
+        {
+          "text": "Too many words. Witness.",
+          "character": "Karsa Orlong"
+        },
+        {
+          "text": "Ambition is not a dirty word. Piss on compromise. Go for the throat.",
+          "character": "Lorn"
+        },
+        {
+          "text": "Every decision you make can change the world. The best life is the one the gods don't notice.",
+          "character": "Sorry"
+        },
+        {
+          "text": "I am the Emperor. And I am tired.",
+          "character": "Kellanved"
+        },
+        {
+          "text": "Mockra is the path of the mind. And the mind is a trap.",
+          "character": "Quick Ben"
+        },
+        {
+          "text": "First in, last out.",
+          "character": "Bridgeburners"
+        },
+        {
+          "text": "Always an even trade.",
+          "character": "Vorcan"
+        },
+        {
+          "text": "Power is a game of shadows.",
+          "character": "Shadowthrone"
+        },
+        {
+          "text": "The harder the world, the softer the heart must be.",
+          "character": "Whiskeyjack"
+        },
+        {
+          "text": "Regret is the domain of those who have earned the right to look back.",
+          "character": "Lorn"
+        }
+      ]
     },
     {
       "id": "374674775",
@@ -4548,7 +6262,29 @@
         "General"
       ],
       "platform": "goodreads",
-      "notes": ""
+      "notes": "",
+      "quotes": [
+        {
+          "text": "I have stolen princesses back from sleeping barrow kings. I burned down the town of Trebon. I have spent the night with Felurian and left with both my sanity and my life. I was expelled from the University at a younger age than most people are allowed in. I tread paths by moonlight that others fear to speak of during day. I have talked to Gods, loved women, and written songs that make the minstrels weep.",
+          "character": "Kvothe"
+        },
+        {
+          "text": "You may have heard of me.",
+          "character": "Kvothe"
+        },
+        {
+          "text": "It was the patient, cut-flower sound of a man who is waiting to die.",
+          "character": "Narrator"
+        },
+        {
+          "text": "Words are pale shadows of forgotten names.",
+          "character": "Elodin"
+        },
+        {
+          "text": "There are three things all wise men fear: the sea in storm, a night with no moon, and the anger of a gentle man.",
+          "character": "Narrator"
+        }
+      ]
     },
     {
       "id": "828341483",
@@ -4565,7 +6301,29 @@
         "General"
       ],
       "platform": "goodreads",
-      "notes": ""
+      "notes": "",
+      "quotes": [
+        {
+          "text": "I must not fear. Fear is the mind-killer.",
+          "character": "Paul Atreides"
+        },
+        {
+          "text": "He who controls the spice controls the universe.",
+          "character": "Baron Harkonnen"
+        },
+        {
+          "text": "The mystery of life isn't a problem to solve, but a reality to experience.",
+          "character": "Reverend Mother Gaius Helen Mohiam"
+        },
+        {
+          "text": "Deep in the human unconscious is a pervasive need for a logical universe that makes sense. But the real universe is always one step beyond logic.",
+          "character": "Princess Irulan"
+        },
+        {
+          "text": "A beginning is the time for taking the most delicate care that the balances are correct.",
+          "character": "Princess Irulan"
+        }
+      ]
     },
     {
       "id": "635743398",
@@ -4584,7 +6342,25 @@
         "Mythology"
       ],
       "platform": "goodreads",
-      "notes": ""
+      "notes": "",
+      "quotes": [
+        {
+          "text": "Gods die. And when they truly die they are unmourned and unremembered. Ideas are more difficult to kill than people, but they can be killed, in the end.",
+          "character": "Wednesday"
+        },
+        {
+          "text": "People believe, thought Shadow. It’s what people do. They believe.",
+          "character": "Shadow Moon"
+        },
+        {
+          "text": "There's never been a true war that wasn't fought between two sets of people who were certain they were in the right.",
+          "character": "Mr. Nancy"
+        },
+        {
+          "text": "This is the only country in the world that worries about what it is.",
+          "character": "Wednesday"
+        }
+      ]
     }
   ]
 }
