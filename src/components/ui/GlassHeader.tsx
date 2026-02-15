@@ -29,14 +29,13 @@ export const GlassHeader: React.FC<GlassHeaderProps> = ({ currentRead }) => {
                         <a href="https://www.sardistic.com/gallery-landing/" className={styles.link} target="_blank" rel="noopener noreferrer">gallery</a>
                         <a href="https://audio.sardistic.com/" className={styles.link} target="_blank" rel="noopener noreferrer">audio</a>
                         <a href="https://chat.sardistic.com/" className={styles.link} target="_blank" rel="noopener noreferrer">chat</a>
-                        <a href="https://course.sardistic.com/" className={styles.link} target="_blank" rel="noopener noreferrer">discourse</a>
+                        <a href="https://write.sardistic.com/" className={styles.link} target="_blank" rel="noopener noreferrer">write</a>
                     </nav>
                 </div>
 
                 {currentRead && (
-                    <div className={styles.readingWidget}>
+                    <div className={styles.readingWidget} style={{ backgroundImage: `url(${currentRead.coverImage})` }}>
                         <RedParticlesOverlay />
-                        <div className={styles.readingCover} style={{ backgroundImage: `url(${currentRead.coverImage})` }} />
                         <div className={styles.readingInfo}>
                             <span className={styles.readingLabel}>Reading Now</span>
                             <span className={styles.readingTitle}>{currentRead.title}</span>
