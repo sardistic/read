@@ -45,7 +45,7 @@ export default async function Home() {
   const currentCover = (currentlyReading.length > 0 ? currentlyReading[0] : readWorks[0])?.coverImage;
 
   return (
-    <DashboardLayout>
+    <DashboardLayout currentRead={currentlyReading[0]}>
       <AtmosphericBackground image={currentCover} />
       <div className={styles.grid}>
 
@@ -98,12 +98,13 @@ export default async function Home() {
         <div className={styles.contentGrid}>
           {/* Main Feed / Timeline Placeholder */}
           <div className={styles.mainColumn}>
-            <div className={styles.sectionHeader}>
+            {/* <div className={styles.sectionHeader}>
               <h2>Currently Reading</h2>
-            </div>
+            </div> */}
 
             <div className={styles.readingList}>
-              {currentlyReading.map(work => (
+              {/* Moved to Header */}
+              {/* {currentlyReading.map(work => (
                 <Link href={`/book/${work.id}`} key={work.id} style={{ textDecoration: 'none' }}>
                   <PaperCard
                     elevation="md"
@@ -145,7 +146,7 @@ export default async function Home() {
                     </div>
                   </PaperCard>
                 </Link>
-              ))}
+              ))} */}
 
               {currentlyReading.length === 0 && (
                 <PaperCard elevation="sm" className={styles.emptyState}>
