@@ -34,7 +34,14 @@ export const RedParticlesOverlay = () => {
 
         const initParticles = () => {
             particles = [];
-            const particleCount = Math.floor((canvas.width * canvas.height) / 60); // Slightly denser
+            // Mobile/Performance optimization:
+            const isMobile = window.innerWidth < 768;
+            const divider = isMobile ? 250 : 60; // Much fewer particles on mobile
+            const particleCount = Math.floor((canvas.width * canvas.height) / divider);
+
+            // Respect reduced motion
+            const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            if (prefersReducedMotion) return; // No particles
 
             for (let i = 0; i < particleCount; i++) {
                 particles.push({

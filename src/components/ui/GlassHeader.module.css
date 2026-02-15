@@ -22,6 +22,12 @@
     /* For absolute centering */
 }
 
+@media (max-width: 768px) {
+    .inner {
+        padding: 0.5rem 1rem;
+    }
+}
+
 .leftSection {
     display: flex;
     align-items: center;
@@ -46,10 +52,31 @@
     filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.2));
 }
 
+@media (max-width: 600px) {
+    .logo {
+        font-size: 0;
+        /* Hide text "read" on very small screens if needed, or keep it */
+    }
+
+    .logoImage {
+        width: 32px;
+        height: 32px;
+    }
+}
+
 .nav {
     display: flex;
     align-items: center;
     gap: 24px;
+}
+
+@media (max-width: 900px) {
+    .nav {
+        display: none;
+        /* Hide nav links on mobile/tablet to save space for widget */
+    }
+
+    /* You might want a hamburger menu here eventually, but for now user asked to fix layout/performance */
 }
 
 .link {
@@ -86,6 +113,8 @@
     /* Let inner content handle padding or size */
     width: 400px;
     /* Wider */
+    max-width: 90vw;
+    /* Responsive cap */
     height: 48px;
     /* Fixed compact height to fit header */
     background-size: cover;
@@ -177,4 +206,21 @@
     flex: 1;
     /* Fill remaining space */
     text-align: center;
+}
+
+@media (max-width: 600px) {
+    .readingWidget {
+        width: 100%;
+        /* Full width on tiny screens? Or just let max-width handle it */
+        max-width: calc(100vw - 120px);
+        /* Leave room for logo/profile */
+        left: 50%;
+        /* Still centered, but constraint by max-width */
+        height: 40px;
+        /* slightly smaller */
+    }
+
+    .readingTitle {
+        font-size: 0.8rem;
+    }
 }
