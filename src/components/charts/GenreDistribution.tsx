@@ -59,8 +59,8 @@ export const GenreDistribution = ({ works }: { works: Work[] }) => {
 
         // Filter out noise (< 6 books)
         const nodeData = aggregated
-            .filter(g => g.value >= 6)
-            .map((g) => {
+            .filter((g: { value: number }) => g.value >= 6)
+            .map((g: { name: string; value: number; parent: string }) => {
                 const isMajor = g.value >= 15; // Raised threshold for major distinction
                 const radius = Math.pow(g.value, 0.4) * 4;
 
@@ -82,7 +82,7 @@ export const GenreDistribution = ({ works }: { works: Work[] }) => {
         const parents = Object.keys(GALAXY_COLORS);
 
         // Cartographic Neighborhood Hubs (Fixed regions for each category)
-        const nodes: Node[] = nodeData.map(n => {
+        const nodes: Node[] = nodeData.map((n: Node) => {
             const parentIndex = parents.indexOf(n.parent);
             // 4 columns, 3 rows grid for 12 categories
             const col = parentIndex % 4;
@@ -174,11 +174,11 @@ export const GenreDistribution = ({ works }: { works: Work[] }) => {
         const maxCount = Math.max(...nodes.map(n => n.count)) || 1;
 
         setNodes(prevNodes => {
-            let workingNodes = prevNodes.map(n => ({ ...n }));
+            let workingNodes: Node[] = prevNodes.map((n: Node) => ({ ...n }));
 
             for (let iter = 0; iter < 60; iter++) {
                 // Gravity & Clustering (Scale Gravity by Relevance)
-                workingNodes.forEach(node => {
+                workingNodes.forEach((node: Node) => {
                     const dx = center.x - node.x;
                     const dy = center.y - node.y;
                     const distToCenter = Math.sqrt(dx * dx + dy * dy);
@@ -191,7 +191,7 @@ export const GenreDistribution = ({ works }: { works: Work[] }) => {
                     node.vx += dx * gravityScale;
                     node.vy += dy * gravityScale;
 
-                    const clusterNodes = workingNodes.filter(n => n.parent === node.parent);
+                    const clusterNodes = workingNodes.filter((n: Node) => n.parent === node.parent);
                     if (clusterNodes.length > 1) {
                         const parentIndex = Object.keys(GALAXY_COLORS).indexOf(node.parent);
                         const col = parentIndex % 4;
@@ -225,8 +225,8 @@ export const GenreDistribution = ({ works }: { works: Work[] }) => {
 
                 // Links
                 initialLinks.forEach(link => {
-                    const source = workingNodes.find(n => n.id === link.source);
-                    const target = workingNodes.find(n => n.id === link.target);
+                    const source = workingNodes.find((n: Node) => n.id === link.source);
+                    const target = workingNodes.find((n: Node) => n.id === link.target);
                     if (source && target) {
                         const dx = target.x - source.x;
                         const dy = target.y - source.y;
@@ -240,7 +240,7 @@ export const GenreDistribution = ({ works }: { works: Work[] }) => {
                 });
 
                 // Movement
-                workingNodes.forEach(node => {
+                workingNodes.forEach((node: Node) => {
                     node.x += node.vx;
                     node.y += node.vy;
                     node.vx *= dampening;
@@ -260,7 +260,7 @@ export const GenreDistribution = ({ works }: { works: Work[] }) => {
 
     // Interaction Handlers
     const handlePointerDown = (e: React.PointerEvent, nodeId: string) => {
-        const node = nodes.find(n => n.id === nodeId);
+        const node = nodes.find((n: Node) => n.id === nodeId);
         if (!node) return;
         (e.target as Element).setPointerCapture(e.pointerId);
         isDragging.current = nodeId;
@@ -274,7 +274,7 @@ export const GenreDistribution = ({ works }: { works: Work[] }) => {
         const x = e.clientX - rect.left;
         const y = e.clientY - rect.top;
 
-        setNodes(prev => prev.map(n => {
+        setNodes(prev => prev.map((n: Node) => {
             if (n.id === isDragging.current) {
                 return { ...n, x, y, vx: 0, vy: 0 };
             }
@@ -337,8 +337,8 @@ export const GenreDistribution = ({ works }: { works: Work[] }) => {
 
                     {/* Links */}
                     {initialLinks.map((link, i) => {
-                        const source = nodes.find(n => n.id === link.source);
-                        const target = nodes.find(n => n.id === link.target);
+                        const source = nodes.find((n: Node) => n.id === link.source);
+                        const target = nodes.find((n: Node) => n.id === link.target);
                         if (!source || !target) return null;
 
                         return (
