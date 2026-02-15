@@ -19,6 +19,8 @@ interface CustomItem {
     user_review: string;
     average_rating: string;
     book_published: string;
+    categories: string[];
+    title: string;
 }
 
 const SHELVES = ['read', 'currently-reading', 'to-read'];
@@ -33,7 +35,7 @@ export async function GET(request: Request) {
     }
 
     try {
-        const parser = new Parser<any, CustomItem>({
+        const parser = new Parser({
             customFields: {
                 item: [
                     'book_id',
