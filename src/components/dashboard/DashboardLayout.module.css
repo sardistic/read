@@ -1,0 +1,25 @@
+.wrapper {
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background: transparent;
+    /* Explicitly transparent */
+}
+
+.main {
+    flex: 1;
+    padding: 32px 32px 48px;
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    overflow-y: auto;
+    /* Enable internal scrolling */
+    min-height: 0;
+    /* Critical for flex child scrolling */
+}
+
+.content {
+    width: 100%;
+    max-width: 1200px;
+}

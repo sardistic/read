@@ -1,0 +1,400 @@
+.container {
+    width: 100%;
+    overflow: hidden;
+    padding: 12px 0;
+    /* Reduced from 24px */
+    margin-bottom: 8px;
+    /* Reduced from 32px */
+    position: relative;
+    /* Add perspective for 3D rotation effects if we implement them later */
+    perspective: 1000px;
+    /* Removed mask-image as user dislikes the fade */
+}
+
+.scrollWrapper {
+    display: flex;
+    width: max-content;
+    align-items: flex-end;
+    gap: 4px;
+    padding: 0 4px;
+    height: 180px;
+    will-change: transform;
+    cursor: grab;
+    /* Indicate draggable */
+
+    /* Reflection Effect for Premium "Glassy" Look */
+    /* This creates a mirror reflection below the books, fading out */
+    -webkit-box-reflect: below 2px linear-gradient(transparent, transparent 80%, rgba(255, 255, 255, 0.2));
+    /* Optimize for JS animation */
+}
+
+.scrollWrapper:active {
+    cursor: grabbing;
+}
+
+/* Pause on hover so user can click */
+.container:hover .scrollWrapper {
+    animation-play-state: paused;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-33.33%);
+    }
+
+    /* Loop 1/3 of the tripled content */
+}
+
+/* Removed CSS keyframes "scroll" as we now use JS */
+
+/* The Spine Wrapper (Handles positioning, size, and static lean) */
+.spineWrapper {
+    position: relative;
+    width: 20px;
+    height: 100%;
+    /* controlled by inline style */
+    flex-shrink: 0;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+    /* No visual styles here, just layout */
+    margin: 0 1px;
+}
+
+/* The Spine Body (Handles background, sway animation, hover effects) */
+/* Base spine style */
+.spine {
+    width: 100%;
+    height: 100%;
+    background-color: var(--surface-2);
+    border-radius: 2px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    opacity: 0.9;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+    /* Organic Sway */
+    transform-origin: bottom center;
+    /* Removed default animation */
+    /* animation-name: sway; */
+    /* animation-timing-function: ease-in-out; */
+    /* animation-iteration-count: infinite; */
+    transition: transform 0.3s ease;
+}
+
+@keyframes sway {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    33% {
+        transform: rotate(1deg);
+    }
+
+    66% {
+        transform: rotate(-0.5deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+/* Hover Effects applied to wrapper trigger changes in body */
+.spineWrapper:hover .spine {
+    transform: translateY(-12px) scale(1.15) !important;
+    /* Override sway */
+    opacity: 1;
+    box-shadow: 6px 6px 16px rgba(0, 0, 0, 0.7);
+    animation-play-state: paused;
+    /* Pause sway on hover */
+}
+
+.spineWrapper:hover {
+    z-index: 100;
+    margin: 0 8px;
+    /* Breathing room */
+}
+
+.spineLabel {
+    display: none;
+}
+
+.spineText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(180deg);
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    color: var(--ink-primary);
+    font-family: var(--font-serif);
+    font-size: 0.75rem;
+    /* Slightly smaller to fit */
+    letter-spacing: 1px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-height: 90%;
+    width: 100%;
+    text-align: center;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9), 0 0 5px rgba(0, 0, 0, 0.5);
+    z-index: 5;
+    /* mix-blend-mode: overlay; */
+    pointer-events: none;
+    opacity: 1;
+    font-weight: 500;
+}
+
+.details {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 8px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.95), transparent);
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease 0.1s;
+}
+
+.spine.expanded .details {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.rating {
+    display: block;
+    color: var(--accent-gold);
+    font-size: 0.8rem;
+    line-height: 1;
+    margin-bottom: 2px;
+}
+
+/* Spine 3D Effect / Lighting Overlay */
+.spineOverlay {
+    position: absolute;
+    inset: 0;
+    /* Gradient to simulate roundness */
+    background: linear-gradient(to right,
+            rgba(255, 255, 255, 0.15) 0%,
+            rgba(255, 255, 255, 0) 30%,
+            rgba(0, 0, 0, 0.1) 70%,
+            rgba(0, 0, 0, 0.4) 100%);
+    pointer-events: none;
+    transition: opacity 0.3s;
+
+    /* Glimmer effect */
+    background-size: 200% 100%;
+    animation: glimmer 4s ease-in-out infinite;
+}
+
+@keyframes glimmer {
+    0% {
+        background-position: 100% 0;
+        opacity: 0.8;
+    }
+
+    50% {
+        background-position: 0% 0;
+        opacity: 1;
+    }
+
+    100% {
+        background-position: 100% 0;
+        opacity: 0.8;
+    }
+}
+
+.spine.expanded .spineOverlay {
+    opacity: 0;
+}
+
+/* Expanded State (Full Cover) */
+.expandedWrapper {
+    width: 60px;
+    /* Expand the layout space */
+    z-index: 100;
+}
+
+.spine.expanded {
+    transform: translateY(-4px) scale(1.5);
+    z-index: 100;
+    opacity: 1;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
+    border: 1px solid var(--accent-gold);
+    background-position: center !important;
+}
+
+/* Modal Overlay / Backdrop */
+.modalOverlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(8px);
+    z-index: 9999;
+    /* High Z-Index */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    animation: fadeIn 0.3s ease-out;
+}
+
+/* Modal Card */
+.modalCard {
+    background-color: rgba(20, 20, 25, 0.95);
+    border: 1px solid var(--accent-gold, #c8a355);
+    border-radius: 12px;
+    padding: 32px;
+    max-width: 600px;
+    width: 100%;
+    display: flex;
+    gap: 24px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    position: relative;
+    animation: slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.modalCover {
+    width: 140px;
+    height: 210px;
+    flex-shrink: 0;
+    border-radius: 4px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    object-fit: cover;
+}
+
+.modalContent {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    /* Prevent overflow */
+}
+
+.modalTitle {
+    font-family: var(--font-heading, "Times New Roman", serif);
+    font-size: 1.8rem;
+    color: #fff;
+    margin: 0 0 4px 0;
+    line-height: 1.2;
+}
+
+.modalAuthor {
+    font-size: 1rem;
+    color: var(--text-muted, #888);
+    margin-bottom: 16px;
+    font-style: italic;
+}
+
+.modalExcerpt {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #ccc;
+    margin-bottom: 24px;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    flex: 1;
+}
+
+.modalActions {
+    margin-top: auto;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.viewButton {
+    background-color: var(--accent-gold, #c8a355);
+    color: #000;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.viewButton:hover {
+    background-color: #fff;
+    transform: translateY(-1px);
+}
+
+.closeButton {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: none;
+    border: none;
+    color: #666;
+    cursor: pointer;
+    font-size: 1.5rem;
+    line-height: 1;
+    padding: 4px;
+    transition: color 0.2s;
+}
+
+.closeButton:hover {
+    color: #fff;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px) scale(0.95);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 600px) {
+    .modalCard {
+        flex-direction: column;
+        padding: 24px;
+        margin: 20px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .modalCover {
+        width: 120px;
+        height: 180px;
+        margin-bottom: 16px;
+    }
+
+    .modalContent {
+        align-items: center;
+    }
+
+    .modalActions {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .viewButton {
+        width: 100%;
+        text-align: center;
+    }
+}

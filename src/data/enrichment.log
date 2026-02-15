@@ -1,0 +1,271 @@
+[2026-02-14T23:30:09.749Z] Skipping (already has data): Pale Fire
+[2026-02-14T23:30:09.759Z] Enriching: Shadows Upon Time (The Sun Eater, #7)...
+[2026-02-14T23:30:10.026Z] Failed to find metadata for: Shadows Upon Time (The Sun Eater, #7)
+[2026-02-14T23:30:10.287Z] Skipping (already has data): Light Bringer (Red Rising Saga, #6)
+[2026-02-14T23:30:10.290Z] Skipping (already has data): Dark Age (Red Rising Saga, #5)
+[2026-02-14T23:30:10.390Z] Enriching: The Strength of the Few (Hierarchy, #2)...
+[2026-02-14T23:30:10.603Z] Failed to find metadata for: The Strength of the Few (Hierarchy, #2)
+[2026-02-14T23:30:10.866Z] Skipping (already has data): Iron Gold (Red Rising Saga, #4)
+[2026-02-14T23:30:10.868Z] Skipping (already has data): This Inevitable Ruin (Dungeon Crawler Carl, #7)
+[2026-02-14T23:30:10.868Z] Enriching: The Eye of the Bedlam Bride (Dungeon Crawler Carl, #6)...
+[2026-02-14T23:30:11.185Z] Failed to find metadata for: The Eye of the Bedlam Bride (Dungeon Crawler Carl, #6)
+[2026-02-14T23:30:11.447Z] Skipping (already has data): The Butcher's Masquerade (Dungeon Crawler Carl, #5)
+[2026-02-14T23:30:11.450Z] Skipping (already has data): The Gate of the Feral Gods (Dungeon Crawler Carl, #4)
+[2026-02-14T23:30:11.450Z] Skipping (already has data): The Dungeon Anarchist's Cookbook (Dungeon Crawler Carl, #3)
+[2026-02-14T23:30:11.451Z] Skipping (already has data): Old Goriot
+[2026-02-14T23:30:11.452Z] Skipping (already has data): The Infinite and the Divine (Warhammer 40,000)
+[2026-02-14T23:30:11.452Z] Skipping (already has data): Project Hail Mary
+[2026-02-14T23:30:11.453Z] Skipping (already has data): Carl's Doomsday Scenario (Dungeon Crawler Carl, #2)
+[2026-02-14T23:30:11.453Z] Skipping (already has data): Dungeon Crawler Carl (Dungeon Crawler Carl, #1)
+[2026-02-14T23:30:11.454Z] Enriching: The Failures (The Wanderlands, #1)...
+[2026-02-14T23:30:11.736Z] Failed to find metadata for: The Failures (The Wanderlands, #1)
+[2026-02-14T23:30:11.997Z] Enriching: The Devils (The Devils, #1)...
+[2026-02-14T23:30:12.502Z] Skipping (already has data): The Will of the Many (Hierarchy, #1)
+[2026-02-14T23:30:12.504Z] Skipping (already has data): The Sunlit Man
+[2026-02-14T23:30:12.504Z] Enriching: Disquiet Gods (The Sun Eater, #6)...
+[2026-02-14T23:30:12.806Z] Failed to find metadata for: Disquiet Gods (The Sun Eater, #6)
+[2026-02-14T23:30:13.067Z] Enriching: Ashes of Man (The Sun Eater, #5)...
+[2026-02-14T23:30:13.301Z] Failed to find metadata for: Ashes of Man (The Sun Eater, #5)
+[2026-02-14T23:30:13.558Z] Enriching: Kingdoms of Death (The Sun Eater, #4)...
+[2026-02-14T23:30:14.062Z] Enriching: Demon in White (The Sun Eater, #3)...
+[2026-02-14T23:30:14.367Z] Failed to find metadata for: Demon in White (The Sun Eater, #3)
+[2026-02-14T23:30:14.628Z] Enriching: Howling Dark (The Sun Eater, #2)...
+[2026-02-14T23:30:14.884Z] Failed to find metadata for: Howling Dark (The Sun Eater, #2)
+[2026-02-14T23:30:15.149Z] Enriching: The Lesser Devil (The Sun Eater, #1.5)...
+[2026-02-14T23:30:15.619Z] Skipping (already has data): Wind and Truth (The Stormlight Archive, #5)
+[2026-02-14T23:30:15.621Z] Skipping (already has data): Empire of Silence (The Sun Eater, #1)
+[2026-02-14T23:30:15.622Z] Skipping (already has data): Morning Star (Red Rising Saga, #3)
+[2026-02-14T23:30:15.623Z] Skipping (already has data): Golden Son (Red Rising Saga, #2)
+[2026-02-14T23:30:15.624Z] Skipping (already has data): Red Rising (Red Rising Saga, #1)
+[2026-02-14T23:30:15.625Z] Skipping (already has data): The Hamlet (The Snopes Trilogy, #1)
+[2026-02-14T23:30:15.626Z] Skipping (already has data): Babel
+[2026-02-14T23:30:15.627Z] Skipping (already has data): Yumi and the Nightmare Painter (Hoid's Travails, #2)
+[2026-02-14T23:30:15.628Z] Enriching: System Collapse (The Murderbot Diaries, #7)...
+[2026-02-14T23:30:15.906Z] Failed to find metadata for: System Collapse (The Murderbot Diaries, #7)
+[2026-02-14T23:30:16.168Z] Skipping (already has data): Fugitive Telemetry (The Murderbot Diaries, #6)
+[2026-02-14T23:30:16.169Z] Enriching: Network Effect (The Murderbot Diaries, #5)...
+[2026-02-14T23:30:16.406Z] Failed to find metadata for: Network Effect (The Murderbot Diaries, #5)
+[2026-02-14T23:30:16.657Z] Enriching: Exit Strategy (The Murderbot Diaries, #4)...
+[2026-02-14T23:30:17.179Z] Skipping (already has data): Rogue Protocol (The Murderbot Diaries, #3)
+[2026-02-14T23:30:17.181Z] Skipping (already has data): Artificial Condition (The Murderbot Diaries, #2)
+[2026-02-14T23:30:17.181Z] Skipping (already has data): All Systems Red (The Murderbot Diaries, #1)
+[2026-02-14T23:30:17.182Z] Skipping (already has data): A Psalm for the Wild-Built (Monk & Robot, #1)
+[2026-02-14T23:30:17.183Z] Skipping (already has data): This Is How You Lose the Time War
+[2026-02-14T23:30:17.184Z] Enriching: The First Collected Tales of Bauchelain and Korbal Broach (The Tales of Bauchelain and Korbal Broach, #1-3)...
+[2026-02-14T23:30:17.507Z] Failed to find metadata for: The First Collected Tales of Bauchelain and Korbal Broach (The Tales of Bauchelain and Korbal Broach, #1-3)
+[2026-02-14T23:30:17.774Z] Enriching: The Wisdom of Crowds (The Age of Madness, #3)...
+[2026-02-14T23:30:18.308Z] Enriching: The Trouble with Peace (The Age of Madness, #2)...
+[2026-02-14T23:30:18.874Z] Enriching: A Little Hatred (The Age of Madness, #1)...
+[2026-02-14T23:30:19.052Z] Failed to find metadata for: A Little Hatred (The Age of Madness, #1)
+[2026-02-14T23:30:19.316Z] Skipping (already has data): Sharp Ends
+[2026-02-14T23:30:19.318Z] Skipping (already has data): Half a King (Shattered Sea, #1)
+[2026-02-14T23:30:19.319Z] Skipping (already has data): Red Country
+[2026-02-14T23:30:19.320Z] Skipping (already has data): The Heroes
+[2026-02-14T23:30:19.321Z] Skipping (already has data): Best Served Cold
+[2026-02-14T23:30:19.322Z] Enriching: The Sandman: Act II (Sandman Audible Original, #2)...
+[2026-02-14T23:30:19.505Z] Failed to find metadata for: The Sandman: Act II (Sandman Audible Original, #2)
+[2026-02-14T23:30:19.758Z] Enriching: Last Argument of Kings (The First Law, #3)...
+[2026-02-14T23:30:20.251Z] Enriching: Before They Are Hanged (The First Law, #2)...
+[2026-02-14T23:30:20.485Z] Failed to find metadata for: Before They Are Hanged (The First Law, #2)
+[2026-02-14T23:30:20.741Z] Enriching: The Blade Itself (The First Law, #1)...
+[2026-02-14T23:30:21.276Z] Enriching: Night of Knives (Novels of the Malazan Empire, #1)...
+[2026-02-14T23:30:21.539Z] Failed to find metadata for: Night of Knives (Novels of the Malazan Empire, #1)
+[2026-02-14T23:30:21.795Z] Skipping (already has data): The Crippled God (Malazan Book of the Fallen, #10)
+[2026-02-14T23:30:21.797Z] Skipping (already has data): Dust of Dreams (Malazan Book of the Fallen, #9)
+[2026-02-14T23:30:21.799Z] Skipping (already has data): Toll the Hounds (Malazan Book of the Fallen, #8)
+[2026-02-14T23:30:21.800Z] Enriching: Deadhouse Gates (Malazan Book of the Fallen, #2)...
+[2026-02-14T23:30:22.286Z] Skipping (already has data): Reaper's Gale (Malazan Book of the Fallen, #7)
+[2026-02-14T23:30:22.289Z] Skipping (already has data): The Bonehunters (Malazan Book of the Fallen, #6)
+[2026-02-14T23:30:22.291Z] Skipping (already has data): A Memory of Light (The Wheel of Time, #14)
+[2026-02-14T23:30:22.292Z] Skipping (already has data): Towers of Midnight (The Wheel of Time, #13)
+[2026-02-14T23:30:22.293Z] Skipping (already has data): The Gathering Storm (The Wheel of Time, #12)
+[2026-02-14T23:30:22.294Z] Skipping (already has data): Knife of Dreams (The Wheel of Time, #11)
+[2026-02-14T23:30:22.295Z] Skipping (already has data): Crossroads of Twilight (The Wheel of Time, #10)
+[2026-02-14T23:30:22.296Z] Skipping (already has data): The Last Question
+[2026-02-14T23:30:22.296Z] Skipping (already has data): The Lost Metal (Mistborn, #7)
+[2026-02-14T23:30:22.297Z] Skipping (already has data): Winter's Heart (The Wheel of Time, #9)
+[2026-02-14T23:30:22.298Z] Skipping (already has data): The Path of Daggers (The Wheel of Time, #8)
+[2026-02-14T23:30:22.300Z] Skipping (already has data): A Crown of Swords (The Wheel of Time, #7)
+[2026-02-14T23:30:22.301Z] Skipping (already has data): Lord of Chaos (The Wheel of Time, #6)
+[2026-02-14T23:30:22.302Z] Skipping (already has data): The Fires of Heaven (The Wheel of Time, #5)
+[2026-02-14T23:30:22.303Z] Skipping (already has data): The Shadow Rising (The Wheel of Time, #4)
+[2026-02-14T23:30:22.304Z] Skipping (already has data): The Dragon Reborn (The Wheel of Time, #3)
+[2026-02-14T23:30:22.305Z] Skipping (already has data): The Great Hunt (The Wheel of Time, #2)
+[2026-02-14T23:30:22.306Z] Enriching: The Sandman: Act I...
+[2026-02-14T23:30:22.534Z] Failed to find metadata for: The Sandman: Act I
+[2026-02-14T23:30:22.790Z] Skipping (already has data): Arcanum Unbounded: The Cosmere Collection
+[2026-02-14T23:30:22.799Z] Skipping (already has data): The Bands of Mourning (Mistborn, #6)
+[2026-02-14T23:30:22.800Z] Skipping (already has data): Complex PTSD: From Surviving to Thriving
+[2026-02-14T23:30:22.801Z] Skipping (already has data): Shadows of Self (Mistborn, #5)
+[2026-02-14T23:30:22.802Z] Skipping (already has data): Midnight Tides (Malazan Book of the Fallen, #5)
+[2026-02-14T23:30:22.803Z] Enriching: House of Chains (Malazan Book of the Fallen, #4)...
+[2026-02-14T23:30:23.356Z] Skipping (already has data): The Eye of the World (The Wheel of Time, #1)
+[2026-02-14T23:30:23.358Z] Skipping (already has data): Memories of Ice (Malazan Book of the Fallen, #3)
+[2026-02-14T23:30:23.359Z] Skipping (already has data): Rhythm of War (The Stormlight Archive, #4)
+[2026-02-14T23:30:23.360Z] Skipping (already has data): The Tyranny of Merit: What's Become of the Common Good?
+[2026-02-14T23:30:23.361Z] Skipping (already has data): The Alloy of Law (Mistborn, #4)
+[2026-02-14T23:30:23.362Z] Skipping (already has data): War is a Racket
+[2026-02-14T23:30:23.363Z] Skipping (already has data): Warbreaker
+[2026-02-14T23:30:23.364Z] Skipping (already has data): Homewreckers
+[2026-02-14T23:30:23.364Z] Skipping (already has data): The Republic of Pirates: Being the True and Surprising Story of the Caribbean Pirates and the Man Who Brought Them Down
+[2026-02-14T23:30:23.366Z] Skipping (already has data): The Hero of Ages (Mistborn, #3)
+[2026-02-14T23:30:23.367Z] Skipping (already has data): The Well of Ascension (Mistborn, #2)
+[2026-02-14T23:30:23.368Z] Skipping (already has data): Beyond Good and Evil
+[2026-02-14T23:30:23.369Z] Skipping (already has data): Mistborn: The Final Empire (Mistborn, #1)
+[2026-02-14T23:30:23.370Z] Skipping (already has data): Screwtape Proposes a Toast: And Other Pieces
+[2026-02-14T23:30:23.370Z] Skipping (already has data): Oathbringer (The Stormlight Archive, #3)
+[2026-02-14T23:30:23.373Z] Skipping (already has data): The Beauty of Dusk
+[2026-02-14T23:30:23.374Z] Skipping (already has data): Xenos (Eisenhorn, #1)
+[2026-02-14T23:30:23.375Z] Skipping (already has data): Notes from Underground
+[2026-02-14T23:30:23.376Z] Skipping (already has data): Black Lamb and Grey Falcon
+[2026-02-14T23:30:23.377Z] Skipping (already has data): The Solace of Open Spaces
+[2026-02-14T23:30:23.378Z] Skipping (already has data): Project Hail Mary
+[2026-02-14T23:30:23.379Z] Skipping (already has data): When Among Crows (Curse Bearer, #1)
+[2026-02-14T23:30:23.380Z] Enriching: The Daughters' War (Blacktongue, #0)...
+[2026-02-14T23:30:23.557Z] Failed to find metadata for: The Daughters' War (Blacktongue, #0)
+[2026-02-14T23:30:23.812Z] Enriching: The Collapsing Empire (The Interdependency, #1)...
+[2026-02-14T23:30:24.011Z] Failed to find metadata for: The Collapsing Empire (The Interdependency, #1)
+[2026-02-14T23:30:24.271Z] Enriching: Gunmetal Gods (Gunmetal Gods, #1)...
+[2026-02-14T23:30:24.586Z] Failed to find metadata for: Gunmetal Gods (Gunmetal Gods, #1)
+[2026-02-14T23:30:24.854Z] Enriching: The Phoenix Project: A Novel About IT, DevOps, and Helping Your Business Win...
+[2026-02-14T23:30:25.418Z] Skipping (already has data): "Surely You're Joking, Mr. Feynman!": Adventures of a Curious Character
+[2026-02-14T23:30:25.419Z] Skipping (already has data): The Will of the Many (Hierarchy, #1)
+[2026-02-14T23:30:25.420Z] Enriching: Elric of Melniboné (The Elric Saga, #1)...
+[2026-02-14T23:30:25.966Z] Skipping (already has data): Tigana
+[2026-02-14T23:30:25.968Z] Skipping (already has data): The Dying Earth (The Dying Earth, #1)
+[2026-02-14T23:30:25.969Z] Skipping (already has data): The Antidote: Happiness for People Who Can't Stand Positive Thinking
+[2026-02-14T23:30:25.970Z] Skipping (already has data): The Three-Body Problem (Remembrance of Earth’s Past, #1)
+[2026-02-14T23:30:25.971Z] Enriching: The Ruin of Kings (A Chorus of Dragons, #1)...
+[2026-02-14T23:30:26.180Z] Failed to find metadata for: The Ruin of Kings (A Chorus of Dragons, #1)
+[2026-02-14T23:30:26.438Z] Skipping (already has data): Norse Mythology
+[2026-02-14T23:30:26.439Z] Skipping (already has data): Gideon the Ninth (The Locked Tomb, #1)
+[2026-02-14T23:30:26.439Z] Enriching: Sufficiently Advanced Magic (Arcane Ascension, #1)...
+[2026-02-14T23:30:26.616Z] Failed to find metadata for: Sufficiently Advanced Magic (Arcane Ascension, #1)
+[2026-02-14T23:30:26.881Z] Skipping (already has data): House of Blades (Traveler's Gate, #1)
+[2026-02-14T23:30:26.882Z] Skipping (already has data): Oathbringer (The Stormlight Archive, #3)
+[2026-02-14T23:31:15.456Z] Skipping (already has data): Pale Fire
+[2026-02-14T23:31:15.460Z] Enriching: Shadows Upon Time (The Sun Eater, #7)...
+[2026-02-14T23:31:16.428Z] Skipping (already has data): Light Bringer (Red Rising Saga, #6)
+[2026-02-14T23:31:16.430Z] Skipping (already has data): Dark Age (Red Rising Saga, #5)
+[2026-02-14T23:31:16.431Z] Enriching: The Strength of the Few (Hierarchy, #2)...
+[2026-02-14T23:31:17.240Z] Skipping (already has data): Iron Gold (Red Rising Saga, #4)
+[2026-02-14T23:31:17.241Z] Skipping (already has data): This Inevitable Ruin (Dungeon Crawler Carl, #7)
+[2026-02-14T23:31:17.243Z] Enriching: The Eye of the Bedlam Bride (Dungeon Crawler Carl, #6)...
+[2026-02-14T23:31:18.004Z] Skipping (already has data): The Butcher's Masquerade (Dungeon Crawler Carl, #5)
+[2026-02-14T23:31:18.005Z] Skipping (already has data): The Gate of the Feral Gods (Dungeon Crawler Carl, #4)
+[2026-02-14T23:31:18.008Z] Skipping (already has data): The Dungeon Anarchist's Cookbook (Dungeon Crawler Carl, #3)
+[2026-02-14T23:31:18.009Z] Skipping (already has data): Old Goriot
+[2026-02-14T23:31:18.010Z] Skipping (already has data): The Infinite and the Divine (Warhammer 40,000)
+[2026-02-14T23:31:18.011Z] Skipping (already has data): Project Hail Mary
+[2026-02-14T23:31:18.012Z] Skipping (already has data): Carl's Doomsday Scenario (Dungeon Crawler Carl, #2)
+[2026-02-14T23:31:18.013Z] Skipping (already has data): Dungeon Crawler Carl (Dungeon Crawler Carl, #1)
+[2026-02-14T23:31:18.014Z] Enriching: The Failures (The Wanderlands, #1)...
+[2026-02-14T23:31:18.797Z] Enriching: The Devils (The Devils, #1)...
+[2026-02-14T23:31:19.622Z] Skipping (already has data): The Will of the Many (Hierarchy, #1)
+[2026-02-14T23:31:19.624Z] Skipping (already has data): The Sunlit Man
+[2026-02-14T23:31:19.625Z] Enriching: Disquiet Gods (The Sun Eater, #6)...
+[2026-02-14T23:31:20.374Z] Enriching: Ashes of Man (The Sun Eater, #5)...
+[2026-02-14T23:31:21.276Z] Enriching: Kingdoms of Death (The Sun Eater, #4)...
+[2026-02-14T23:31:22.102Z] Enriching: Demon in White (The Sun Eater, #3)...
+[2026-02-14T23:31:22.853Z] Enriching: Howling Dark (The Sun Eater, #2)...
+[2026-02-14T23:31:23.587Z] Enriching: The Lesser Devil (The Sun Eater, #1.5)...
+[2026-02-14T23:31:24.428Z] Skipping (already has data): Wind and Truth (The Stormlight Archive, #5)
+[2026-02-14T23:31:24.431Z] Skipping (already has data): Empire of Silence (The Sun Eater, #1)
+[2026-02-14T23:31:24.433Z] Skipping (already has data): Morning Star (Red Rising Saga, #3)
+[2026-02-14T23:31:24.434Z] Skipping (already has data): Golden Son (Red Rising Saga, #2)
+[2026-02-14T23:31:24.435Z] Skipping (already has data): Red Rising (Red Rising Saga, #1)
+[2026-02-14T23:31:24.437Z] Skipping (already has data): The Hamlet (The Snopes Trilogy, #1)
+[2026-02-14T23:31:24.438Z] Skipping (already has data): Babel
+[2026-02-14T23:31:24.439Z] Skipping (already has data): Yumi and the Nightmare Painter (Hoid's Travails, #2)
+[2026-02-14T23:31:24.440Z] Enriching: System Collapse (The Murderbot Diaries, #7)...
+[2026-02-14T23:31:25.224Z] Skipping (already has data): Fugitive Telemetry (The Murderbot Diaries, #6)
+[2026-02-14T23:31:25.226Z] Enriching: Network Effect (The Murderbot Diaries, #5)...
+[2026-02-14T23:31:26.128Z] Enriching: Exit Strategy (The Murderbot Diaries, #4)...
+[2026-02-14T23:31:26.892Z] Skipping (already has data): Rogue Protocol (The Murderbot Diaries, #3)
+[2026-02-14T23:31:26.893Z] Skipping (already has data): Artificial Condition (The Murderbot Diaries, #2)
+[2026-02-14T23:31:26.894Z] Skipping (already has data): All Systems Red (The Murderbot Diaries, #1)
+[2026-02-14T23:31:26.895Z] Skipping (already has data): A Psalm for the Wild-Built (Monk & Robot, #1)
+[2026-02-14T23:31:26.896Z] Skipping (already has data): This Is How You Lose the Time War
+[2026-02-14T23:31:26.897Z] Enriching: The First Collected Tales of Bauchelain and Korbal Broach (The Tales of Bauchelain and Korbal Broach, #1-3)...
+[2026-02-14T23:31:27.683Z] Enriching: The Wisdom of Crowds (The Age of Madness, #3)...
+[2026-02-14T23:31:28.606Z] Enriching: The Trouble with Peace (The Age of Madness, #2)...
+[2026-02-14T23:31:29.416Z] Enriching: A Little Hatred (The Age of Madness, #1)...
+[2026-02-14T23:31:30.318Z] Skipping (already has data): Sharp Ends
+[2026-02-14T23:31:30.320Z] Skipping (already has data): Half a King (Shattered Sea, #1)
+[2026-02-14T23:31:30.321Z] Skipping (already has data): Red Country
+[2026-02-14T23:31:30.323Z] Skipping (already has data): The Heroes
+[2026-02-14T23:31:30.323Z] Skipping (already has data): Best Served Cold
+[2026-02-14T23:31:30.324Z] Enriching: The Sandman: Act II (Sandman Audible Original, #2)...
+[2026-02-14T23:31:30.511Z] Failed to find metadata for: The Sandman: Act II (Sandman Audible Original, #2)
+[2026-02-14T23:31:31.022Z] Enriching: Last Argument of Kings (The First Law, #3)...
+[2026-02-14T23:31:31.787Z] Enriching: Before They Are Hanged (The First Law, #2)...
+[2026-02-14T23:31:32.634Z] Enriching: The Blade Itself (The First Law, #1)...
+[2026-02-14T23:31:33.431Z] Enriching: Night of Knives (Novels of the Malazan Empire, #1)...
+[2026-02-14T23:31:34.240Z] Skipping (already has data): The Crippled God (Malazan Book of the Fallen, #10)
+[2026-02-14T23:31:34.241Z] Skipping (already has data): Dust of Dreams (Malazan Book of the Fallen, #9)
+[2026-02-14T23:31:34.243Z] Skipping (already has data): Toll the Hounds (Malazan Book of the Fallen, #8)
+[2026-02-14T23:31:34.244Z] Enriching: Deadhouse Gates (Malazan Book of the Fallen, #2)...
+[2026-02-14T23:31:34.992Z] Skipping (already has data): Reaper's Gale (Malazan Book of the Fallen, #7)
+[2026-02-14T23:31:34.994Z] Skipping (already has data): The Bonehunters (Malazan Book of the Fallen, #6)
+[2026-02-14T23:31:34.995Z] Skipping (already has data): A Memory of Light (The Wheel of Time, #14)
+[2026-02-14T23:31:34.996Z] Skipping (already has data): Towers of Midnight (The Wheel of Time, #13)
+[2026-02-14T23:31:34.997Z] Skipping (already has data): The Gathering Storm (The Wheel of Time, #12)
+[2026-02-14T23:31:34.998Z] Skipping (already has data): Knife of Dreams (The Wheel of Time, #11)
+[2026-02-14T23:31:34.999Z] Skipping (already has data): Crossroads of Twilight (The Wheel of Time, #10)
+[2026-02-14T23:31:35.000Z] Skipping (already has data): The Last Question
+[2026-02-14T23:31:35.001Z] Skipping (already has data): The Lost Metal (Mistborn, #7)
+[2026-02-14T23:31:35.002Z] Skipping (already has data): Winter's Heart (The Wheel of Time, #9)
+[2026-02-14T23:31:35.003Z] Skipping (already has data): The Path of Daggers (The Wheel of Time, #8)
+[2026-02-14T23:31:35.003Z] Skipping (already has data): A Crown of Swords (The Wheel of Time, #7)
+[2026-02-14T23:31:35.004Z] Skipping (already has data): Lord of Chaos (The Wheel of Time, #6)
+[2026-02-14T23:31:35.005Z] Skipping (already has data): The Fires of Heaven (The Wheel of Time, #5)
+[2026-02-14T23:31:35.006Z] Skipping (already has data): The Shadow Rising (The Wheel of Time, #4)
+[2026-02-14T23:31:35.006Z] Skipping (already has data): The Dragon Reborn (The Wheel of Time, #3)
+[2026-02-14T23:31:35.007Z] Skipping (already has data): The Great Hunt (The Wheel of Time, #2)
+[2026-02-14T23:31:35.009Z] Enriching: The Sandman: Act I...
+[2026-02-14T23:31:35.297Z] Failed to find metadata for: The Sandman: Act I
+[2026-02-14T23:31:35.802Z] Skipping (already has data): Arcanum Unbounded: The Cosmere Collection
+[2026-02-14T23:31:35.804Z] Skipping (already has data): The Bands of Mourning (Mistborn, #6)
+[2026-02-14T23:31:35.805Z] Skipping (already has data): Complex PTSD: From Surviving to Thriving
+[2026-02-14T23:31:35.806Z] Skipping (already has data): Shadows of Self (Mistborn, #5)
+[2026-02-14T23:31:35.807Z] Skipping (already has data): Midnight Tides (Malazan Book of the Fallen, #5)
+[2026-02-14T23:31:35.808Z] Enriching: House of Chains (Malazan Book of the Fallen, #4)...
+[2026-02-14T23:31:36.552Z] Skipping (already has data): The Eye of the World (The Wheel of Time, #1)
+[2026-02-14T23:31:36.553Z] Skipping (already has data): Memories of Ice (Malazan Book of the Fallen, #3)
+[2026-02-14T23:31:36.555Z] Skipping (already has data): Rhythm of War (The Stormlight Archive, #4)
+[2026-02-14T23:31:36.556Z] Skipping (already has data): The Tyranny of Merit: What's Become of the Common Good?
+[2026-02-14T23:31:36.557Z] Skipping (already has data): The Alloy of Law (Mistborn, #4)
+[2026-02-14T23:31:36.559Z] Skipping (already has data): War is a Racket
+[2026-02-14T23:31:36.560Z] Skipping (already has data): Warbreaker
+[2026-02-14T23:31:36.561Z] Skipping (already has data): Homewreckers
+[2026-02-14T23:31:36.563Z] Skipping (already has data): The Republic of Pirates: Being the True and Surprising Story of the Caribbean Pirates and the Man Who Brought Them Down
+[2026-02-14T23:31:36.564Z] Skipping (already has data): The Hero of Ages (Mistborn, #3)
+[2026-02-14T23:31:36.565Z] Skipping (already has data): The Well of Ascension (Mistborn, #2)
+[2026-02-14T23:31:36.566Z] Skipping (already has data): Beyond Good and Evil
+[2026-02-14T23:31:36.567Z] Skipping (already has data): Mistborn: The Final Empire (Mistborn, #1)
+[2026-02-14T23:31:36.568Z] Skipping (already has data): Screwtape Proposes a Toast: And Other Pieces
+[2026-02-14T23:31:36.569Z] Skipping (already has data): Oathbringer (The Stormlight Archive, #3)
+[2026-02-14T23:31:36.571Z] Skipping (already has data): The Beauty of Dusk
+[2026-02-14T23:31:36.572Z] Skipping (already has data): Xenos (Eisenhorn, #1)
+[2026-02-14T23:31:36.573Z] Skipping (already has data): Notes from Underground
+[2026-02-14T23:31:36.574Z] Skipping (already has data): Black Lamb and Grey Falcon
+[2026-02-14T23:31:36.575Z] Skipping (already has data): The Solace of Open Spaces
+[2026-02-14T23:31:36.576Z] Skipping (already has data): Project Hail Mary
+[2026-02-14T23:31:36.577Z] Skipping (already has data): When Among Crows (Curse Bearer, #1)
+[2026-02-14T23:31:36.578Z] Enriching: The Daughters' War (Blacktongue, #0)...
+[2026-02-14T23:31:37.353Z] Enriching: The Collapsing Empire (The Interdependency, #1)...
+[2026-02-14T23:31:38.164Z] Enriching: Gunmetal Gods (Gunmetal Gods, #1)...
+[2026-02-14T23:31:38.975Z] Skipping (already has data): The Phoenix Project: A Novel About IT, DevOps, and Helping Your Business Win
+[2026-02-14T23:31:38.976Z] Skipping (already has data): "Surely You're Joking, Mr. Feynman!": Adventures of a Curious Character
+[2026-02-14T23:31:38.977Z] Skipping (already has data): The Will of the Many (Hierarchy, #1)
+[2026-02-14T23:31:38.978Z] Enriching: Elric of Melniboné (The Elric Saga, #1)...
+[2026-02-14T23:31:39.811Z] Skipping (already has data): Tigana
+[2026-02-14T23:31:39.813Z] Skipping (already has data): The Dying Earth (The Dying Earth, #1)
+[2026-02-14T23:31:39.814Z] Skipping (already has data): The Antidote: Happiness for People Who Can't Stand Positive Thinking
+[2026-02-14T23:31:39.816Z] Skipping (already has data): The Three-Body Problem (Remembrance of Earth’s Past, #1)
+[2026-02-14T23:31:39.816Z] Enriching: The Ruin of Kings (A Chorus of Dragons, #1)...
+[2026-02-14T23:31:40.637Z] Skipping (already has data): Norse Mythology
+[2026-02-14T23:31:40.639Z] Skipping (already has data): Gideon the Ninth (The Locked Tomb, #1)
+[2026-02-14T23:31:40.640Z] Enriching: Sufficiently Advanced Magic (Arcane Ascension, #1)...
+[2026-02-14T23:31:41.429Z] Skipping (already has data): House of Blades (Traveler's Gate, #1)
+[2026-02-14T23:31:41.432Z] Skipping (already has data): Oathbringer (The Stormlight Archive, #3)

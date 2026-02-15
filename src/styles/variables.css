@@ -1,0 +1,52 @@
+:root {
+  /* Dark Vellum Revamped Palette */
+  --bg-void: #111111;
+  /* Deep Charcoal (Not pitch black) */
+
+  /* Elevation Surfaces (Lighter = Higher) */
+  --bg-paper: #1a1a1a;
+  /* DP00 */
+  --bg-paper-sm: #242424;
+  /* DP01 */
+  --bg-paper-md: #2d2d2d;
+  /* DP02 */
+  --bg-paper-lg: #363636;
+  /* DP04 */
+  --bg-paper-raised: #404040;
+  /* Hover state */
+
+  /* Ink & Typography */
+  --ink-primary: #f5f5f5;
+  /* High contrast text */
+  --ink-secondary: #a3a3a3;
+  /* Medium contrast */
+  --ink-faint: #525252;
+  /* Low contrast / Borders */
+
+  /* Accents */
+  --accent-gold: #ffc107;
+  --accent-crimson: #cf6679;
+  --accent-cyan: #03dac6;
+
+  /* Borders & Highlights */
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --highlight-white: rgba(255, 255, 255, 0.05);
+
+  /* Shadows */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 6px 10px rgba(0, 0, 0, 0.5), 0 2px 4px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 12px 20px rgba(0, 0, 0, 0.6), 0 8px 10px rgba(0, 0, 0, 0.5);
+  --shadow-xl: 0 25px 40px rgba(0, 0, 0, 0.7);
+
+  /* Texture - Increased visibility & coarseness */
+  --noise-pattern: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.15'/%3E%3C/svg%3E");
+
+  /* Typography */
+  --font-serif: "Cinzel", "Playfair Display", serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+
+  /* Spacing */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+}

@@ -1,0 +1,60 @@
+.banner {
+    width: 100%;
+    box-sizing: border-box;
+    /* Fix overhang */
+    padding: 0.75rem 1rem;
+    /* Reduced padding */
+    margin: 0;
+    /* Reduced margin */
+    text-align: center;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    position: relative;
+    /* Optional: subtle separator lines */
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.banner:active {
+    opacity: 0.7;
+}
+
+.quote {
+    font-family: 'Crimson Pro', serif;
+    /* Use serif for literary feel */
+    font-size: 1.5rem;
+    font-style: italic;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    opacity: 0.9;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.citation {
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    opacity: 0.7;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.book i {
+    font-style: italic;
+    color: var(--accent-gold);
+    /* Or similar highlight */
+}
+
+@media (max-width: 768px) {
+    .banner {
+        padding: 1.5rem;
+    }
+
+    .quote {
+        font-size: 1.2rem;
+    }
+}

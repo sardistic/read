@@ -1,0 +1,70 @@
+/* Base Card - Dot Matrix Transparency */
+.card {
+    background-color: rgba(5, 5, 8, 0.6);
+    /* Darker tint */
+    /* Dark grid pattern */
+    background-image: radial-gradient(rgba(0, 0, 0, 0.4) 1px, transparent 1px);
+    background-size: 4px 4px;
+
+    backdrop-filter: saturate(100%) blur(12px);
+    /* Heavier blur */
+    -webkit-backdrop-filter: saturate(100%) blur(12px);
+
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    /* Very subtle light border */
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    /* Top highlight */
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+    border-radius: var(--radius-md);
+    padding: 1.5rem;
+    color: var(--ink-primary);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Subtle inner glow/texture hint */
+.card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    /* Noise is still nice for texture */
+    background-image: var(--noise-pattern);
+    opacity: 0.03;
+    pointer-events: none;
+    mix-blend-mode: overlay;
+}
+
+.flat {
+    box-shadow: none;
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.sm {
+    box-shadow: var(--shadow-sm);
+    border-color: rgba(255, 255, 255, 0.05);
+    /* Darker borders for small cards */
+}
+
+.md {
+    box-shadow: var(--shadow-md);
+    border-color: rgba(255, 255, 255, 0.08);
+}
+
+.lg {
+    box-shadow: var(--shadow-lg);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.interactive {
+    cursor: pointer;
+}
+
+.interactive:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--ink-secondary);
+    background-color: rgba(60, 60, 70, 0.3);
+    /* Slightly lighter on hover */
+}
