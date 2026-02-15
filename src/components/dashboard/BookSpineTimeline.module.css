@@ -23,9 +23,10 @@
     /* Indicate draggable */
 
     /* Reflection Effect for Premium "Glassy" Look */
-    /* This creates a mirror reflection below the books, fading out */
-    -webkit-box-reflect: below 2px linear-gradient(transparent, transparent 80%, rgba(255, 255, 255, 0.2));
-    /* Optimize for JS animation */
+    /* Only on Desktop to save mobile performance */
+    @media (min-width: 768px) {
+        -webkit-box-reflect: below 2px linear-gradient(transparent, transparent 80%, rgba(255, 255, 255, 0.2));
+    }
 }
 
 .scrollWrapper:active {
@@ -188,9 +189,14 @@
     pointer-events: none;
     transition: opacity 0.3s;
 
-    /* Glimmer effect */
+    /* Glimmer effect - Desktop Only */
     background-size: 200% 100%;
-    animation: glimmer 4s ease-in-out infinite;
+}
+
+@media (min-width: 768px) {
+    .spineOverlay {
+        animation: glimmer 4s ease-in-out infinite;
+    }
 }
 
 @keyframes glimmer {

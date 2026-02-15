@@ -56,7 +56,11 @@ export const BookSpineTimeline: React.FC<BookSpineTimelineProps> = ({ works }) =
         const maxScroll = totalSetWidth * 2; // Loop point
 
         const animate = () => {
-            if (!isDraggingRef.current && !isPausedRef.current && wrapperRef.current) {
+            // Mobile Optimization: Disable auto-scroll logic entirely on small screens
+            // We check this inside the loop or just once? checking window width is cheap enough
+            const isMobile = window.innerWidth < 768;
+
+            if (!isDraggingRef.current && !isPausedRef.current && wrapperRef.current && !isMobile) {
                 // VERY Slow Auto-scroll speed
                 const speed = 0.2;
                 scrollRef.current += speed;
