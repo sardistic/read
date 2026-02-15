@@ -4,6 +4,10 @@
   color-scheme: dark;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   color: var(--ink-primary);
   background-color: var(--bg-void);
@@ -18,6 +22,9 @@ body {
   position: relative;
   overflow: hidden;
   /* Lock the body */
+  position: fixed;
+  /* Prevent mobile scroll bounce on body */
+  width: 100%;
 }
 
 /* Texture Overlay - Aggressive Visibility */

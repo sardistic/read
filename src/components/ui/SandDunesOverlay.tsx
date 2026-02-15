@@ -38,7 +38,7 @@ export const SandDunesOverlay = () => {
             particles = [];
             // Mobile/Performance optimization:
             const isMobile = window.innerWidth < 768;
-            const divider = isMobile ? 300 : 80; // Much fewer particles on mobile
+            const divider = isMobile ? 1500 : 100; // Aggressively fewer particles (was 300)
             const particleCount = Math.floor((canvas.width * canvas.height) / divider);
 
             // Respect reduced motion

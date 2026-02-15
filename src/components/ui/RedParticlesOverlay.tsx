@@ -36,7 +36,7 @@ export const RedParticlesOverlay = () => {
             particles = [];
             // Mobile/Performance optimization:
             const isMobile = window.innerWidth < 768;
-            const divider = isMobile ? 250 : 60; // Much fewer particles on mobile
+            const divider = isMobile ? 1200 : 80; // Aggressively fewer particles (was 250)
             const particleCount = Math.floor((canvas.width * canvas.height) / divider);
 
             // Respect reduced motion
