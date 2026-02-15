@@ -3,5 +3,3 @@ node_modules
 .git
 .github
 *.md
-Dockerfile
-railway.json
