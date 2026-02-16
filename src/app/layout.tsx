@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "literature",
+  title: "read",
   description: "Personal reading tracker",
   icons: {
     icon: '/images/logo.webp'
