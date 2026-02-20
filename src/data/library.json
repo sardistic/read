@@ -130,6 +130,14 @@
         {
           "text": "If all lies were so kind, I'd never wish to hear the truth.",
           "character": "Lysander au Lune"
+        },
+        {
+          "text": "Clang. Clang. Clang.",
+          "character": "Darrow"
+        },
+        {
+          "text": "Confess!",
+          "character": "Fa"
         }
       ]
     },
@@ -181,6 +189,10 @@
         {
           "text": "If you cannot be a good man, be a great one.",
           "character": "Atlas au Raa"
+        },
+        {
+          "text": "Here I am, you deviant bitch. Here I stand, the motherfucking consequence.",
+          "character": "Darrow"
         }
       ]
     },
@@ -273,6 +285,14 @@
         {
           "text": "I would have lived in peace. But my enemies brought me war.",
           "character": "Darrow"
+        },
+        {
+          "text": "War eats the victors last.",
+          "character": "Romulus"
+        },
+        {
+          "text": "I am the Reaper.",
+          "character": "Darrow"
         }
       ]
     },
@@ -314,6 +334,26 @@
         },
         {
           "text": "Let them know fear.",
+          "character": "Carl"
+        },
+        {
+          "text": "Ruin is coming.",
+          "character": "The AI"
+        },
+        {
+          "text": "We don't stop. We never stop.",
+          "character": "Carl"
+        },
+        {
+          "text": "This is the end of the world as we know it.",
+          "character": "Donut"
+        },
+        {
+          "text": "Survival is the only victory.",
+          "character": "Mordecai"
+        },
+        {
+          "text": "Make them pay.",
           "character": "Carl"
         }
       ]
@@ -371,6 +411,26 @@
         {
           "text": "New Achievement! You’ve really stepped in it now.",
           "character": "System AI"
+        },
+        {
+          "text": "Madness is a perspective.",
+          "character": "The Bride"
+        },
+        {
+          "text": "I will burn this dungeon to the ground.",
+          "character": "Carl"
+        },
+        {
+          "text": "Princess Donut, the Queen Anne Chonk.",
+          "character": "System"
+        },
+        {
+          "text": "You are not ready.",
+          "character": "Mordecai"
+        },
+        {
+          "text": "Let's break some rules.",
+          "character": "Carl"
         }
       ]
     },
@@ -408,6 +468,26 @@
         {
           "text": "DON'T SLUT SHAME ME. I'M GOING TO KILL YOUR MOTHER.",
           "character": "Samantha"
+        },
+        {
+          "text": "The masquerade is just a polite way to say 'slaughter'.",
+          "character": "Carl"
+        },
+        {
+          "text": "I look absolutely radiant.",
+          "character": "Donut"
+        },
+        {
+          "text": "Kill them all, Carl.",
+          "character": "Donut"
+        },
+        {
+          "text": "The audience demands blood.",
+          "character": "The AI"
+        },
+        {
+          "text": "I am the Butcher.",
+          "character": "Carl"
         }
       ]
     },
@@ -455,6 +535,26 @@
         {
           "text": "Puppies shouldn't ever share a world with pain. Yet here we are. Thanks, earth culture.",
           "character": "Carl"
+        },
+        {
+          "text": "The gods are real, and they are assholes.",
+          "character": "Carl"
+        },
+        {
+          "text": "Don't touch the button, Donut.",
+          "character": "Carl"
+        },
+        {
+          "text": "I have seen the face of god, and it was a foot.",
+          "character": "Donut"
+        },
+        {
+          "text": "Chaos is the only constant.",
+          "character": "The AI"
+        },
+        {
+          "text": "We are the crawl.",
+          "character": "Carl"
         }
       ]
     },
@@ -492,6 +592,26 @@
         {
           "text": "You tried to kill Katia you fucking bitch!",
           "character": "Princess Donut"
+        },
+        {
+          "text": "Revolution is a process, not an event.",
+          "character": "The Cookbook"
+        },
+        {
+          "text": "They want a show? I'll give them a show.",
+          "character": "Carl"
+        },
+        {
+          "text": "I will break your wheel.",
+          "character": "Carl"
+        },
+        {
+          "text": "This is not a game. This is an extermination.",
+          "character": "Mordecai"
+        },
+        {
+          "text": "Glurp glurp!",
+          "character": "Glurp"
         }
       ]
     },
@@ -532,6 +652,10 @@
         {
           "text": "The secret of great fortunes without apparent cause is a crime forgotten, for it was properly done.",
           "character": "Balzac"
+        },
+        {
+          "text": "Money is life. If you have cash, you have it all.",
+          "character": "Vautrin"
         }
       ]
     },
@@ -711,6 +835,26 @@
         {
           "text": "Question: What's the only thing standing between an innocent child and a happy, fulfilling life? Answer: You. The answer is you.",
           "character": "The System AI"
+        },
+        {
+          "text": "The river of blood has no banks.",
+          "character": "The AI"
+        },
+        {
+          "text": "I am not a person. I am a resource.",
+          "character": "Carl"
+        },
+        {
+          "text": "Mongo is appalled!",
+          "character": "Donut"
+        },
+        {
+          "text": "Goddammit, Donut.",
+          "character": "Carl"
+        },
+        {
+          "text": "You can't kill a planet, Carl. But you can make it wish it was dead.",
+          "character": "Mordecai"
         }
       ]
     },
@@ -794,6 +938,10 @@
         },
         {
           "text": "Welcome to the dungeon, crawler.",
+          "character": "System AI"
+        },
+        {
+          "text": "New Achievement! You’ve managed to annoy a god.",
           "character": "System AI"
         }
       ]
@@ -1179,6 +1327,10 @@
         {
           "text": "Ashes to ashes, dust to dust. But the fire remains.",
           "character": "Hadrian Marlowe"
+        },
+        {
+          "text": "From ashes we rise.",
+          "character": "Hadrian"
         }
       ]
     },
@@ -1223,6 +1375,10 @@
         {
           "text": "Hope is the drug we take to forget the pain.",
           "character": "Hadrian Marlowe"
+        },
+        {
+          "text": "Death is the only kingdom that lasts.",
+          "character": "Hadrian"
         }
       ]
     },
@@ -1271,6 +1427,14 @@
         {
           "text": "History is a wheel, for the nature of man is fundamentally unchanging.",
           "character": "Hadrian Marlowe"
+        },
+        {
+          "text": "I am clearly the victim here.",
+          "character": "Hadrian"
+        },
+        {
+          "text": "Empire is a machine.",
+          "character": "Emperor"
         }
       ]
     },
@@ -1316,6 +1480,14 @@
         {
           "text": "There are no monsters. Only men who have stopped pretending.",
           "character": "Hadrian Marlowe"
+        },
+        {
+          "text": "The dark is not empty.",
+          "character": "Hadrian"
+        },
+        {
+          "text": "We are the devils we fear.",
+          "character": "Hadrian"
         }
       ]
     },
@@ -1905,7 +2077,15 @@
       "quotes": [
         "I like the imaginary people on the entertainment feed way better than I like real people.",
         "I don't want to be human. I want to be a SecUnit who can watch media.",
-        "Emotions are annoying. I wish I didn't have them."
+        "Emotions are annoying. I wish I didn't have them.",
+        {
+          "text": "I just want to watch media.",
+          "character": "Murderbot"
+        },
+        {
+          "text": "Emotions are inefficient.",
+          "character": "Murderbot"
+        }
       ]
     },
     {
@@ -1993,6 +2173,10 @@
         {
           "text": "To be too conscious is an illness - a real thorough-going illness.",
           "character": "The Underground Man"
+        },
+        {
+          "text": "I love you. I hate you. I'm going to kill you.",
+          "character": "ART"
         }
       ]
     },
@@ -2954,6 +3138,14 @@
         {
           "text": "The trouble with being able to lift heavy things is that when heavy things need lifting folk step out of the way and smile at you.",
           "character": "Logen Ninefingers"
+        },
+        {
+          "text": "The body found floating by the docks...",
+          "character": "Glokta"
+        },
+        {
+          "text": "Rules are for children.",
+          "character": "Bayaz"
         }
       ]
     },
@@ -2999,6 +3191,14 @@
         {
           "text": "Every man has his excuses, and the more vile the man becomes, the more touching the story has to be.",
           "character": "Glokta"
+        },
+        {
+          "text": "You have to be realistic about these things.",
+          "character": "Logen Ninefingers"
+        },
+        {
+          "text": "Once you've got a task to do, it's better to do it than live with the fear of it.",
+          "character": "Logen Ninefingers"
         }
       ]
     },
@@ -3518,6 +3718,22 @@
         {
           "text": "There are no endings, and never will be endings, to the turning of the Wheel of Time. But it was an ending.",
           "character": "Narrator"
+        },
+        {
+          "text": "It was not about me. It's never been about me.",
+          "character": "Rand"
+        },
+        {
+          "text": "The Light shine on you, my son.",
+          "character": "Tam"
+        },
+        {
+          "text": "I did not come here to win. I came here to kill you.",
+          "character": "Lan"
+        },
+        {
+          "text": "He Came Like the Wind, Like the Wind Touched Everything, and Like the Wind Was Gone.",
+          "character": "Epitaph"
         }
       ]
     },
@@ -3551,6 +3767,14 @@
         {
           "text": "A man who trusts everyone is a fool and a man who trusts no one is a fool.",
           "character": "Lews Therin Telamon"
+        },
+        {
+          "text": "A man who cannot share a laugh is a man who cannot receive one.",
+          "character": "Thom"
+        },
+        {
+          "text": "I'm just a blacksmith.",
+          "character": "Perrin"
         }
       ]
     },
@@ -3593,6 +3817,14 @@
         {
           "text": "By the way, that dress you are wearing is green.",
           "character": "Verin Mathwin"
+        },
+        {
+          "text": "I am the storm.",
+          "character": "Rand"
+        },
+        {
+          "text": "Veins of gold.",
+          "character": "Lews Therin"
         }
       ]
     },
@@ -3623,6 +3855,14 @@
         {
           "text": "The Golden Crane flies for Tarmon Gai'don.",
           "character": "Nynaeve al'Meara"
+        },
+        {
+          "text": "The Golden Crane flies for Tarmon Gai'don!",
+          "character": "Nynaeve"
+        },
+        {
+          "text": "Does he ride alone?",
+          "character": "Civilian"
         }
       ]
     },
@@ -3656,6 +3896,10 @@
         {
           "text": "Patience is a weapon.",
           "character": "Perrin Aybara"
+        },
+        {
+          "text": "We wait.",
+          "character": "Perrin"
         }
       ]
     },
@@ -3742,6 +3986,14 @@
         {
           "text": "Culture is the most persistent force in human history.",
           "character": "Colin Woodard"
+        },
+        {
+          "text": "It is time to go.",
+          "character": "Wayne"
+        },
+        {
+          "text": "Be the hero.",
+          "character": "Wax"
         }
       ]
     },
@@ -3774,6 +4026,10 @@
         {
           "text": "We ride on the winds of the rising storm.",
           "character": "Rand al'Thor"
+        },
+        {
+          "text": "The bond.",
+          "character": "Elayne"
         }
       ]
     },
@@ -3804,6 +4060,10 @@
         {
           "text": "The bite of the lance is cleaner than the bite of the smile.",
           "character": "Rand al'Thor"
+        },
+        {
+          "text": "The seanchan are coming.",
+          "character": "Varon"
         }
       ]
     },
@@ -3833,6 +4093,14 @@
         {
           "text": "It is always better to know the truth than to live in a lie.",
           "character": "Cadsuane Melaidhrin"
+        },
+        {
+          "text": "The wind was not the beginning.",
+          "character": "Narrator"
+        },
+        {
+          "text": "Death is lighter than a feather.",
+          "character": "Lan"
         }
       ]
     },
@@ -3866,6 +4134,10 @@
         {
           "text": "Kneel and swear to the Lord Dragon, or you will be knelt.",
           "character": "Mazrim Taim"
+        },
+        {
+          "text": "Let the Lord of Chaos rule.",
+          "character": "Dark One"
         }
       ]
     },
@@ -3902,6 +4174,14 @@
         {
           "text": "Almost dead yesterday, maybe dead tomorrow, but alive, gloriously alive, today.",
           "character": "Mat Cauthon"
+        },
+        {
+          "text": "The lion on the high plains.",
+          "character": "Aviendha"
+        },
+        {
+          "text": "Kneel, or you will be knelt.",
+          "character": "Taim"
         }
       ]
     },
@@ -3931,6 +4211,14 @@
         {
           "text": "Kneel and swear to the Lord Dragon, or you will be knelt.",
           "character": "Mazrim Taim"
+        },
+        {
+          "text": "The Shadow shall rise across the world, and darken every land, even to the smallest corner, and there shall be neither Light nor safety.",
+          "character": "Prophecy"
+        },
+        {
+          "text": "I will defend what is mine.",
+          "character": "Perrin Aybara"
         }
       ]
     },
@@ -3969,6 +4257,14 @@
         {
           "text": "Take what you want, and pay for it.",
           "character": "Moiraine Damodred"
+        },
+        {
+          "text": "I am the Dragon Reborn. I will not be caged.",
+          "character": "Rand al'Thor"
+        },
+        {
+          "text": "A man who trusts everyone is a fool, and a man who trusts no one is a fool.",
+          "character": "Lews Therin"
         }
       ]
     },
@@ -4003,6 +4299,14 @@
         {
           "text": "It is always better to have a plan than not.",
           "character": "Thom Merrilin"
+        },
+        {
+          "text": "Till shade is gone, till water is gone, into the Shadow with teeth bared, screaming defiance with the last breath, to spit in Sightblinder's eye on the Last Day.",
+          "character": "Aiel Oath"
+        },
+        {
+          "text": "There is no such thing as a fair fight.",
+          "character": "Lan Mandragoran"
         }
       ]
     },
@@ -4112,6 +4416,14 @@
         {
           "text": "Gotta hide a gift where nobody'll look for it.",
           "character": "Wayne"
+        },
+        {
+          "text": "A hat is not just a hat.",
+          "character": "Wayne"
+        },
+        {
+          "text": "Rust and Ruin!",
+          "character": "Wax"
         }
       ]
     },
@@ -4188,6 +4500,14 @@
         },
         {
           "text": "Ain't no one what knows the cow better than the butcher, Wax.",
+          "character": "Wayne"
+        },
+        {
+          "text": "I am the law.",
+          "character": "Wax"
+        },
+        {
+          "text": "Everyone has a secret.",
           "character": "Wayne"
         }
       ]
@@ -4293,6 +4613,18 @@
         {
           "text": "Death is lighter than a feather. Duty heavier than a mountain.",
           "character": "Lan Mandragoran"
+        },
+        {
+          "text": "The Wheel weeds as the Wheel wills.",
+          "character": "Moiraine Sedai"
+        },
+        {
+          "text": "Run when you have to, fight when you must, rest when you can.",
+          "character": "Lan Mandragoran"
+        },
+        {
+          "text": "Almost dead yesterday, maybe dead tomorrow, but alive, gloriously alive, today.",
+          "character": "Mat Cauthon"
         }
       ]
     },
