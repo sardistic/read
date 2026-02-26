@@ -11,6 +11,14 @@ const scraped = JSON.parse(fs.readFileSync(scrapePath, 'utf8'));
 let addedCount = 0;
 let updatedCount = 0;
 
+// Map Goodreads shelf names to our status values
+const shelfToStatus = (shelf) => {
+    if (shelf === 'read') return 'read';
+    if (shelf === 'currently-reading') return 'reading';
+    if (shelf === 'to-read') return 'toread';
+    return 'read'; // default
+};
+
 // Helper to normalize strings for comparison
 const normalize = (str) => str ? str.toLowerCase().replace(/[^\w\s]/g, '').trim() : '';
 
@@ -47,6 +55,16 @@ scraped.forEach(scrapedBook => {
             }
         }
 
+        // Update status from shelf if shelf data is available
+        if (scrapedBook.shelf) {
+            const newStatus = shelfToStatus(scrapedBook.shelf);
+            if (existingBook.status !== newStatus) {
+                console.log(`  Status change: ${existingBook.title}: ${existingBook.status} -> ${newStatus}`);
+                existingBook.status = newStatus;
+                updated = true;
+            }
+        }
+
         if (updated) {
             updatedCount++;
             console.log(`Updated: ${existingBook.title}`);
@@ -58,7 +76,7 @@ scraped.forEach(scrapedBook => {
             title: scrapedBook.title,
             author: scrapedBook.author,
             type: "book",
-            status: "read",
+            status: scrapedBook.shelf ? shelfToStatus(scrapedBook.shelf) : "read",
             rating: 0,
             dateAdded: new Date().toISOString().split('T')[0],
             pageCount: 0, // Unknown

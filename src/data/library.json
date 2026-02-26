@@ -5878,7 +5878,7 @@
       "title": "The Beauty of Dusk",
       "author": "Frank Bruni",
       "type": "book",
-      "status": "reading",
+      "status": "read",
       "rating": 0,
       "dateAdded": "2026-02-12",
       "pageCount": 306,
@@ -5926,7 +5926,8 @@
           "text": "If hope is a thing with feathers, envy is a thing with tentacles.",
           "character": "Frank Bruni"
         }
-      ]
+      ],
+      "dateRead": "2026-02-18"
     },
     {
       "id": "1009259",
@@ -8017,6 +8018,81 @@
           "character": "Whiskey Jack"
         }
       ]
+    },
+    {
+      "id": "731693264",
+      "title": "Between Two Fires",
+      "author": "Christopher Buehlman",
+      "type": "book",
+      "status": "reading",
+      "rating": 0,
+      "dateAdded": "2026-02-26",
+      "pageCount": 0,
+      "coverImage": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1710293039l/13543121._SY475_.jpg",
+      "description": "",
+      "genres": [],
+      "platform": "goodreads",
+      "notes": ""
+    },
+    {
+      "id": "543965500",
+      "title": "Homegrown Magic (Homegrown Magic, #1)",
+      "author": "Jamie Pacton",
+      "type": "book",
+      "status": "toread",
+      "rating": 0,
+      "dateAdded": "2026-02-26",
+      "pageCount": 0,
+      "coverImage": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1719846708l/215362543._SY475_.jpg",
+      "description": "",
+      "genres": [],
+      "platform": "goodreads",
+      "notes": ""
+    },
+    {
+      "id": "254537158",
+      "title": "A Deadly Education (The Scholomance, #1)",
+      "author": "Naomi Novik",
+      "type": "book",
+      "status": "toread",
+      "rating": 0,
+      "dateAdded": "2026-02-26",
+      "pageCount": 0,
+      "coverImage": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1596909044l/50548197._SY475_.jpg",
+      "description": "",
+      "genres": [],
+      "platform": "goodreads",
+      "notes": ""
+    },
+    {
+      "id": "242031570",
+      "title": "The Carathayan (Second Apocalypse #0.1)",
+      "author": "R. Scott Bakker",
+      "type": "book",
+      "status": "toread",
+      "rating": 0,
+      "dateAdded": "2026-02-26",
+      "pageCount": 0,
+      "coverImage": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1738257639l/41956647._SY475_.jpg",
+      "description": "",
+      "genres": [],
+      "platform": "goodreads",
+      "notes": ""
+    },
+    {
+      "id": "687630152",
+      "title": "Audition for the Fox",
+      "author": "Martin Cahill",
+      "type": "book",
+      "status": "toread",
+      "rating": 0,
+      "dateAdded": "2026-02-26",
+      "pageCount": 0,
+      "coverImage": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1750697361l/228022844._SY475_.jpg",
+      "description": "",
+      "genres": [],
+      "platform": "goodreads",
+      "notes": ""
     }
   ]
 }
