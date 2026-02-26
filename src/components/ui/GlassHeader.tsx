@@ -1,5 +1,7 @@
+'use client';
+
 import Link from 'next/link';
-import React from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import styles from './GlassHeader.module.css';
 
 import { Work } from '@/lib/types';
@@ -9,6 +11,52 @@ interface GlassHeaderProps {
     currentRead?: Work;
 }
 
+interface DropdownProps {
+    label: string;
+    items: { label: string; href: string }[];
+}
+
+const NavDropdown: React.FC<DropdownProps> = ({ label, items }) => {
+    const [open, setOpen] = useState(false);
+    const ref = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        const handler = (e: MouseEvent) => {
+            if (ref.current && !ref.current.contains(e.target as Node)) {
+                setOpen(false);
+            }
+        };
+        document.addEventListener('mousedown', handler);
+        return () => document.removeEventListener('mousedown', handler);
+    }, []);
+
+    return (
+        <div className={styles.dropdown} ref={ref}>
+            <button
+                className={styles.link}
+                onClick={() => setOpen(!open)}
+                aria-expanded={open}
+            >
+                {label}
+                <span className={`${styles.chevron} ${open ? styles.chevronOpen : ''}`}>▾</span>
+            </button>
+            <div className={`${styles.dropdownMenu} ${open ? styles.dropdownOpen : ''}`}>
+                {items.map((item, i) => (
+                    <a
+                        key={item.href}
+                        href={item.href}
+                        className={styles.dropdownItem}
+                        style={{ animationDelay: `${i * 0.05}s` }}
+                        onClick={() => setOpen(false)}
+                    >
+                        {item.label}
+                    </a>
+                ))}
+            </div>
+        </div>
+    );
+};
+
 export const GlassHeader: React.FC<GlassHeaderProps> = ({ currentRead }) => {
     return (
         <header className={styles.header}>
@@ -16,20 +64,33 @@ export const GlassHeader: React.FC<GlassHeaderProps> = ({ currentRead }) => {
                 {/* Left Section: Logo + External Navigation */}
                 <div className={styles.leftSection}>
                     <Link href="/" className={styles.logo}>
+                        <span className={styles.logoText}>read</span>
                         <img
                             src="/images/logo.webp"
                             alt="Logo"
                             className={styles.logoImage}
                         />
-                        read
                     </Link>
 
                     <nav className={styles.nav}>
-                        <a href="https://www.sardistic.com/" className={styles.link} target="_blank" rel="noopener noreferrer">return</a>
-                        <a href="https://www.sardistic.com/gallery-landing/" className={styles.link} target="_blank" rel="noopener noreferrer">gallery</a>
-                        <a href="https://audio.sardistic.com/" className={styles.link} target="_blank" rel="noopener noreferrer">audio</a>
-                        <a href="https://chat.sardistic.com/" className={styles.link} target="_blank" rel="noopener noreferrer">chat</a>
-                        <a href="https://write.sardistic.com/" className={styles.link} target="_blank" rel="noopener noreferrer">write</a>
+                        <a href="https://www.sardistic.com/" className={styles.link}>.com</a>
+
+                        <NavDropdown
+                            label="I/O"
+                            items={[
+                                { label: 'audio', href: 'https://audio.sardistic.com/' },
+                                { label: 'write', href: 'https://write.sardistic.com/' },
+                                { label: 'chat', href: 'https://chat.sardistic.com/' },
+                            ]}
+                        />
+
+                        <NavDropdown
+                            label="gallery"
+                            items={[
+                                { label: 'organic', href: 'https://www.sardistic.com/gallery-timeline/' },
+                                { label: 'artificial', href: 'https://www.sardistic.com/ai-timeline/' },
+                            ]}
+                        />
                     </nav>
                 </div>
 

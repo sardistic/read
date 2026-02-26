@@ -100,6 +100,99 @@
     border-radius: 4px;
 }
 
+.logoText {
+    order: -1;
+}
+
+/* Dropdown styles */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown .link {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.chevron {
+    font-size: 0.7em;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: inline-block;
+}
+
+.chevronOpen {
+    transform: rotate(180deg);
+}
+
+.dropdownMenu {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%) scale(0.95);
+    min-width: 140px;
+    background: rgba(20, 20, 22, 0.85);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 8px 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.5),
+        0 0 0 1px rgba(255, 255, 255, 0.03) inset;
+    z-index: 100;
+}
+
+.dropdownOpen {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) scale(1);
+}
+
+.dropdownItem {
+    display: block;
+    padding: 8px 20px;
+    color: var(--ink-secondary);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.25s ease;
+    white-space: nowrap;
+    opacity: 0;
+    transform: translateY(-6px);
+    animation: none;
+}
+
+.dropdownOpen .dropdownItem {
+    animation: dropIn 0.3s ease forwards;
+}
+
+.dropdownItem:hover {
+    color: var(--ink-primary);
+    background: rgba(255, 255, 255, 0.06);
+    padding-left: 24px;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
+}
+
+@keyframes dropIn {
+    from {
+        opacity: 0;
+        transform: translateY(-6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 /* New Reading Widget Styles */
 .readingWidget {
     position: absolute;
