@@ -1,5 +1,19 @@
 [
     {
+        "title": "A Deadly Education (The Scholomance, #1)",
+        "author": "Naomi Novik",
+        "dateRead": "Mon, 9 Mar 2026 00:00:00 +0000",
+        "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1596909044l/50548197._SY475_.jpg",
+        "shelf": "read"
+    },
+    {
+        "title": "Between Two Fires",
+        "author": "Christopher Buehlman",
+        "dateRead": "Fri, 27 Feb 2026 00:00:00 +0000",
+        "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1710293039l/13543121._SY475_.jpg",
+        "shelf": "read"
+    },
+    {
         "title": "The Beauty of Dusk",
         "author": "Frank Bruni",
         "dateRead": "Wed, 18 Feb 2026 00:00:00 +0000",
@@ -36,7 +50,7 @@
     },
     {
         "title": "The Strength of the Few (Hierarchy, #2)",
-        "author": "James  Islington",
+        "author": "James Islington",
         "dateRead": "Wed, 17 Dec 2025 00:00:00 +0000",
         "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1742965949l/169485073._SY475_.jpg",
         "shelf": "read"
@@ -134,7 +148,7 @@
     },
     {
         "title": "The Will of the Many (Hierarchy, #1)",
-        "author": "James  Islington",
+        "author": "James Islington",
         "dateRead": "Tue, 13 May 2025 00:00:00 +0000",
         "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1670363463l/58416952._SY475_.jpg",
         "shelf": "read"
@@ -847,24 +861,31 @@
         "shelf": "read"
     },
     {
-        "title": "Between Two Fires",
-        "author": "Christopher Buehlman",
+        "title": "Notes from Underground",
+        "author": "Fyodor Dostoevsky",
         "dateRead": "",
-        "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1710293039l/13543121._SY475_.jpg",
+        "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1657562670l/49455._SY475_.jpg",
         "shelf": "currently-reading"
+    },
+    {
+        "title": "Consider Phlebas (Culture, #1)",
+        "author": "Iain M. Banks",
+        "dateRead": "",
+        "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1327951890l/8935689.jpg",
+        "shelf": "to-read"
+    },
+    {
+        "title": "Elric of Melniboné and Other Stories (Elric Chronological Order, #1)",
+        "author": "Michael Moorcock",
+        "dateRead": "",
+        "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1417165441l/18142589.jpg",
+        "shelf": "to-read"
     },
     {
         "title": "Homegrown Magic (Homegrown Magic, #1)",
         "author": "Jamie Pacton",
         "dateRead": "",
         "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1719846708l/215362543._SY475_.jpg",
-        "shelf": "to-read"
-    },
-    {
-        "title": "A Deadly Education (The Scholomance, #1)",
-        "author": "Naomi Novik",
-        "dateRead": "",
-        "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1596909044l/50548197._SY475_.jpg",
         "shelf": "to-read"
     },
     {
@@ -886,13 +907,6 @@
         "author": "Dan Abnett",
         "dateRead": "",
         "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1480857623l/1009259._SY475_.jpg",
-        "shelf": "to-read"
-    },
-    {
-        "title": "Notes from Underground",
-        "author": "Fyodor Dostoevsky",
-        "dateRead": "",
-        "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1657562670l/49455._SY475_.jpg",
         "shelf": "to-read"
     },
     {

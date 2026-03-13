@@ -8156,11 +8156,71 @@
       "title": "A Deadly Education (The Scholomance, #1)",
       "author": "Naomi Novik",
       "type": "book",
+      "status": "read",
+      "rating": 0,
+      "dateRead": "2026-03-09",
+      "dateAdded": "2026-02-26",
+      "pageCount": 336,
+      "wordCount": 92400,
+      "durationMinutes": 596,
+      "coverImage": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1596909044l/50548197._SY475_.jpg",
+      "description": "Galadriel \"El\" Higgins attends the Scholomance, a ruthless school for magic where there are no teachers, no holidays, and monsters lurk around every corner. El has an affinity for mass destruction—dark spells of incredible power that she refuses to use. Survival to graduation is the only goal, and alliances are everything. When the annoyingly heroic Orion Lake keeps saving her life, El must navigate deadly politics, monstrous threats, and her own terrifying potential.",
+      "genres": [
+        "Fiction",
+        "Fantasy",
+        "Horror",
+        "Young Adult",
+        "Dark Academia"
+      ],
+      "seriesName": "The Scholomance",
+      "seriesIndex": 1,
+      "platform": "goodreads",
+      "notes": "",
+      "quotes": [
+        {
+          "text": "Dignity was what I had instead of friends.",
+          "character": "El Higgins"
+        },
+        {
+          "text": "I decided that Orion needed to die after the second time he saved my life.",
+          "character": "El Higgins"
+        },
+        {
+          "text": "Some sorcerers get an affinity for weather magic, or transformation spells, or fantastic combat magics like dear Orion. I got an affinity for mass destruction.",
+          "character": "El Higgins"
+        },
+        {
+          "text": "But hope is good strong drink, especially when you can get someone else to buy it for you.",
+          "character": "El Higgins"
+        },
+        {
+          "text": "I love having existential crises at bedtime, it's so restful.",
+          "character": "El Higgins"
+        },
+        {
+          "text": "You have to ration sympathy and grief in here the way you ration school supplies.",
+          "character": "El Higgins"
+        },
+        {
+          "text": "There was only me to save me, because no one else cared.",
+          "character": "El Higgins"
+        },
+        {
+          "text": "My anger's a bad guest, my mother likes to say: comes without warning and stays a long time.",
+          "character": "El Higgins"
+        }
+      ]
+    },
+    {
+      "id": "49455",
+      "title": "Notes from Underground",
+      "author": "Fyodor Dostoevsky",
+      "type": "book",
       "status": "reading",
       "rating": 0,
-      "dateAdded": "2026-02-26",
+      "dateAdded": "2026-03-12",
       "pageCount": 0,
-      "coverImage": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1596909044l/50548197._SY475_.jpg",
+      "coverImage": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1657562670l/49455._SY475_.jpg",
       "description": "",
       "genres": [],
       "platform": "goodreads",
