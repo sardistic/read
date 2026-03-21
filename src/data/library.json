@@ -73,7 +73,10 @@
         "Science & Thought",
         "Self-Help",
         "Biography",
-        "Medical"
+        "Medical",
+        "Supernatural",
+        "Psychology",
+        "History"
       ],
       "platform": "goodreads",
       "notes": "",
@@ -6046,7 +6049,7 @@
       "title": "Notes from Underground",
       "author": "Fyodor Dostoevsky",
       "type": "book",
-      "status": "toread",
+      "status": "read",
       "rating": 0,
       "dateAdded": "2025-06-22",
       "pageCount": 136,
@@ -6088,7 +6091,8 @@
           "text": "An intelligent man cannot become anything seriously, and it is only the fool who becomes anything.",
           "character": "Underground Man"
         }
-      ]
+      ],
+      "dateRead": "2026-03-13"
     },
     {
       "id": "12880",
@@ -8097,7 +8101,9 @@
         "Mythology",
         "Supernatural",
         "History",
-        "Adventure"
+        "Adventure",
+        "First Contact",
+        "Art & Design"
       ],
       "platform": "goodreads",
       "notes": "",
@@ -8147,7 +8153,9 @@
       "pageCount": 0,
       "coverImage": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1719846708l/215362543._SY475_.jpg",
       "description": "",
-      "genres": [],
+      "genres": [
+        "Fantasy"
+      ],
       "platform": "goodreads",
       "notes": ""
     },
@@ -8170,7 +8178,9 @@
         "Fantasy",
         "Horror",
         "Young Adult",
-        "Dark Academia"
+        "Dark Academia",
+        "Post-Apocalyptic",
+        "Politics"
       ],
       "seriesName": "The Scholomance",
       "seriesIndex": 1,
@@ -8216,13 +8226,23 @@
       "title": "Notes from Underground",
       "author": "Fyodor Dostoevsky",
       "type": "book",
-      "status": "reading",
+      "status": "read",
       "rating": 0,
+      "dateRead": "2026-03-13",
       "dateAdded": "2026-03-12",
-      "pageCount": 0,
+      "pageCount": 136,
+      "wordCount": 37400,
+      "durationMinutes": 241,
       "coverImage": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1657562670l/49455._SY475_.jpg",
-      "description": "",
-      "genres": [],
+      "description": "In this bitter confession, an anonymous narrator—the \"Underground Man\"—a retired, isolated civil servant in St. Petersburg, delivers a rambling, self-contradictory monologue railing against determinism, rational egoism, and utopian ideals. Divided into two parts, the first explores his tortured philosophy on free will, consciousness, and suffering, while the second recounts humiliating episodes from his past that illustrate his theories. A precursor to existentialism and modernism, it is one of Dostoevsky's most psychologically penetrating works.",
+      "genres": [
+        "Fiction",
+        "Classics",
+        "Philosophy",
+        "Psychology",
+        "Time Travel",
+        "Art & Design"
+      ],
       "platform": "goodreads",
       "notes": ""
     },
@@ -8237,7 +8257,10 @@
       "pageCount": 0,
       "coverImage": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1738257639l/41956647._SY475_.jpg",
       "description": "",
-      "genres": [],
+      "genres": [
+        "Post-Apocalyptic",
+        "Young Adult"
+      ],
       "platform": "goodreads",
       "notes": ""
     },
@@ -8252,7 +8275,60 @@
       "pageCount": 0,
       "coverImage": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1750697361l/228022844._SY475_.jpg",
       "description": "",
-      "genres": [],
+      "genres": [
+        "General"
+      ],
+      "platform": "goodreads",
+      "notes": ""
+    },
+    {
+      "id": "784302184",
+      "title": "Consider Phlebas (Culture, #1)",
+      "author": "Iain M. Banks",
+      "type": "book",
+      "status": "reading",
+      "rating": 0,
+      "dateAdded": "2026-03-20",
+      "pageCount": 467,
+      "wordCount": 128425,
+      "durationMinutes": 829,
+      "coverImage": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1327951890l/8935689.jpg",
+      "description": "Set against the backdrop of the devastating Idiran-Culture War, this space opera follows Bora Horza Gobuchul, a shape-shifting mercenary working for the deeply religious Idirans against the Culture—a sprawling, post-scarcity civilization governed by hyper-intelligent AIs. Horza is tasked with retrieving a fugitive Culture Mind from a forbidden Planet of the Dead, plunging him into a violent odyssey across a galaxy at war. The first novel in Banks's legendary Culture series.",
+      "genres": [
+        "Fiction",
+        "Science Fiction",
+        "Space Opera",
+        "Psychology",
+        "History"
+      ],
+      "seriesName": "Culture",
+      "seriesIndex": 1,
+      "platform": "goodreads",
+      "notes": ""
+    },
+    {
+      "id": "955135046",
+      "title": "Elric of Melniboné and Other Stories (Elric Chronological Order, #1)",
+      "author": "Michael Moorcock",
+      "type": "book",
+      "status": "toread",
+      "rating": 0,
+      "dateAdded": "2026-03-20",
+      "pageCount": 384,
+      "wordCount": 105600,
+      "durationMinutes": 681,
+      "coverImage": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1417165441l/18142589.jpg",
+      "description": "Elric is the albino emperor of the decadent island civilization of Melniboné, last in a long line of cruel rulers. Sustained by drugs and sorcery, he is a brooding, introspective anti-hero who wields Stormbringer, a sentient black sword that devours the souls of those it kills. This collection gathers the foundational tales of Moorcock's most iconic character—a tormented sorcerer-king caught between loyalty to his dying empire and a restless desire to explore the Young Kingdoms beyond.",
+      "genres": [
+        "Fiction",
+        "Fantasy",
+        "Sword & Sorcery",
+        "Classics",
+        "Epic Fantasy",
+        "Young Adult"
+      ],
+      "seriesName": "Elric Chronological Order",
+      "seriesIndex": 1,
       "platform": "goodreads",
       "notes": ""
     }

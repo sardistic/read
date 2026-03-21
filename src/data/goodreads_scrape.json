@@ -1,5 +1,12 @@
 [
     {
+        "title": "Notes from Underground",
+        "author": "Fyodor Dostoevsky",
+        "dateRead": "Fri, 13 Mar 2026 00:00:00 +0000",
+        "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1657562670l/49455._SY475_.jpg",
+        "shelf": "read"
+    },
+    {
         "title": "A Deadly Education (The Scholomance, #1)",
         "author": "Naomi Novik",
         "dateRead": "Mon, 9 Mar 2026 00:00:00 +0000",
@@ -861,18 +868,11 @@
         "shelf": "read"
     },
     {
-        "title": "Notes from Underground",
-        "author": "Fyodor Dostoevsky",
-        "dateRead": "",
-        "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1657562670l/49455._SY475_.jpg",
-        "shelf": "currently-reading"
-    },
-    {
         "title": "Consider Phlebas (Culture, #1)",
         "author": "Iain M. Banks",
         "dateRead": "",
         "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1327951890l/8935689.jpg",
-        "shelf": "to-read"
+        "shelf": "currently-reading"
     },
     {
         "title": "Elric of Melniboné and Other Stories (Elric Chronological Order, #1)",
