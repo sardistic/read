@@ -31,7 +31,12 @@ export default async function Home() {
   // Logic
   const works = await getLibraryData();
   const totalWorks = works.length;
-  const readWorks = works.filter(w => w.status === 'read');
+  const readWorks = works.filter(w => w.status === 'read')
+    .sort((a, b) => {
+      const dateA = a.dateRead ? new Date(a.dateRead).getTime() : 0;
+      const dateB = b.dateRead ? new Date(b.dateRead).getTime() : 0;
+      return dateB - dateA;
+    });
   const finishedCount = readWorks.length;
 
   const totalPages = readWorks.reduce((acc, w) => acc + (w.pageCount || 0), 0);
