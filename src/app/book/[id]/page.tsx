@@ -19,6 +19,16 @@ async function getLibraryData(): Promise<Work[]> {
     }
 }
 
+export async function generateStaticParams() {
+    const works = await getLibraryData();
+
+    return works.map((work) => ({
+        id: work.id,
+    }));
+}
+
+export const dynamicParams = false;
+
 export default async function BookDetail({ params }: { params: Promise<{ id: string }> }) {
     const { id } = await params;
     const works = await getLibraryData();

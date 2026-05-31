@@ -58,6 +58,8 @@ const NavDropdown: React.FC<DropdownProps> = ({ label, items }) => {
 };
 
 export const GlassHeader: React.FC<GlassHeaderProps> = ({ currentRead }) => {
+    const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
     return (
         <header className={styles.header}>
             <div className={styles.inner}>
@@ -66,7 +68,7 @@ export const GlassHeader: React.FC<GlassHeaderProps> = ({ currentRead }) => {
                     <Link href="/" className={styles.logo}>
                         <span className={styles.logoText}>read</span>
                         <img
-                            src="/images/logo.webp"
+                            src={`${basePath}/images/logo.webp`}
                             alt="Logo"
                             className={styles.logoImage}
                         />
