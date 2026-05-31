@@ -1,5 +1,47 @@
 [
     {
+        "title": "A Parade of Horribles (Dungeon Crawler Carl, #8)",
+        "author": "Matt Dinniman",
+        "dateRead": "Sat, 30 May 2026 00:00:00 +0000",
+        "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1768406680l/228928465._SY475_.jpg",
+        "shelf": "read"
+    },
+    {
+        "title": "Excession (Culture, #5)",
+        "author": "Iain M. Banks",
+        "dateRead": "Fri, 8 May 2026 00:00:00 +0000",
+        "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1288930712l/12013.jpg",
+        "shelf": "read"
+    },
+    {
+        "title": "The State of the Art (Culture, #4)",
+        "author": "Iain M. Banks",
+        "dateRead": "Sat, 25 Apr 2026 00:00:00 +0000",
+        "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1388240598l/129131.jpg",
+        "shelf": "read"
+    },
+    {
+        "title": "Use of Weapons (Culture, #3)",
+        "author": "Iain M. Banks",
+        "dateRead": "Mon, 20 Apr 2026 00:00:00 +0000",
+        "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1587400756l/12007.jpg",
+        "shelf": "read"
+    },
+    {
+        "title": "The Player of Games (Culture, #2)",
+        "author": "Iain M. Banks",
+        "dateRead": "Tue, 7 Apr 2026 00:00:00 +0000",
+        "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1386922873l/18630.jpg",
+        "shelf": "read"
+    },
+    {
+        "title": "Consider Phlebas (Culture, #1)",
+        "author": "Iain M. Banks",
+        "dateRead": "Fri, 27 Mar 2026 00:00:00 +0000",
+        "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1327951890l/8935689.jpg",
+        "shelf": "read"
+    },
+    {
         "title": "Notes from Underground",
         "author": "Fyodor Dostoevsky",
         "dateRead": "Fri, 13 Mar 2026 00:00:00 +0000",
@@ -161,7 +203,7 @@
         "shelf": "read"
     },
     {
-        "title": "The Sunlit Man",
+        "title": "The Sunlit Man (Cosmere)",
         "author": "Brandon Sanderson",
         "dateRead": "Fri, 25 Apr 2025 00:00:00 +0000",
         "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1696146860l/60531420._SY475_.jpg",
@@ -469,35 +511,35 @@
         "shelf": "read"
     },
     {
-        "title": "A Memory of Light (The Wheel of Time, #14)",
+        "title": "A Memory of Light (Wheel of Time, #14)",
         "author": "Robert Jordan",
         "dateRead": "Fri, 14 Jul 2023 00:00:00 +0000",
         "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1647270202l/7743175._SX318_.jpg",
         "shelf": "read"
     },
     {
-        "title": "Towers of Midnight (The Wheel of Time, #13)",
+        "title": "Towers of Midnight (Wheel of Time, #13)",
         "author": "Robert Jordan",
         "dateRead": "",
         "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1358109459l/8253920.jpg",
         "shelf": "read"
     },
     {
-        "title": "The Gathering Storm (The Wheel of Time, #12)",
+        "title": "The Gathering Storm (Wheel of Time, #12)",
         "author": "Robert Jordan",
         "dateRead": "Thu, 20 Apr 2023 00:00:00 +0000",
         "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1647270090l/1166599._SY475_.jpg",
         "shelf": "read"
     },
     {
-        "title": "Knife of Dreams (The Wheel of Time, #11)",
+        "title": "Knife of Dreams (Wheel of Time, #11)",
         "author": "Robert Jordan",
         "dateRead": "Thu, 16 Feb 2023 00:00:00 +0000",
         "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1659904494l/13888._SY475_.jpg",
         "shelf": "read"
     },
     {
-        "title": "Crossroads of Twilight (The Wheel of Time, #10)",
+        "title": "Crossroads of Twilight (Wheel of Time, #10)",
         "author": "Robert Jordan",
         "dateRead": "Mon, 16 Jan 2023 00:00:00 +0000",
         "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1647270020l/113435._SY475_.jpg",
@@ -518,56 +560,56 @@
         "shelf": "read"
     },
     {
-        "title": "Winter's Heart (The Wheel of Time, #9)",
+        "title": "Winter's Heart (Wheel of Time, #9)",
         "author": "Robert Jordan",
         "dateRead": "Thu, 27 Oct 2022 00:00:00 +0000",
         "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1667248191l/13891._SY475_.jpg",
         "shelf": "read"
     },
     {
-        "title": "The Path of Daggers (The Wheel of Time, #8)",
+        "title": "The Path of Daggers (Wheel of Time, #8)",
         "author": "Robert Jordan",
         "dateRead": "",
         "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1390508613l/140974.jpg",
         "shelf": "read"
     },
     {
-        "title": "A Crown of Swords (The Wheel of Time, #7)",
+        "title": "A Crown of Swords (Wheel of Time, #7)",
         "author": "Robert Jordan",
         "dateRead": "Fri, 5 Aug 2022 00:00:00 +0000",
         "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1358542379l/13890.jpg",
         "shelf": "read"
     },
     {
-        "title": "Lord of Chaos (The Wheel of Time, #6)",
+        "title": "Lord of Chaos (Wheel of Time, #6)",
         "author": "Robert Jordan",
         "dateRead": "",
         "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1480096417l/35231._SY475_.jpg",
         "shelf": "read"
     },
     {
-        "title": "The Fires of Heaven (The Wheel of Time, #5)",
+        "title": "The Fires of Heaven (Wheel of Time, #5)",
         "author": "Robert Jordan",
         "dateRead": "",
         "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1327866286l/13895.jpg",
         "shelf": "read"
     },
     {
-        "title": "The Shadow Rising (The Wheel of Time, #4)",
+        "title": "The Shadow Rising (Wheel of Time, #4)",
         "author": "Robert Jordan",
         "dateRead": "Thu, 17 Mar 2022 00:00:00 +0000",
         "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1638239837l/9539._SY475_.jpg",
         "shelf": "read"
     },
     {
-        "title": "The Dragon Reborn (The Wheel of Time, #3)",
+        "title": "The Dragon Reborn (Wheel of Time, #3)",
         "author": "Robert Jordan",
         "dateRead": "Sat, 22 Jan 2022 00:00:00 +0000",
         "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1659905781l/34897._SX318_.jpg",
         "shelf": "read"
     },
     {
-        "title": "The Great Hunt (The Wheel of Time, #2)",
+        "title": "The Great Hunt (Wheel of Time, #2)",
         "author": "Robert Jordan",
         "dateRead": "",
         "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1659905799l/233649._SY475_.jpg",
@@ -623,7 +665,7 @@
         "shelf": "read"
     },
     {
-        "title": "The Eye of the World (The Wheel of Time, #1)",
+        "title": "The Eye of the World (Wheel of Time, #1)",
         "author": "Robert Jordan",
         "dateRead": "Fri, 23 Jul 2021 00:00:00 +0000",
         "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1659905815l/228665._SY475_.jpg",
@@ -854,7 +896,7 @@
         "shelf": "read"
     },
     {
-        "title": "Dune (Dune #1)",
+        "title": "Dune (Dune, #1)",
         "author": "Frank Herbert",
         "dateRead": "",
         "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1434908555l/234225._SY475_.jpg",
@@ -868,11 +910,39 @@
         "shelf": "read"
     },
     {
-        "title": "Consider Phlebas (Culture, #1)",
-        "author": "Iain M. Banks",
+        "title": "Columbus Day (Expeditionary Force, #1)",
+        "author": "Craig Alanson",
         "dateRead": "",
-        "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1327951890l/8935689.jpg",
-        "shelf": "currently-reading"
+        "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1508556358l/36449535._SY475_.jpg",
+        "shelf": "to-read"
+    },
+    {
+        "title": "Dawn (Xenogenesis, #1)",
+        "author": "Octavia E. Butler",
+        "dateRead": "",
+        "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1717091024l/60929._SY475_.jpg",
+        "shelf": "to-read"
+    },
+    {
+        "title": "Hyperion (Hyperion Cantos, #1)",
+        "author": "Dan Simmons",
+        "dateRead": "",
+        "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1746983261l/77566._SY475_.jpg",
+        "shelf": "to-read"
+    },
+    {
+        "title": "Blood Over Bright Haven",
+        "author": "M.L. Wang",
+        "dateRead": "",
+        "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1717354584l/208430658._SY475_.jpg",
+        "shelf": "to-read"
+    },
+    {
+        "title": "His Majesty's Dragon (Temeraire, #1)",
+        "author": "Naomi Novik",
+        "dateRead": "",
+        "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1376392909l/28876.jpg",
+        "shelf": "to-read"
     },
     {
         "title": "Elric of Melniboné and Other Stories (Elric Chronological Order, #1)",
