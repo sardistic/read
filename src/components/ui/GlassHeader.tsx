@@ -9,6 +9,7 @@ import { RedParticlesOverlay } from './RedParticlesOverlay';
 
 interface GlassHeaderProps {
     currentRead?: Work;
+    currentReadLabel?: string;
 }
 
 interface DropdownProps {
@@ -57,7 +58,7 @@ const NavDropdown: React.FC<DropdownProps> = ({ label, items }) => {
     );
 };
 
-export const GlassHeader: React.FC<GlassHeaderProps> = ({ currentRead }) => {
+export const GlassHeader: React.FC<GlassHeaderProps> = ({ currentRead, currentReadLabel = 'Reading Now' }) => {
     const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
     return (
@@ -100,7 +101,7 @@ export const GlassHeader: React.FC<GlassHeaderProps> = ({ currentRead }) => {
                     <div className={styles.readingWidget} style={{ backgroundImage: `url(${currentRead.coverImage})` }}>
                         <RedParticlesOverlay />
                         <div className={styles.readingInfo}>
-                            <span className={styles.readingLabel}>Reading Now</span>
+                            <span className={styles.readingLabel}>{currentReadLabel}</span>
                             <span className={styles.readingTitle}>{currentRead.title}</span>
                         </div>
                     </div>

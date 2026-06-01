@@ -7,12 +7,13 @@ import { Work } from '@/lib/types';
 interface DashboardLayoutProps {
     children: React.ReactNode;
     currentRead?: Work;
+    currentReadLabel?: string;
 }
 
-export const DashboardLayout: React.FC<DashboardLayoutProps> = ({ children, currentRead }) => {
+export const DashboardLayout: React.FC<DashboardLayoutProps> = ({ children, currentRead, currentReadLabel }) => {
     return (
         <div className={styles.wrapper}>
-            <GlassHeader currentRead={currentRead} />
+            <GlassHeader currentRead={currentRead} currentReadLabel={currentReadLabel} />
             <main className={styles.main}>
                 <div className={styles.content}>
                     {children}

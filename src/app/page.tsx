@@ -47,10 +47,12 @@ export default async function Home() {
 
   const currentlyReading = works.filter(w => w.status === 'reading');
   // Fallback to most recent read book if no active reading
-  const currentCover = (currentlyReading.length > 0 ? currentlyReading[0] : readWorks[0])?.coverImage;
+  const currentHeaderWork = currentlyReading[0] || readWorks[0];
+  const currentCover = currentHeaderWork?.coverImage;
+  const currentHeaderLabel = currentlyReading[0] ? 'Reading Now' : 'Latest Read';
 
   return (
-    <DashboardLayout currentRead={currentlyReading[0]}>
+    <DashboardLayout currentRead={currentHeaderWork} currentReadLabel={currentHeaderLabel}>
       <AtmosphericBackground image={currentCover} />
       <div className={styles.grid}>
 
