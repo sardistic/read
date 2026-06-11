@@ -8737,6 +8737,52 @@
       "genres": [],
       "platform": "goodreads",
       "notes": ""
+    },
+    {
+      "id": "51479562",
+      "title": "Inversions (Culture, #6)",
+      "author": "Iain M. Banks",
+      "type": "book",
+      "status": "read",
+      "rating": 0,
+      "dateAdded": "2026-06-11",
+      "pageCount": 0,
+      "coverImage": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1288930844l/12017.jpg",
+      "description": "",
+      "genres": [],
+      "platform": "goodreads",
+      "notes": "",
+      "dateRead": "2026-06-09"
+    },
+    {
+      "id": "384742726",
+      "title": "Surface Detail (Culture, #9)",
+      "author": "Iain M. Banks",
+      "type": "book",
+      "status": "read",
+      "rating": 0,
+      "dateAdded": "2026-06-11",
+      "pageCount": 0,
+      "coverImage": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1287893375l/7937744.jpg",
+      "description": "",
+      "genres": [],
+      "platform": "goodreads",
+      "notes": ""
+    },
+    {
+      "id": "479062090",
+      "title": "Look to Windward (Culture, #7)",
+      "author": "Iain M. Banks",
+      "type": "book",
+      "status": "reading",
+      "rating": 0,
+      "dateAdded": "2026-06-11",
+      "pageCount": 0,
+      "coverImage": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1288930978l/12016.jpg",
+      "description": "",
+      "genres": [],
+      "platform": "goodreads",
+      "notes": ""
     }
   ]
 }

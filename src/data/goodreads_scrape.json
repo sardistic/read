@@ -1,5 +1,19 @@
 [
     {
+        "title": "Inversions (Culture, #6)",
+        "author": "Iain M. Banks",
+        "dateRead": "Tue, 9 Jun 2026 00:00:00 +0000",
+        "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1288930844l/12017.jpg",
+        "shelf": "read"
+    },
+    {
+        "title": "Surface Detail (Culture, #9)",
+        "author": "Iain M. Banks",
+        "dateRead": "",
+        "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1287893375l/7937744.jpg",
+        "shelf": "read"
+    },
+    {
         "title": "A Parade of Horribles (Dungeon Crawler Carl, #8)",
         "author": "Matt Dinniman",
         "dateRead": "Sat, 30 May 2026 00:00:00 +0000",
@@ -908,6 +922,13 @@
         "dateRead": "",
         "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1462924585l/30165203.jpg",
         "shelf": "read"
+    },
+    {
+        "title": "Look to Windward (Culture, #7)",
+        "author": "Iain M. Banks",
+        "dateRead": "",
+        "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1288930978l/12016.jpg",
+        "shelf": "currently-reading"
     },
     {
         "title": "Columbus Day (Expeditionary Force, #1)",
