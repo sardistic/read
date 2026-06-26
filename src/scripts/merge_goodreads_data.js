@@ -21,12 +21,15 @@ const shelfToStatus = (shelf) => {
 
 // Helper to normalize strings for comparison
 const normalize = (str) => str ? str.toLowerCase().replace(/[^\w\s]/g, '').trim() : '';
+const normalizeUrl = (str) => str ? str.trim() : '';
 
 scraped.forEach(scrapedBook => {
     // Try to find existing book
     let existingBook = library.works.find(work => {
         // Exact title match (normalized)
         if (normalize(work.title) === normalize(scrapedBook.title)) return true;
+        // Goodreads sometimes renames editions; the cover URL is a stable fallback.
+        if (normalizeUrl(work.coverImage) && normalizeUrl(work.coverImage) === normalizeUrl(scrapedBook.imageUrl)) return true;
         // Check fuzzy if needed? For now strict on title, loose on author
         return false;
     });

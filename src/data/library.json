@@ -8724,21 +8724,6 @@
       "notes": ""
     },
     {
-      "id": "309262379",
-      "title": "American Gods (American Gods, #1)",
-      "author": "Neil Gaiman",
-      "type": "book",
-      "status": "read",
-      "rating": 0,
-      "dateAdded": "2026-06-10",
-      "pageCount": 0,
-      "coverImage": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1462924585l/30165203.jpg",
-      "description": "",
-      "genres": [],
-      "platform": "goodreads",
-      "notes": ""
-    },
-    {
       "id": "51479562",
       "title": "Inversions (Culture, #6)",
       "author": "Iain M. Banks",
@@ -8784,6 +8769,36 @@
       "platform": "goodreads",
       "notes": "",
       "dateRead": "2026-06-19"
+    },
+    {
+      "id": "770490288",
+      "title": "Matter (Culture, #8)",
+      "author": "Iain M. Banks",
+      "type": "book",
+      "status": "reading",
+      "rating": 0,
+      "dateAdded": "2026-06-26",
+      "pageCount": 0,
+      "coverImage": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1742831881l/886066._SY475_.jpg",
+      "description": "",
+      "genres": [],
+      "platform": "goodreads",
+      "notes": ""
+    },
+    {
+      "id": "419035918",
+      "title": "The Lathe of Heaven",
+      "author": "Ursula K. Le Guin",
+      "type": "book",
+      "status": "toread",
+      "rating": 0,
+      "dateAdded": "2026-06-26",
+      "pageCount": 0,
+      "coverImage": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1433084322l/59924.jpg",
+      "description": "",
+      "genres": [],
+      "platform": "goodreads",
+      "notes": ""
     }
   ]
 }
