@@ -4,10 +4,12 @@ on:
   push:
     branches:
       - master
+  schedule:
+    - cron: "17 10 * * *"
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -24,6 +26,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
@@ -36,6 +40,23 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
+
+      - name: Scrape Goodreads
+        if: github.event_name != 'push'
+        run: node src/scripts/scrape_goodreads.js
+
+      - name: Merge Goodreads data
+        if: github.event_name != 'push'
+        run: node src/scripts/merge_goodreads_data.js
+
+      - name: Commit refreshed data
+        if: github.event_name != 'push'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/data/goodreads_scrape.json src/data/library.json
+          git diff --cached --quiet || git commit -m "Update reads list [skip ci]"
+          git push
 
       - name: Build static site
         run: npm run build
