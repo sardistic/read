@@ -1,10 +1,14 @@
 {
   "name": "read",
   "version": "0.1.0",
+  "description": "A personal reading dashboard that turns Goodreads library data into an interactive Next.js bookshelf, timeline, and genre analytics.",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "metrics:local": "node scripts/fill_local_counts.js",
+    "metrics:external": "node scripts/enrich_external_metrics.js",
+    "metrics:audio": "node scripts/enrich_external_metrics.js --audio-all --audio-only",
     "start": "next start",
     "lint": "eslint"
   },

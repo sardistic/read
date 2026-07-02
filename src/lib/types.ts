@@ -14,8 +14,15 @@ export interface Work {
   coverImage?: string; // URL
   description?: string; // Book summary/blurb
   pageCount?: number; // For books
-  wordCount?: number; // Estimated or actual
+  wordCount?: number; // Publisher-verified (metricSource ":verified") or estimated
   durationMinutes?: number; // For audiobooks
+  audiobookDurationMinutes?: number; // Runtime for audiobook editions of this work
+  metricSource?: {
+    pageCount?: string;
+    wordCount?: string;
+    durationMinutes?: string;
+    audiobookDurationMinutes?: string;
+  };
   genres: string[];
   seriesName?: string;
   seriesIndex?: number;

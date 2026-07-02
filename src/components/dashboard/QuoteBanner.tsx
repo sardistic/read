@@ -93,7 +93,7 @@ export const QuoteBanner: React.FC<QuoteBannerProps> = ({ works }) => {
             }}
         >
             <blockquote className={styles.quote}>
-                "{quote.text}"
+                &ldquo;{quote.text}&rdquo;
             </blockquote>
             <div className={styles.citation}>
                 <span className={styles.author}>— {quote.author}</span>

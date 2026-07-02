@@ -81,7 +81,9 @@ export const AtmosphericBackground: React.FC<AtmosphericBackgroundProps> = ({ im
 
         const update = () => {
             frame++;
-            updateObstacles();
+            // getBoundingClientRect forces layout, so only remap obstacles a few
+            // times a second — sand reacts to scrolled cards within ~150ms.
+            if (frame % 10 === 1) updateObstacles();
 
             // 1. Emitter: Waves
             const stormIntensity = (Math.sin(frame * 0.01) + 1) / 2;
@@ -370,7 +372,11 @@ export const AtmosphericBackground: React.FC<AtmosphericBackgroundProps> = ({ im
         document.addEventListener('mouseleave', onMouseLeave);
 
         resize();
-        update();
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            draw(); // static dunes, no animation loop
+        } else {
+            update();
+        }
 
         return () => {
             window.removeEventListener('resize', resize);

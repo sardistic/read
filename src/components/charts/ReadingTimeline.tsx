@@ -11,24 +11,46 @@ export const ReadingTimeline = ({ works }: { works: Work[] }) => {
     const data = useMemo(() => {
         interface MonthData {
             label: string;
+            shortLabel: string;
+            rangeLabel: string;
             fullDate: Date;
             words: number;
             hours: number;
+            books: number;
+            missingWords: number;
+            missingHours: number;
+            estimatedWords: number;
+            estimatedHours: number;
         }
         const months: MonthData[] = [];
-        const today = new Date();
+        const readDates = works
+            .map(w => w.dateRead)
+            .filter((date): date is string => Boolean(date))
+            .map(date => {
+                const [y, m, d] = date.split('-').map(Number);
+                return new Date(y, m - 1, d || 1);
+            })
+            .filter(date => !Number.isNaN(date.getTime()));
+        const latestReadDate = readDates.length
+            ? new Date(Math.max(...readDates.map(date => date.getTime())))
+            : new Date();
+        const anchorMonth = new Date(latestReadDate.getFullYear(), latestReadDate.getMonth(), 1);
 
-        // Generate last 12 months keys
         for (let i = 11; i >= 0; i--) {
-            const d = new Date(today.getFullYear(), today.getMonth() - i, 1);
+            const d = new Date(anchorMonth.getFullYear(), anchorMonth.getMonth() - i, 1);
             const key = d.toLocaleString('default', { month: 'short' });
-            // We use a simplified key like "Aug" but for sorting we might need more, 
-            // but for this chart order is fixed to last 12 months.
             months.push({
-                label: key,
+                label: `${key} '${String(d.getFullYear()).slice(2)}`,
+                shortLabel: key,
+                rangeLabel: d.toLocaleString('default', { month: 'long', year: 'numeric' }),
                 fullDate: d,
                 words: 0,
-                hours: 0
+                hours: 0,
+                books: 0,
+                missingWords: 0,
+                missingHours: 0,
+                estimatedWords: 0,
+                estimatedHours: 0
             });
         }
 
@@ -46,8 +68,17 @@ export const ReadingTimeline = ({ works }: { works: Work[] }) => {
             );
 
             if (bin) {
+                const audiobookMinutes = w.audiobookDurationMinutes ||
+                    (w.type === 'audiobook' && !w.metricSource?.durationMinutes?.includes('estimated')
+                        ? w.durationMinutes || 0
+                        : 0);
                 bin.words += (w.wordCount || 0);
-                bin.hours += (w.durationMinutes || 0) / 60;
+                bin.hours += audiobookMinutes / 60;
+                bin.books += 1;
+                if (!w.wordCount) bin.missingWords += 1;
+                if (!audiobookMinutes) bin.missingHours += 1;
+                if (w.wordCount && !w.metricSource?.wordCount?.includes('actual')) bin.estimatedWords += 1;
+                if (audiobookMinutes && !w.metricSource?.audiobookDurationMinutes?.includes('itunes')) bin.estimatedHours += 1;
             }
         });
 
@@ -55,9 +86,10 @@ export const ReadingTimeline = ({ works }: { works: Work[] }) => {
     }, [works]);
 
     const maxValue = Math.max(...data.map(d => metric === 'words' ? d.words : d.hours)) || 1;
-    const height = 280;
-    const barWidth = 32;
-    const gap = 12;
+    const totalValue = data.reduce((sum, d) => sum + (metric === 'words' ? d.words : d.hours), 0);
+    const estimateCount = data.reduce((sum, d) => sum + (metric === 'words' ? d.estimatedWords : d.estimatedHours), 0);
+    const isEstimatedTotal = estimateCount > 0;
+    const rangeText = data.length ? `${data[0].label} - ${data[data.length - 1].label}` : 'last 12 months';
 
     return (
         <PaperCard elevation="md" className={styles.container} enableSand>
@@ -74,74 +106,50 @@ export const ReadingTimeline = ({ works }: { works: Work[] }) => {
                         className={`${styles.toggle} ${metric === 'hours' ? styles.active : ''}`}
                         onClick={() => setMetric('hours')}
                     >
-                        Hours
+                        Audio
                     </button>
                 </div>
             </div>
 
             <div className={styles.chartWrapper}>
-                <svg
-                    width="100%"
-                    height={320}
-                    viewBox={`0 0 ${data.length * (barWidth + gap)} 320`}
-                    preserveAspectRatio="xMidYMid meet"
-                    className={styles.svg}
-                >
-                    <defs>
-                        <linearGradient id="barGradient" x1="0" y1="0" x2="0" y2="1">
-                            <stop offset="0%" stopColor={metric === 'words' ? 'var(--ink-primary)' : 'var(--accent-gold)'} stopOpacity="0.9" />
-                            <stop offset="100%" stopColor={metric === 'words' ? 'var(--ink-primary)' : 'var(--accent-gold)'} stopOpacity="0.4" />
-                        </linearGradient>
-                    </defs>
-
-                    {/* Grid lines */}
-                    <line x1="0" y1={height} x2="100%" y2={height} stroke="var(--ink-faint)" strokeWidth="1" />
-                    <line x1="0" y1={height / 2} x2="100%" y2={height / 2} stroke="var(--ink-faint)" strokeWidth="1" strokeDasharray="4 4" opacity="0.3" />
-                    <line x1="0" y1={0} x2="100%" y2={0} stroke="var(--ink-faint)" strokeWidth="1" strokeDasharray="4 4" opacity="0.3" />
-
-                    {data.map((d, i) => {
+                <div className={styles.summary}>
+                    <span>{metric === 'words' ? `${isEstimatedTotal ? '~' : ''}${Math.round(totalValue / 1000).toLocaleString()}k` : `${isEstimatedTotal ? '~' : ''}${Math.round(totalValue).toLocaleString()}h`}</span>
+                    <small>{rangeText}</small>
+                </div>
+                <div className={styles.barList}>
+                    {data.map((d) => {
                         const val = metric === 'words' ? d.words : d.hours;
-                        const barHeight = (val / maxValue) * height;
-                        const x = i * (barWidth + gap);
-                        const y = height - barHeight;
+                        const width = `${Math.max(val > 0 ? 6 : 0, (val / maxValue) * 100)}%`;
+                        const displayValue = metric === 'words'
+                            ? `${Math.round(val / 1000).toLocaleString()}k`
+                            : `${val.toFixed(1)}h`;
+                        const missingCount = metric === 'words' ? d.missingWords : d.missingHours;
+                        const estimatedCount = metric === 'words' ? d.estimatedWords : d.estimatedHours;
+                        const isEstimated = estimatedCount > 0;
+                        const missingLabel = missingCount > 0 ? ` (${missingCount} missing ${metric === 'words' ? 'word counts' : 'hour counts'})` : '';
+                        const estimatedLabel = isEstimated ? ` (${estimatedCount} estimated ${metric === 'words' ? 'word counts' : 'time values'})` : '';
 
                         return (
-                            <g key={i} className={styles.barGroup}>
-                                <rect
-                                    x={x}
-                                    y={y}
-                                    width={barWidth}
-                                    height={barHeight}
-                                    fill="url(#barGradient)"
-                                    className={styles.bar}
-                                    rx="2"
-                                />
-                                <text
-                                    x={x + barWidth / 2}
-                                    y={height + 24}
-                                    textAnchor="middle"
-                                    fill="var(--ink-secondary)"
-                                    fontSize="10"
-                                    fontFamily="var(--font-sans)"
-                                >
-                                    {d.label}
-                                </text>
-                                {val > 0 && (
-                                    <text
-                                        x={x + barWidth / 2}
-                                        y={y - 4}
-                                        textAnchor="middle"
-                                        fill="var(--ink-primary)"
-                                        fontSize="9"
-                                        fontWeight="bold"
-                                    >
-                                        {metric === 'words' ? (val / 1000).toFixed(0) + 'k' : val.toFixed(1)}
-                                    </text>
-                                )}
-                            </g>
+                            <div key={d.rangeLabel} className={styles.barRow} title={`${d.rangeLabel}: ${isEstimated ? '~' : ''}${displayValue}, ${d.books} books${missingLabel}${estimatedLabel}`}>
+                                <span className={styles.month}>{d.label}</span>
+                                <span className={styles.track}>
+                                    <span
+                                        className={styles.bar}
+                                        style={{
+                                            width,
+                                            background: metric === 'words'
+                                                ? 'linear-gradient(90deg, var(--ink-primary), rgba(255,255,255,0.42))'
+                                                : 'linear-gradient(90deg, var(--accent-gold), rgba(255,209,102,0.34))'
+                                        }}
+                                    />
+                                </span>
+                                <span className={missingCount > 0 ? styles.valueMissing : isEstimated ? styles.valueEstimated : styles.value}>
+                                    {val > 0 ? `${isEstimated ? '~' : ''}${displayValue}` : d.books > 0 ? `${d.books} books` : '-'}
+                                </span>
+                            </div>
                         );
                     })}
-                </svg>
+                </div>
             </div>
         </PaperCard>
     );

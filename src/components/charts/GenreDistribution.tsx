@@ -4,113 +4,132 @@ import React, { useMemo, useRef, useState, useEffect } from 'react';
 import { PaperCard } from '../ui/PaperCard';
 import { Work } from '@/lib/types';
 import styles from './GenreDistribution.module.css';
-import { aggregateGenres, normalizeGenre } from '@/lib/genreUtils';
+import { resolveWorkGenres, getParentGenre } from '@/lib/genreUtils';
 
 interface Node {
-    id: string; // Genre Name
+    id: string;
     count: number;
     parent: string;
     isMajor: boolean;
+    radius: number;
+    color: string;
     x: number;
     y: number;
     vx: number;
     vy: number;
-    radius: number;
-    color: string;
 }
 
 interface Link {
     source: string;
     target: string;
-    strength: number; // Shared books count
+    strength: number; // shared-book count
 }
 
-// Dynamic Galaxy Palette
+// Only render nodes/links above these thresholds so the sky stays legible.
+const MIN_COUNT = 4;
+const MAX_NODES = 40;
+const MIN_LINK = 6;
+
+// Force-simulation constants (tuned for this dataset so galaxies separate
+// instead of collapsing into a central hairball).
+const CHARGE = 9000;   // mutual repulsion between stars
+const LINK_K = 0.018;  // spring stiffness for shared-genre links
+const CLUSTER_K = 0.18; // pull toward each star's galaxy centroid
+const CENTER_K = 0.005; // gentle pull toward canvas centre
+
+// Galaxy palette (parent genre -> colour).
 const GALAXY_COLORS: Record<string, string> = {
     'Science Fiction': '#4cc9f0',
     'Fantasy': '#f72585',
     'Horror': '#7209b7',
     'Mystery & Thriller': '#4361ee',
     'History & Memoir': '#ffd166',
-    'Science & Thought': '#06d6a0',
+    'Science': '#06d6a0',
     'Society & Business': '#ef476f',
     'Spirituality': '#b5179e',
-    'Arts & Poetry': '#560bad',
+    'Arts & Poetry': '#c77dff',
     'Comics & Manga': '#3a0ca3',
     'Romance': '#ff4d6d',
+    'Action & Adventure': '#ff9f1c',
+    'Classics': '#e9c46a',
+    'Young Adult': '#2ec4b6',
+    'Philosophy': '#9b5de5',
+    'Psychology': '#00bbf9',
     'Other': '#adb5bd'
 };
+
+const colorFor = (parent: string) => GALAXY_COLORS[parent] || GALAXY_COLORS['Other'];
+
+const hashString = (value: string) => {
+    let hash = 0;
+    for (let i = 0; i < value.length; i++) {
+        hash = ((hash << 5) - hash + value.charCodeAt(i)) | 0;
+    }
+    return Math.abs(hash);
+};
+
+const galaxyHazeRadius = (starCount: number) => Math.min(120, 34 + starCount * 12);
 
 export const GenreDistribution = ({ works }: { works: Work[] }) => {
     const containerRef = useRef<HTMLDivElement>(null);
     const canvasRef = useRef<SVGSVGElement>(null);
-    const [tooltipToken, setTooltipToken] = useState<{ x: number, y: number, content: string } | null>(null);
 
-
-    // State for Simulation
-    const [nodes, setNodes] = useState<Node[]>([]);
-    const [dimensions, setDimensions] = useState({ width: 800, height: 500 });
+    const [dimensions, setDimensions] = useState({ width: 800, height: 440 });
     const [hoveredNode, setHoveredNode] = useState<string | null>(null);
-    const isDragging = useRef<string | null>(null);
+    const [pinnedNode, setPinnedNode] = useState<string | null>(null);
 
-    // 1. Process Data (Pure calculation)
-    const { nodes: filteredNodes, links: initialLinks } = useMemo(() => {
-        const allGenres = works.flatMap(w => w.genres);
-        const aggregated = aggregateGenres(allGenres);
+    // Hover previews a star; a pinned star keeps its panel/links when the mouse leaves.
+    const selected = hoveredNode ?? pinnedNode;
 
-        // Filter out noise (< 6 books)
-        const nodeData = aggregated
-            .filter((g: { value: number }) => g.value >= 6)
-            .map((g: { name: string; value: number; parent: string }) => {
-                const isMajor = g.value >= 15; // Raised threshold for major distinction
-                const radius = Math.pow(g.value, 0.4) * 4;
+    // Distinguish a click (pin) from a drag.
+    const downRef = useRef<{ x: number; y: number } | null>(null);
+    const movedRef = useRef(false);
 
-                return {
-                    id: g.name,
-                    count: g.value,
-                    parent: g.parent,
-                    isMajor,
-                    x: 400 + (Math.random() - 0.5) * 100,
-                    y: 250 + (Math.random() - 0.5) * 100,
-                    vx: 0,
-                    vy: 0,
-                    radius,
-                    color: GALAXY_COLORS[g.parent] || GALAXY_COLORS['Other']
-                };
-            });
+    // Refs the simulation reads without re-subscribing.
+    const dimsRef = useRef(dimensions);
+    const dragRef = useRef<{ id: string; x: number; y: number } | null>(null);
+    const alphaRef = useRef(0);
+    const runningRef = useRef(false);
+    const reheatRef = useRef<(() => void) | null>(null);
+    dimsRef.current = dimensions;
 
-        const maxCount = Math.max(...nodeData.map(n => n.count)) || 1;
-        const parents = Object.keys(GALAXY_COLORS);
+    // The simulation writes positions straight to these DOM elements each frame,
+    // bypassing React state so a hot sim doesn't re-render the whole tree.
+    const nodeElRefs = useRef(new Map<string, SVGGElement>());
+    const linkElRefs = useRef(new Map<number, SVGLineElement>());
+    const galaxyElRefs = useRef(new Map<string, SVGGElement>());
 
-        // Cartographic Neighborhood Hubs (Fixed regions for each category)
-        const nodes: Node[] = nodeData.map((n: Node) => {
-            const parentIndex = parents.indexOf(n.parent);
-            // 4 columns, 3 rows grid for 12 categories
-            const col = parentIndex % 4;
-            const row = Math.floor(parentIndex / 4);
-            const hubX = 100 + col * 180;
-            const hubY = 80 + row * 100;
+    // 1. Build nodes + links from the (de-duplicated) genre data.
+    const { nodeData, links } = useMemo(() => {
+        const perWork = works.map(w => resolveWorkGenres(w.genres));
 
-            const angle = Math.random() * Math.PI * 2;
-            const dist = (1 - n.count / maxCount) * 40 + 10;
+        const counts = new Map<string, number>();
+        perWork.forEach(genres => genres.forEach(g => counts.set(g, (counts.get(g) || 0) + 1)));
 
+        const entries = Array.from(counts.entries())
+            .filter(([, value]) => value >= MIN_COUNT)
+            .sort((a, b) => b[1] - a[1])
+            .slice(0, MAX_NODES);
+        const names = new Set(entries.map(([name]) => name));
+
+        const nodeData: Node[] = entries.map(([name, count]) => {
+            const parent = getParentGenre(name);
             return {
-                ...n,
-                x: hubX + Math.cos(angle) * dist,
-                y: hubY + Math.sin(angle) * dist
+                id: name,
+                count,
+                parent,
+                isMajor: count >= 15,
+                // Rounded so SSR and client render identical attribute strings
+                // (Math.pow can differ in the last float bits across engines).
+                radius: Math.round(Math.max(6, Math.pow(count, 0.42) * 4.4) * 100) / 100,
+                color: colorFor(parent),
+                x: 0, y: 0, vx: 0, vy: 0
             };
         });
 
-        const nodeNames = new Set(nodes.map(n => n.id));
-
-        // Create Links (Shared Books)
         const linkMap = new Map<string, number>();
-        works.forEach(w => {
-            const bookGenres = w.genres
-                .map(g => normalizeGenre(g))
-                .filter((g): g is string => g !== null && nodeNames.has(g));
-
-            const unique = Array.from(new Set(bookGenres)).sort();
+        perWork.forEach(genres => {
+            const unique = Array.from(new Set(genres.filter(g => names.has(g)))).sort();
             for (let i = 0; i < unique.length; i++) {
                 for (let j = i + 1; j < unique.length; j++) {
                     const key = `${unique[i]}|${unique[j]}`;
@@ -120,309 +139,476 @@ export const GenreDistribution = ({ works }: { works: Work[] }) => {
         });
 
         const links: Link[] = Array.from(linkMap.entries())
-            .map(([key, count]) => {
+            .map(([key, strength]) => {
                 const [source, target] = key.split('|');
-                return { source, target, strength: count };
+                return { source, target, strength };
             })
-            .filter(l => l.strength >= 1);
+            .filter(link => link.strength >= MIN_LINK);
 
-        return { nodes, links };
+        return { nodeData, links };
     }, [works]);
 
-    // 2. Manage Dimensions
+    // Mutable simulation state. Seeded here so the very first render already has
+    // sensible positions; the animation effect then mutates these same objects.
+    const sim = useMemo(() => {
+        const { width, height } = dimsRef.current;
+        const cx = width / 2;
+        const cy = height / 2;
+        const parents = Array.from(new Set(nodeData.map(n => n.parent)));
+        return nodeData.map(node => {
+            const angle = (parents.indexOf(node.parent) / Math.max(1, parents.length)) * Math.PI * 2;
+            const jitter = (hashString(node.id) % 100) / 100 - 0.5;
+            return {
+                ...node,
+                x: Math.round((cx + Math.cos(angle) * (150 + jitter * 40)) * 100) / 100,
+                y: Math.round((cy + Math.sin(angle) * (120 + jitter * 40)) * 100) / 100,
+                vx: 0, vy: 0
+            };
+        });
+    }, [nodeData]);
+
+    const activeConnections = useMemo(() => {
+        if (!selected) return new Set<string>();
+        const connections = new Set(
+            links
+                .filter(link => link.source === selected || link.target === selected)
+                .flatMap(link => [link.source, link.target])
+        );
+        connections.add(selected);
+        return connections;
+    }, [selected, links]);
+
+    // Static galaxy facts (name, colour, sizes). Positions are updated
+    // imperatively from the live centroids inside the simulation tick.
+    const galaxies = useMemo(() => {
+        const groups = new Map<string, { name: string; color: string; count: number; nodes: number }>();
+        nodeData.forEach(node => {
+            const existing = groups.get(node.parent);
+            if (existing) {
+                existing.count += node.count;
+                existing.nodes += 1;
+            } else {
+                groups.set(node.parent, { name: node.parent, color: node.color, count: node.count, nodes: 1 });
+            }
+        });
+        return Array.from(groups.values()).sort((a, b) => b.count - a.count);
+    }, [nodeData]);
+
+    // 2. Track container size.
     useEffect(() => {
         if (!containerRef.current) return;
-
         const updateSize = () => {
-            if (containerRef.current) {
-                const rect = containerRef.current.getBoundingClientRect();
-                setDimensions({ width: rect.width || 800, height: rect.height || 200 });
-            }
+            if (!containerRef.current) return;
+            const rect = containerRef.current.getBoundingClientRect();
+            setDimensions({ width: rect.width || 800, height: rect.height || 440 });
         };
-
         const observer = new ResizeObserver(updateSize);
         observer.observe(containerRef.current);
         updateSize();
-
         return () => observer.disconnect();
     }, []);
 
-    // 3. Initialize/Reset Nodes when data or initial centering changes
+    // 3. Force simulation. Runs while "hot" or dragging, then rests.
+    //    Each tick mutates `sim` and writes transforms/coordinates directly to
+    //    the SVG elements — React is not involved in the per-frame path.
     useEffect(() => {
-        const centeredNodes = filteredNodes.map(n => ({
-            ...n,
-            x: dimensions.width / 2 + (Math.random() - 0.5) * 100,
-            y: dimensions.height / 2 + (Math.random() - 0.5) * 100
-        }));
-        setNodes(centeredNodes);
-    }, [filteredNodes, dimensions.width === 800]);
+        const index = new Map(sim.map((n, i) => [n.id, i]));
+        const simLinks = links
+            .map(l => ({ a: index.get(l.source)!, b: index.get(l.target)!, strength: l.strength }))
+            .filter(l => l.a !== undefined && l.b !== undefined);
+        const maxStrength = Math.max(1, ...simLinks.map(l => l.strength));
 
-    // 4. Physics Simulation (Static Warm-up)
-    useEffect(() => {
-        if (nodes.length === 0) return;
+        const applyPositions = () => {
+            for (const n of sim) {
+                nodeElRefs.current.get(n.id)?.setAttribute('transform', `translate(${n.x}, ${n.y})`);
+            }
+            links.forEach((l, i) => {
+                const el = linkElRefs.current.get(i);
+                if (!el) return;
+                const a = sim[index.get(l.source)!];
+                const b = sim[index.get(l.target)!];
+                if (!a || !b) return;
+                el.setAttribute('x1', String(a.x));
+                el.setAttribute('y1', String(a.y));
+                el.setAttribute('x2', String(b.x));
+                el.setAttribute('y2', String(b.y));
+            });
+            const centroid = new Map<string, { x: number; y: number; n: number }>();
+            for (const n of sim) {
+                const c = centroid.get(n.parent) || { x: 0, y: 0, n: 0 };
+                c.x += n.x; c.y += n.y; c.n += 1;
+                centroid.set(n.parent, c);
+            }
+            centroid.forEach((c, parent) => {
+                galaxyElRefs.current.get(parent)?.setAttribute('transform', `translate(${c.x / c.n}, ${c.y / c.n})`);
+            });
+        };
 
-        const { width, height } = dimensions;
-        const center = { x: width / 2, y: height / 2 };
+        alphaRef.current = 1;
+        let raf = 0;
 
-        // Physics Constants (Structured Sector Layout)
-        const repulsion = 100; // Lower repulsion to preserve sectors
-        const springLength = 80;
-        const springK = 0.01;
-        const dampening = 0.85;
-        const centerGravity = 0.02;
-        const clusterStrength = 0.08; // Strong pull to parent sector
+        const tick = () => {
+            const alpha = alphaRef.current;
+            const { width: W, height: H } = dimsRef.current;
+            const centerX = W / 2;
+            const centerY = H / 2;
 
-        const maxCount = Math.max(...nodes.map(n => n.count)) || 1;
+            // Live galaxy centroids for cluster gravity.
+            const centroid = new Map<string, { x: number; y: number; n: number }>();
+            for (const n of sim) {
+                const c = centroid.get(n.parent) || { x: 0, y: 0, n: 0 };
+                c.x += n.x; c.y += n.y; c.n += 1;
+                centroid.set(n.parent, c);
+            }
+            centroid.forEach(c => { c.x /= c.n; c.y /= c.n; });
 
-        setNodes(prevNodes => {
-            let workingNodes: Node[] = prevNodes.map((n: Node) => ({ ...n }));
+            // Charge: mutual repulsion so stars spread out.
+            for (let i = 0; i < sim.length; i++) {
+                for (let j = i + 1; j < sim.length; j++) {
+                    const a = sim[i], b = sim[j];
+                    let dx = b.x - a.x, dy = b.y - a.y;
+                    let d2 = dx * dx + dy * dy;
+                    if (d2 < 1) { d2 = 1; dx = 0.5; dy = 0.5; }
+                    const d = Math.sqrt(d2);
+                    const rep = (CHARGE / d2) * alpha;
+                    const fx = (dx / d) * rep, fy = (dy / d) * rep;
+                    a.vx -= fx; a.vy -= fy;
+                    b.vx += fx; b.vy += fy;
+                }
+            }
 
-            for (let iter = 0; iter < 60; iter++) {
-                // Gravity & Clustering (Scale Gravity by Relevance)
-                workingNodes.forEach((node: Node) => {
-                    const dx = center.x - node.x;
-                    const dy = center.y - node.y;
-                    const distToCenter = Math.sqrt(dx * dx + dy * dy);
+            // Links: springs pulling shared-genre stars together.
+            for (const l of simLinks) {
+                const a = sim[l.a], b = sim[l.b];
+                const dx = b.x - a.x, dy = b.y - a.y;
+                const d = Math.sqrt(dx * dx + dy * dy) || 1;
+                const rest = a.radius + b.radius + 46;
+                const weight = 0.35 + 0.55 * (l.strength / maxStrength);
+                const f = (d - rest) * LINK_K * weight * alpha;
+                const fx = (dx / d) * f, fy = (dy / d) * f;
+                a.vx += fx; a.vy += fy;
+                b.vx -= fx; b.vy -= fy;
+            }
 
-                    // Proportional Gravity: Significant genres are pulled harder to core
-                    const relevanceScale = node.count / maxCount;
-                    const baseGravity = distToCenter > width * 0.4 ? centerGravity * 5 : centerGravity;
-                    const gravityScale = baseGravity * (0.5 + relevanceScale * 1.5);
+            // Cluster gravity (toward galaxy centroid) + gentle centering.
+            for (const n of sim) {
+                const c = centroid.get(n.parent)!;
+                n.vx += (c.x - n.x) * CLUSTER_K * alpha;
+                n.vy += (c.y - n.y) * CLUSTER_K * alpha;
+                n.vx += (centerX - n.x) * CENTER_K * alpha;
+                n.vy += (centerY - n.y) * CENTER_K * alpha;
+            }
 
-                    node.vx += dx * gravityScale;
-                    node.vy += dy * gravityScale;
+            // Integrate with damping; pin the dragged node.
+            const drag = dragRef.current;
+            for (const n of sim) {
+                if (drag && drag.id === n.id) {
+                    n.x = drag.x; n.y = drag.y; n.vx = 0; n.vy = 0;
+                    continue;
+                }
+                n.vx = Math.max(-40, Math.min(40, n.vx)) * 0.72;
+                n.vy = Math.max(-40, Math.min(40, n.vy)) * 0.72;
+                n.x += n.vx;
+                n.y += n.vy;
+                const pad = n.radius + 12;
+                n.x = Math.max(pad, Math.min(W - pad, n.x));
+                n.y = Math.max(pad, Math.min(H - pad, n.y));
+            }
 
-                    const clusterNodes = workingNodes.filter((n: Node) => n.parent === node.parent);
-                    if (clusterNodes.length > 1) {
-                        const parentIndex = Object.keys(GALAXY_COLORS).indexOf(node.parent);
-                        const col = parentIndex % 4;
-                        const row = Math.floor(parentIndex / 4);
-                        const targetX = 100 + col * 180;
-                        const targetY = 80 + row * 100;
-
-                        node.vx += (targetX - node.x) * clusterStrength;
-                        node.vy += (targetY - node.y) * clusterStrength;
-                    }
-                });
-
-                // Repulsion
-                const interactionDist = 400;
-                for (let i = 0; i < workingNodes.length; i++) {
-                    for (let j = i + 1; j < workingNodes.length; j++) {
-                        const n1 = workingNodes[i];
-                        const n2 = workingNodes[j];
-                        const dx = n1.x - n2.x;
-                        const dy = n1.y - n2.y;
-                        const distSq = dx * dx + dy * dy || 1;
-                        if (distSq > interactionDist * interactionDist) continue;
-                        const dist = Math.sqrt(distSq);
-                        const force = (repulsion * (n1.radius + n2.radius)) / (distSq * 1.5 + 1);
-                        const fx = (dx / dist) * force;
-                        const fy = (dy / dist) * force;
-                        n1.vx += fx; n1.vy += fy;
-                        n2.vx -= fx; n2.vy -= fy;
+            // Collision: keep stars from overlapping.
+            for (let i = 0; i < sim.length; i++) {
+                for (let j = i + 1; j < sim.length; j++) {
+                    const a = sim[i], b = sim[j];
+                    const dx = b.x - a.x, dy = b.y - a.y;
+                    const d = Math.sqrt(dx * dx + dy * dy) || 1;
+                    const min = a.radius + b.radius + 6;
+                    if (d < min) {
+                        const push = (min - d) / 2;
+                        const ox = (dx / d) * push, oy = (dy / d) * push;
+                        if (!(drag && drag.id === a.id)) { a.x -= ox; a.y -= oy; }
+                        if (!(drag && drag.id === b.id)) { b.x += ox; b.y += oy; }
                     }
                 }
-
-                // Links
-                initialLinks.forEach(link => {
-                    const source = workingNodes.find((n: Node) => n.id === link.source);
-                    const target = workingNodes.find((n: Node) => n.id === link.target);
-                    if (source && target) {
-                        const dx = target.x - source.x;
-                        const dy = target.y - source.y;
-                        const dist = Math.sqrt(dx * dx + dy * dy) || 1;
-                        const linkForce = (dist - springLength) * springK * (link.strength * 0.5 + 0.5);
-                        const fx = (dx / dist) * linkForce;
-                        const fy = (dy / dist) * linkForce;
-                        source.vx += fx; source.vy += fy;
-                        target.vx -= fx; target.vy -= fy;
-                    }
-                });
-
-                // Movement
-                workingNodes.forEach((node: Node) => {
-                    node.x += node.vx;
-                    node.y += node.vy;
-                    node.vx *= dampening;
-                    node.vy *= dampening;
-
-                    // Bounds (Zero Padding)
-                    const padding = 0;
-                    if (node.x < padding) { node.x = padding; node.vx = 0; }
-                    if (node.x > width - padding) { node.x = width - padding; node.vx = 0; }
-                    if (node.y < padding) { node.y = padding; node.vy = 0; }
-                    if (node.y > height - padding) { node.y = height - padding; node.vy = 0; }
-                });
             }
-            return workingNodes;
-        });
-    }, [initialLinks, filteredNodes, dimensions.width === 800]);
 
-    // Interaction Handlers
+            applyPositions();
+
+            alphaRef.current = alpha * 0.985;
+            if (alphaRef.current > 0.02 || dragRef.current) {
+                raf = requestAnimationFrame(tick);
+            } else {
+                runningRef.current = false;
+            }
+        };
+
+        reheatRef.current = () => {
+            alphaRef.current = Math.max(alphaRef.current, 0.5);
+            if (!runningRef.current) {
+                runningRef.current = true;
+                raf = requestAnimationFrame(tick);
+            }
+        };
+
+        applyPositions();
+        runningRef.current = true;
+        raf = requestAnimationFrame(tick);
+        return () => {
+            runningRef.current = false;
+            cancelAnimationFrame(raf);
+        };
+    }, [sim, links]);
+
+    // Reheat on resize so the layout re-settles into the new bounds.
+    useEffect(() => {
+        reheatRef.current?.();
+    }, [dimensions.width, dimensions.height]);
+
+    // Interaction: drag stars around.
+    const pointToCanvas = (e: React.PointerEvent) => {
+        const svg = canvasRef.current;
+        if (!svg) return { x: 0, y: 0 };
+        const rect = svg.getBoundingClientRect();
+        return { x: e.clientX - rect.left, y: e.clientY - rect.top };
+    };
+
     const handlePointerDown = (e: React.PointerEvent, nodeId: string) => {
-        const node = nodes.find((n: Node) => n.id === nodeId);
-        if (!node) return;
         (e.target as Element).setPointerCapture(e.pointerId);
-        isDragging.current = nodeId;
+        const { x, y } = pointToCanvas(e);
+        dragRef.current = { id: nodeId, x, y };
+        downRef.current = { x, y };
+        movedRef.current = false;
+        reheatRef.current?.();
     };
 
     const handlePointerMove = (e: React.PointerEvent) => {
-        if (!isDragging.current) return;
-        const svg = canvasRef.current;
-        if (!svg) return;
-        const rect = svg.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-
-        setNodes(prev => prev.map((n: Node) => {
-            if (n.id === isDragging.current) {
-                return { ...n, x, y, vx: 0, vy: 0 };
-            }
-            return n;
-        }));
+        if (!dragRef.current) return;
+        const { x, y } = pointToCanvas(e);
+        if (downRef.current) {
+            const dx = x - downRef.current.x, dy = y - downRef.current.y;
+            if (dx * dx + dy * dy > 16) movedRef.current = true;
+        }
+        dragRef.current = { id: dragRef.current.id, x, y };
     };
 
     const handlePointerUp = (e: React.PointerEvent) => {
-        isDragging.current = null;
-        (e.target as Element).releasePointerCapture(e.pointerId);
+        // A press without meaningful movement is a click: toggle the pin.
+        if (dragRef.current && !movedRef.current) {
+            const id = dragRef.current.id;
+            setPinnedNode(prev => (prev === id ? null : id));
+        }
+        dragRef.current = null;
+        downRef.current = null;
+        const target = e.target as Element;
+        if (target.hasPointerCapture?.(e.pointerId)) target.releasePointerCapture(e.pointerId);
     };
 
+    // Clicking empty space clears any pinned star.
+    const handleBackgroundPointerDown = (e: React.PointerEvent) => {
+        if (e.target === canvasRef.current) setPinnedNode(null);
+    };
+
+    const nodeById = useMemo(() => new Map(nodeData.map(n => [n.id, n])), [nodeData]);
+    const maxLinkStrength = useMemo(() => Math.max(1, ...links.map(l => l.strength)), [links]);
+
+    // One soft radial gradient per galaxy colour replaces the old per-node
+    // feGaussianBlur filter, which was far too expensive to repaint every frame.
+    const glowColors = useMemo(() => Array.from(new Set(nodeData.map(n => n.color))), [nodeData]);
+    const glowId = (color: string) => `genre-glow-${color.slice(1)}`;
+
+    // Which works sit behind each genre, so hovering a star reveals real titles.
+    const genreWorks = useMemo(() => {
+        const map = new Map<string, Work[]>();
+        works.forEach(work => {
+            resolveWorkGenres(work.genres).forEach(genre => {
+                const list = map.get(genre);
+                if (list) list.push(work);
+                else map.set(genre, [work]);
+            });
+        });
+        return map;
+    }, [works]);
+
+    // Ranked series / standalone titles for the hovered genre.
+    const hoveredInfo = useMemo(() => {
+        if (!selected) return null;
+        const list = genreWorks.get(selected) || [];
+        const seriesCount = new Map<string, number>();
+        const standalone: string[] = [];
+        list.forEach(work => {
+            if (work.seriesName) seriesCount.set(work.seriesName, (seriesCount.get(work.seriesName) || 0) + 1);
+            else standalone.push(work.title);
+        });
+        const items = [
+            ...Array.from(seriesCount.entries()).map(([label, count]) => ({ label, count, series: true })),
+            ...standalone.map(label => ({ label, count: 1, series: false }))
+        ]
+            .sort((a, b) => b.count - a.count)
+            .slice(0, 6);
+        const node = nodeById.get(selected);
+        return {
+            count: list.length,
+            seriesTotal: seriesCount.size,
+            items,
+            parent: node?.parent ?? '',
+            color: node?.color ?? colorFor('Other')
+        };
+    }, [selected, genreWorks, nodeById]);
+
     return (
-        <PaperCard elevation="md" className={styles.container} enableSand style={{ padding: 0 }}>
-            <h3 className={styles.title} style={{ margin: '16px 0 0 16px' }}>Genre Constellation</h3>
-            <div
-                ref={containerRef}
-                className={styles.graphContainer}
-                style={{ width: '100%', height: '350px', minHeight: '350px', position: 'relative', overflow: 'hidden' }}
-            >
+        <PaperCard elevation="md" className={styles.container} enableSand>
+            <div className={styles.header}>
+                <div>
+                    <span className={styles.eyebrow}>Genre Map</span>
+                    <h3 className={styles.title}>Constellation</h3>
+                </div>
+                <div className={styles.stats}>
+                    <span>{nodeData.length} genres</span>
+                    <span>{galaxies.length} galaxies</span>
+                    <span>{links.length} links</span>
+                </div>
+            </div>
+            <div ref={containerRef} className={styles.graphContainer}>
+                <div className={styles.starfield} />
                 <svg
                     ref={canvasRef}
                     width="100%"
                     height="100%"
+                    onPointerDown={handleBackgroundPointerDown}
                     onPointerMove={handlePointerMove}
                     onPointerUp={handlePointerUp}
                     onPointerLeave={handlePointerUp}
-                    style={{ overflow: 'visible', cursor: 'all-scroll' }}
+                    className={styles.canvas}
                 >
                     <defs>
-                        <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
-                            <feGaussianBlur stdDeviation="2.5" result="coloredBlur" />
-                            <feMerge>
-                                <feMergeNode in="coloredBlur" />
-                                <feMergeNode in="SourceGraphic" />
-                            </feMerge>
-                        </filter>
+                        <radialGradient id="genre-core" cx="50%" cy="50%" r="50%">
+                            <stop offset="0%" stopColor="rgba(255,255,255,0.42)" />
+                            <stop offset="45%" stopColor="rgba(255,255,255,0.06)" />
+                            <stop offset="100%" stopColor="rgba(255,255,255,0)" />
+                        </radialGradient>
+                        {glowColors.map(color => (
+                            <radialGradient key={color} id={glowId(color)} cx="50%" cy="50%" r="50%">
+                                <stop offset="0%" stopColor={color} stopOpacity="0.4" />
+                                <stop offset="55%" stopColor={color} stopOpacity="0.14" />
+                                <stop offset="100%" stopColor={color} stopOpacity="0" />
+                            </radialGradient>
+                        ))}
                     </defs>
 
-                    {/* Background Category Anchors (Faint Labels) */}
-                    {Object.keys(GALAXY_COLORS).map((p, i) => {
-                        const col = i % 4;
-                        const row = Math.floor(i / 4);
-                        return (
-                            <text
-                                key={`hub-${p}`}
-                                x={100 + col * 180}
-                                y={80 + row * 100}
-                                textAnchor="middle"
-                                fill="var(--ink-secondary)"
-                                opacity="0.05"
-                                fontSize="2.5rem"
-                                fontWeight="900"
-                                style={{ pointerEvents: 'none', userSelect: 'none', textTransform: 'uppercase' }}
-                            >
-                                {p.split(' ')[0]}
+                    {/* Galaxy haze + label at each cluster centroid (positioned by the sim) */}
+                    {galaxies.filter(g => g.nodes >= 2).map(g => (
+                        <g
+                            key={`galaxy-${g.name}`}
+                            className={styles.hub}
+                            ref={el => {
+                                if (el) galaxyElRefs.current.set(g.name, el);
+                                else galaxyElRefs.current.delete(g.name);
+                            }}
+                        >
+                            <circle r={galaxyHazeRadius(g.nodes)} fill={g.color} opacity="0.05" />
+                            <text y={-galaxyHazeRadius(g.nodes) + 4} textAnchor="middle" className={styles.hubLabel}>
+                                {g.name}
                             </text>
-                        );
-                    })}
+                        </g>
+                    ))}
 
-                    {/* Links */}
-                    {initialLinks.map((link: Link, i: number) => {
-                        const source = nodes.find((n: Node) => n.id === link.source);
-                        const target = nodes.find((n: Node) => n.id === link.target);
-                        if (!source || !target) return null;
-
+                    {/* Persistent connection lines (co-occurring genres) */}
+                    {links.map((link, i) => {
+                        const active = selected === link.source || selected === link.target;
+                        const dimmed = selected !== null && !active;
+                        // Fade weak links so the strong co-occurrence backbone stands out.
+                        const strengthOpacity = 0.18 + 0.82 * (link.strength / maxLinkStrength);
                         return (
                             <line
                                 key={`link-${i}`}
-                                x1={source.x} y1={source.y}
-                                x2={target.x} y2={target.y}
-                                stroke="rgba(255,255,255,0.08)"
-                                strokeWidth={Math.min(1.2, Math.max(0.3, link.strength * 0.25))}
+                                ref={el => {
+                                    if (el) linkElRefs.current.set(i, el);
+                                    else linkElRefs.current.delete(i);
+                                }}
+                                className={active ? styles.linkActive : styles.link}
+                                strokeWidth={Math.min(4, Math.max(0.5, link.strength * 0.35))}
+                                opacity={active ? 1 : dimmed ? 0.06 : strengthOpacity}
                             />
                         );
                     })}
 
-                    {/* Nodes */}
-                    {nodes.map(node => (
-                        <g
-                            key={node.id}
-                            transform={`translate(${node.x}, ${node.y})`}
-                            onPointerDown={(e) => handlePointerDown(e, node.id)}
-                            onMouseEnter={() => {
-                                setHoveredNode(node.id);
-                                setTooltipToken({ x: node.x, y: node.y, content: `${node.id}: ${node.count} books` });
-                            }}
-                            onMouseLeave={() => {
-                                setHoveredNode(null);
-                                setTooltipToken(null);
-                            }}
-                            style={{ cursor: 'grab' }}
-                        >
-                            <circle
-                                r={node.radius + 5}
-                                fill={node.color}
-                                fillOpacity={0.12}
-                                filter="url(#glow)"
-                            />
-                            <circle
-                                r={node.radius}
-                                fill={node.color}
-                                fillOpacity={node.isMajor ? 0.95 : 0.6}
-                                stroke={node.isMajor ? "rgba(255,255,255,0.4)" : "none"}
-                                strokeWidth={2}
-                            />
+                    {/* Stars (positioned by the sim via transform) */}
+                    {sim.map(node => {
+                        const dimmed = selected !== null && !activeConnections.has(node.id);
+                        const active = selected === node.id;
+                        const pinned = pinnedNode === node.id;
+                        return (
+                            <g
+                                key={node.id}
+                                ref={el => {
+                                    if (el) nodeElRefs.current.set(node.id, el);
+                                    else nodeElRefs.current.delete(node.id);
+                                }}
+                                transform={`translate(${node.x}, ${node.y})`}
+                                onPointerDown={(e) => handlePointerDown(e, node.id)}
+                                onMouseEnter={() => setHoveredNode(node.id)}
+                                onMouseLeave={() => setHoveredNode(null)}
+                                className={styles.node}
+                                opacity={dimmed ? 0.24 : 1}
+                            >
+                                <circle r={node.radius + (active ? 16 : 9)} fill="url(#genre-core)" className={active ? styles.nodeAuraActive : styles.nodeAura} />
+                                <circle r={node.radius * 2.4} fill={`url(#${glowId(node.color)})`} className={styles.nodeAura} />
+                                <circle
+                                    r={node.radius}
+                                    fill={node.color}
+                                    fillOpacity={node.isMajor ? 0.96 : 0.72}
+                                    stroke={pinned ? '#ffffff' : active || node.isMajor ? 'rgba(255,255,255,0.62)' : 'rgba(255,255,255,0.18)'}
+                                    strokeWidth={pinned ? 3 : active ? 2.5 : 1.25}
+                                />
+                                {pinned && (
+                                    <circle r={node.radius + 11} fill="none" stroke="rgba(255,255,255,0.5)" strokeWidth={1} strokeDasharray="3 4" />
+                                )}
+                                <circle r={Math.max(2, node.radius * 0.24)} fill="#ffffff" fillOpacity={node.isMajor ? 0.52 : 0.25} />
 
-                            {hoveredNode === node.id && (
-                                <text
-                                    dy={node.radius + 15}
-                                    textAnchor="middle"
-                                    fill="#ffffff"
-                                    fontSize="0.75rem"
-                                    fontWeight="700"
-                                    style={{
-                                        pointerEvents: 'none',
-                                        textShadow: '0 0 10px rgba(0,0,0,0.9)',
-                                        fontFamily: 'Inter, sans-serif',
-                                        letterSpacing: '0.04em',
-                                        textTransform: 'uppercase'
-                                    }}
-                                >
-                                    {node.id}
-                                </text>
-                            )}
-                        </g>
-                    ))}
+                                {(node.isMajor || active) && (
+                                    <text dy={node.radius + 17} textAnchor="middle" className={active ? styles.nodeLabelActive : styles.nodeLabel}>
+                                        {node.id}
+                                    </text>
+                                )}
+                                {active && (
+                                    <text dy={node.radius + 32} textAnchor="middle" className={styles.nodeCount}>
+                                        {node.count} books
+                                    </text>
+                                )}
+                            </g>
+                        );
+                    })}
                 </svg>
 
-                {tooltipToken && (
-                    <div style={{
-                        position: 'absolute',
-                        left: tooltipToken.x,
-                        top: tooltipToken.y - 40,
-                        transform: 'translateX(-50%)',
-                        backgroundColor: 'rgba(0,0,0,0.8)',
-                        padding: '4px 8px',
-                        borderRadius: '4px',
-                        fontSize: '0.75rem',
-                        color: '#fff',
-                        pointerEvents: 'none',
-                        whiteSpace: 'nowrap',
-                        zIndex: 10
-                    }}>
-                        {tooltipToken.content}
+                {hoveredInfo && (
+                    <div className={styles.infoPanel}>
+                        <span className={styles.infoKicker} style={{ color: hoveredInfo.color }}>
+                            {hoveredInfo.parent}{selected === pinnedNode && pinnedNode ? ' · pinned' : ''}
+                        </span>
+                        <strong>{selected}</strong>
+                        <span>
+                            {hoveredInfo.count} books
+                            {hoveredInfo.seriesTotal > 0 && ` · ${hoveredInfo.seriesTotal} series`}
+                        </span>
+                        <div className={styles.topList}>
+                            {hoveredInfo.items.map(item => (
+                                <span className={styles.topGenre} key={item.label} title={item.label}>
+                                    <span style={{ background: hoveredInfo.color, color: hoveredInfo.color }} />
+                                    {item.label}{item.series && item.count > 1 ? ` ×${item.count}` : ''}
+                                </span>
+                            ))}
+                        </div>
                     </div>
                 )}
+
+                <div className={styles.legend}>
+                    {galaxies.slice(0, 6).map(g => (
+                        <span key={`legend-${g.name}`} className={styles.legendItem}>
+                            <span style={{ background: g.color }} />
+                            {g.name}
+                        </span>
+                    ))}
+                </div>
+                <span className={styles.dragHint}>Drag stars · hover to trace links · click to pin</span>
             </div>
         </PaperCard>
     );

@@ -161,7 +161,7 @@ export default async function BookDetail({ params }: { params: Promise<{ id: str
                                     fontStyle: 'italic',
                                     color: 'var(--ink-secondary)'
                                 }}>
-                                    " {work.notes} "
+                                    &ldquo; {work.notes} &rdquo;
                                 </div>
                             )}
                         </div>

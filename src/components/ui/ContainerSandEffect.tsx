@@ -23,10 +23,19 @@ export const ContainerSandEffect: React.FC<ContainerSandEffectProps> = ({
         if (!ctx) return;
 
         let animationFrameId: number;
+        let running = false;
         let cols = 0;
         let rows = 0;
         const CELL_SIZE = 4;
         let grid: Uint8Array; // 0=Empty, 1=Sand
+
+        // Sand only exists after the mouse visits the card, so the loop parks
+        // itself whenever the grid is empty and the pointer is gone.
+        const start = () => {
+            if (running) return;
+            running = true;
+            animationFrameId = requestAnimationFrame(update);
+        };
 
         const resize = () => {
             const parent = canvas.parentElement;
@@ -121,22 +130,31 @@ export const ContainerSandEffect: React.FC<ContainerSandEffectProps> = ({
                 }
             }
 
-            draw();
-            animationFrameId = requestAnimationFrame(update);
+            const sandCount = draw();
+
+            // Park the loop once the card is sand-free and un-hovered.
+            if (sandCount > 0 || mouseRef.current.x >= 0) {
+                animationFrameId = requestAnimationFrame(update);
+            } else {
+                running = false;
+            }
         };
 
         const draw = () => {
-            if (!ctx) return;
+            if (!ctx) return 0;
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             ctx.fillStyle = color;
 
+            let sandCount = 0;
             for (let y = 0; y < rows; y++) {
                 for (let x = 0; x < cols; x++) {
                     if (grid[y * cols + x] === 1) {
+                        sandCount++;
                         ctx.fillRect(x * CELL_SIZE, y * CELL_SIZE, CELL_SIZE, CELL_SIZE);
                     }
                 }
             }
+            return sandCount;
         };
 
         const handleMouseMove = (e: MouseEvent) => {
@@ -145,6 +163,7 @@ export const ContainerSandEffect: React.FC<ContainerSandEffectProps> = ({
                 x: e.clientX - rect.left,
                 y: e.clientY - rect.top
             };
+            start();
         };
 
         const handleMouseLeave = () => {
@@ -173,7 +192,7 @@ export const ContainerSandEffect: React.FC<ContainerSandEffectProps> = ({
         };
 
         resize();
-        update();
+        start();
 
         const ro = new ResizeObserver(resize);
         if (canvas.parentElement) {

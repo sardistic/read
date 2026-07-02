@@ -1,56 +1,340 @@
 .container {
+    position: relative;
     display: flex;
     flex-direction: column;
+    gap: 14px;
+    min-height: 460px;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 20% 10%, rgba(76, 201, 240, 0.16), transparent 32%),
+        radial-gradient(circle at 86% 22%, rgba(247, 37, 133, 0.14), transparent 28%),
+        radial-gradient(circle at 50% 100%, rgba(255, 209, 102, 0.1), transparent 30%),
+        rgba(8, 9, 14, 0.74);
+}
+
+.header {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.eyebrow {
+    display: block;
+    margin-bottom: 2px;
+    color: var(--ink-secondary);
+    font-family: var(--font-sans);
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
 }
 
 .title {
-    font-family: var(--font-sans);
-    font-size: 0.875rem;
-    color: var(--ink-secondary);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
+    margin: 0;
+    color: var(--ink-primary);
+    font-family: var(--font-serif);
+    font-size: clamp(1.45rem, 3vw, 2rem);
     font-weight: 500;
-    margin: 0 0 16px 0;
+    letter-spacing: 0;
 }
 
-.chartRow {
-    flex: 1;
+.stats {
     display: flex;
-    align-items: center;
-    gap: 24px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 6px;
+    color: rgba(255, 255, 255, 0.72);
+    font-family: var(--font-sans);
+    font-size: 0.72rem;
 }
 
-.donut {
-    flex-shrink: 0;
+.stats span {
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 999px;
+    padding: 5px 8px;
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.graphContainer {
+    position: relative;
+    width: 100%;
+    min-height: 360px;
+    height: clamp(360px, 34vw, 500px);
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    border-radius: 8px;
+    background:
+        linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+        radial-gradient(circle at center, rgba(255, 255, 255, 0.05), transparent 58%);
+    background-size: 38px 38px, 38px 38px, 100% 100%;
+}
+
+.graphContainer::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    box-shadow: inset 0 0 90px rgba(0, 0, 0, 0.62);
+}
+
+.starfield {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.62;
+    background-image:
+        radial-gradient(circle, rgba(255, 255, 255, 0.8) 0 1px, transparent 1.6px),
+        radial-gradient(circle, rgba(76, 201, 240, 0.55) 0 1px, transparent 1.7px),
+        radial-gradient(circle, rgba(255, 209, 102, 0.45) 0 1px, transparent 1.8px);
+    background-position: 7px 14px, 44px 22px, 18px 52px;
+    background-size: 91px 83px, 137px 121px, 173px 149px;
+}
+
+.canvas {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    overflow: visible;
+    cursor: all-scroll;
+    touch-action: none;
+}
+
+.hub {
+    pointer-events: none;
+    user-select: none;
+}
+
+.hubLabel {
+    fill: rgba(255, 255, 255, 0.24);
+    font-family: var(--font-sans);
+    font-size: 0.62rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.linkHalo,
+.linkActiveHalo,
+.link,
+.linkActive {
+    pointer-events: none;
+    transition: opacity 160ms ease, stroke 160ms ease;
+}
+
+.linkHalo {
+    stroke: rgba(255, 255, 255, 0.025);
+}
+
+.linkActiveHalo {
+    stroke: rgba(255, 255, 255, 0.2);
+}
+
+.link {
+    stroke: rgba(255, 255, 255, 0.07);
+}
+
+.linkActive {
+    stroke: rgba(255, 255, 255, 0.58);
+}
+
+.node {
+    cursor: grab;
+    transition: opacity 140ms ease;
+}
+
+.node:active {
+    cursor: grabbing;
+}
+
+.nodeAura,
+.nodeAuraActive {
+    pointer-events: none;
+}
+
+.nodeAuraActive {
+    animation: pulse 1.6s ease-in-out infinite;
+}
+
+.nodeLabel,
+.nodeLabelActive,
+.nodeCount {
+    pointer-events: none;
+    paint-order: stroke fill;
+    stroke: rgba(0, 0, 0, 0.78);
+    stroke-width: 4px;
+    stroke-linejoin: round;
+    font-family: var(--font-sans);
+    text-transform: uppercase;
+}
+
+.nodeLabel {
+    fill: rgba(255, 255, 255, 0.76);
+    font-size: 0.62rem;
+    font-weight: 800;
+    letter-spacing: 0.07em;
+}
+
+.nodeLabelActive {
+    fill: #ffffff;
+    font-size: 0.72rem;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+}
+
+.nodeCount {
+    fill: rgba(255, 255, 255, 0.68);
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0;
+    text-transform: none;
+}
+
+.infoPanel {
+    position: absolute;
+    z-index: 2;
+    top: 14px;
+    right: 14px;
+    display: flex;
+    width: min(220px, calc(100% - 28px));
+    min-height: 96px;
+    flex-direction: column;
+    gap: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 8px;
+    padding: 12px;
+    background: rgba(7, 8, 12, 0.9);
+    box-shadow: 0 14px 40px rgba(0, 0, 0, 0.28);
+    color: rgba(255, 255, 255, 0.74);
+    font-family: var(--font-sans);
+    font-size: 0.78rem;
+}
+
+.infoPanel strong {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 750;
+    line-height: 1.15;
+}
+
+.infoKicker {
+    font-size: 0.66rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.topList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.topGenre {
+    display: inline-flex;
+    max-width: 100%;
+    align-items: center;
+    gap: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 999px;
+    padding: 5px 8px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.06);
+    color: rgba(255, 255, 255, 0.82);
+    cursor: pointer;
+    font: inherit;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.topGenre:hover,
+.topGenre:focus-visible {
+    border-color: rgba(255, 255, 255, 0.32);
+    color: #fff;
+    outline: none;
+}
+
+.topGenre span {
+    width: 7px;
+    height: 7px;
+    flex: 0 0 auto;
+    border-radius: 50%;
+    box-shadow: 0 0 12px currentColor;
 }
 
 .legend {
+    position: absolute;
+    z-index: 2;
+    left: 14px;
+    bottom: 14px;
     display: flex;
-    flex-direction: column;
-    gap: 8px;
-    width: 100%;
+    max-width: calc(100% - 28px);
+    flex-wrap: wrap;
+    gap: 6px;
 }
 
 .legendItem {
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    font-size: 0.875rem;
-    justify-content: space-between;
+    gap: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 999px;
+    padding: 5px 8px;
+    background: rgba(7, 8, 12, 0.72);
+    color: rgba(255, 255, 255, 0.68);
+    font-family: var(--font-sans);
+    font-size: 0.66rem;
+    font-weight: 650;
 }
 
-.dot {
-    width: 8px;
-    height: 8px;
+.legendItem span {
+    width: 7px;
+    height: 7px;
+    flex: 0 0 auto;
     border-radius: 50%;
-    margin-right: 8px;
 }
 
-.genreName {
-    flex: 1;
-    color: var(--ink-primary);
+.dragHint {
+    position: absolute;
+    z-index: 2;
+    right: 14px;
+    bottom: 14px;
+    color: rgba(255, 255, 255, 0.42);
+    font-family: var(--font-sans);
+    font-size: 0.68rem;
 }
 
-.count {
-    color: var(--ink-secondary);
-    font-family: var(--font-serif);
+@keyframes pulse {
+    0%,
+    100% {
+        opacity: 0.5;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.08);
+    }
+}
+
+@media (max-width: 720px) {
+    .container {
+        min-height: 500px;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .stats {
+        justify-content: flex-start;
+    }
+
+    .graphContainer {
+        height: 420px;
+    }
 }

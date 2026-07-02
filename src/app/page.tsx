@@ -97,8 +97,8 @@ export default async function Home() {
 
         {/* Charts Row */}
         <div className={styles.chartsRow}>
-          <ReadingTimeline works={readWorks} />
           <GenreDistribution works={readWorks} />
+          <ReadingTimeline works={readWorks} />
         </div>
 
         {/* Content Area */}
