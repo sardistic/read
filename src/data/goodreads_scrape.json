@@ -1,5 +1,12 @@
 [
     {
+        "title": "Matter (Culture, #8)",
+        "author": "Iain M. Banks",
+        "dateRead": "Wed, 8 Jul 2026 00:00:00 +0000",
+        "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1742831881l/886066._SY475_.jpg",
+        "shelf": "read"
+    },
+    {
         "title": "Look to Windward (Culture, #7)",
         "author": "Iain M. Banks",
         "dateRead": "Fri, 19 Jun 2026 00:00:00 +0000",
@@ -11,13 +18,6 @@
         "author": "Iain M. Banks",
         "dateRead": "Tue, 9 Jun 2026 00:00:00 +0000",
         "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1288930844l/12017.jpg",
-        "shelf": "read"
-    },
-    {
-        "title": "Surface Detail (Culture, #9)",
-        "author": "Iain M. Banks",
-        "dateRead": "",
-        "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1287893375l/7937744.jpg",
         "shelf": "read"
     },
     {
@@ -931,10 +931,10 @@
         "shelf": "read"
     },
     {
-        "title": "Matter (Culture, #8)",
+        "title": "Surface Detail (Culture, #9)",
         "author": "Iain M. Banks",
         "dateRead": "",
-        "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1742831881l/886066._SY475_.jpg",
+        "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1287893375l/7937744.jpg",
         "shelf": "currently-reading"
     },
     {

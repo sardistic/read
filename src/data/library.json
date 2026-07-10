@@ -10079,7 +10079,7 @@
       "title": "Surface Detail (Culture, #9)",
       "author": "Iain M. Banks",
       "type": "book",
-      "status": "read",
+      "status": "reading",
       "rating": 0,
       "dateAdded": "2026-06-11",
       "pageCount": 627,
@@ -10128,7 +10128,7 @@
       "title": "Matter (Culture, #8)",
       "author": "Iain M. Banks",
       "type": "book",
-      "status": "reading",
+      "status": "read",
       "rating": 0,
       "dateAdded": "2026-06-26",
       "pageCount": 593,
@@ -10145,7 +10145,8 @@
         "durationMinutes": "estimated-from-words",
         "audiobookDurationMinutes": "howlongtoread:107452"
       },
-      "audiobookDurationMinutes": 1078
+      "audiobookDurationMinutes": 1078,
+      "dateRead": "2026-07-08"
     },
     {
       "id": "419035918",
