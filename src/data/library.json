@@ -10079,7 +10079,7 @@
       "title": "Surface Detail (Culture, #9)",
       "author": "Iain M. Banks",
       "type": "book",
-      "status": "reading",
+      "status": "read",
       "rating": 0,
       "dateAdded": "2026-06-11",
       "pageCount": 627,
@@ -10096,7 +10096,8 @@
         "durationMinutes": "estimated-from-words",
         "audiobookDurationMinutes": "howlongtoread:231532"
       },
-      "audiobookDurationMinutes": 1222
+      "audiobookDurationMinutes": 1222,
+      "dateRead": "2026-07-24"
     },
     {
       "id": "479062090",
@@ -10171,6 +10172,21 @@
         "audiobookDurationMinutes": "howlongtoread:528782"
       },
       "audiobookDurationMinutes": 408
+    },
+    {
+      "id": "668746967",
+      "title": "The Hydrogen Sonata (Culture, #10)",
+      "author": "Iain M. Banks",
+      "type": "book",
+      "status": "reading",
+      "rating": 0,
+      "dateAdded": "2026-07-28",
+      "pageCount": 0,
+      "coverImage": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1340894566l/13497991.jpg",
+      "description": "",
+      "genres": [],
+      "platform": "goodreads",
+      "notes": ""
     }
   ]
 }
