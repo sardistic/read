@@ -10178,7 +10178,7 @@
       "title": "The Hydrogen Sonata (Culture, #10)",
       "author": "Iain M. Banks",
       "type": "book",
-      "status": "reading",
+      "status": "read",
       "rating": 0,
       "dateAdded": "2026-07-28",
       "pageCount": 0,
@@ -10186,7 +10186,8 @@
       "description": "",
       "genres": [],
       "platform": "goodreads",
-      "notes": ""
+      "notes": "",
+      "dateRead": "2026-08-01"
     }
   ]
 }
