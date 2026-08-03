@@ -10188,6 +10188,36 @@
       "platform": "goodreads",
       "notes": "",
       "dateRead": "2026-08-01"
+    },
+    {
+      "id": "61616751",
+      "title": "The Heart Is a Lonely Hunter",
+      "author": "Carson McCullers",
+      "type": "book",
+      "status": "toread",
+      "rating": 0,
+      "dateAdded": "2026-08-03",
+      "pageCount": 0,
+      "coverImage": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1385265834l/37380.jpg",
+      "description": "",
+      "genres": [],
+      "platform": "goodreads",
+      "notes": ""
+    },
+    {
+      "id": "78883172",
+      "title": "No Longer Human",
+      "author": "Osamu Dazai",
+      "type": "book",
+      "status": "toread",
+      "rating": 0,
+      "dateAdded": "2026-08-03",
+      "pageCount": 0,
+      "coverImage": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1422638843l/194746.jpg",
+      "description": "",
+      "genres": [],
+      "platform": "goodreads",
+      "notes": ""
     }
   ]
 }
