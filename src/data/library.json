@@ -10218,6 +10218,21 @@
       "genres": [],
       "platform": "goodreads",
       "notes": ""
+    },
+    {
+      "id": "252592846",
+      "title": "Woodcutters",
+      "author": "Thomas Bernhard",
+      "type": "book",
+      "status": "reading",
+      "rating": 0,
+      "dateAdded": "2026-08-04",
+      "pageCount": 0,
+      "coverImage": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1328874375l/92576.jpg",
+      "description": "",
+      "genres": [],
+      "platform": "goodreads",
+      "notes": ""
     }
   ]
 }
