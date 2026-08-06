@@ -952,6 +952,13 @@
         "shelf": "read"
     },
     {
+        "title": "Hyperion (Hyperion Cantos, #1)",
+        "author": "Dan Simmons",
+        "dateRead": "",
+        "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1746983261l/77566._SY475_.jpg",
+        "shelf": "currently-reading"
+    },
+    {
         "title": "The Heart Is a Lonely Hunter",
         "author": "Carson McCullers",
         "dateRead": "",
@@ -984,13 +991,6 @@
         "author": "Octavia E. Butler",
         "dateRead": "",
         "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1717091024l/60929._SY475_.jpg",
-        "shelf": "to-read"
-    },
-    {
-        "title": "Hyperion (Hyperion Cantos, #1)",
-        "author": "Dan Simmons",
-        "dateRead": "",
-        "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1746983261l/77566._SY475_.jpg",
         "shelf": "to-read"
     },
     {
