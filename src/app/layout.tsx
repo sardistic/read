@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -29,6 +30,13 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         {children}
+        {/* Self-hosted analytics. No cookies, no cross-site identifiers, and
+            the data never leaves our own box. */}
+        <Script
+          src="https://analytics.sardistic.com/script.js"
+          data-website-id="82259345-a4a1-49f7-aa69-6d69e0867d48"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );
