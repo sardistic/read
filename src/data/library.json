@@ -10234,6 +10234,36 @@
       "platform": "goodreads",
       "notes": "",
       "dateRead": "2026-08-04"
+    },
+    {
+      "id": "469505253",
+      "title": "Wool Omnibus (Silo, #1)",
+      "author": "Hugh Howey",
+      "type": "book",
+      "status": "toread",
+      "rating": 0,
+      "dateAdded": "2026-08-14",
+      "pageCount": 0,
+      "coverImage": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1349614200l/13453029.jpg",
+      "description": "",
+      "genres": [],
+      "platform": "goodreads",
+      "notes": ""
+    },
+    {
+      "id": "242932992",
+      "title": "Wool (Wool, #1)",
+      "author": "Hugh Howey",
+      "type": "book",
+      "status": "toread",
+      "rating": 0,
+      "dateAdded": "2026-08-14",
+      "pageCount": 0,
+      "coverImage": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1327889474l/12287209.jpg",
+      "description": "",
+      "genres": [],
+      "platform": "goodreads",
+      "notes": ""
     }
   ]
 }
