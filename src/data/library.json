@@ -9982,7 +9982,7 @@
       "title": "Hyperion (Hyperion Cantos, #1)",
       "author": "Dan Simmons",
       "type": "book",
-      "status": "reading",
+      "status": "read",
       "rating": 0,
       "dateAdded": "2026-05-31",
       "pageCount": 500,
@@ -9999,7 +9999,8 @@
         "durationMinutes": "estimated-from-words",
         "audiobookDurationMinutes": "howlongtoread:58392"
       },
-      "audiobookDurationMinutes": 1281
+      "audiobookDurationMinutes": 1281,
+      "dateRead": "2026-08-24"
     },
     {
       "id": "558809800",
@@ -10260,6 +10261,36 @@
       "dateAdded": "2026-08-14",
       "pageCount": 0,
       "coverImage": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1327889474l/12287209.jpg",
+      "description": "",
+      "genres": [],
+      "platform": "goodreads",
+      "notes": ""
+    },
+    {
+      "id": "748288273",
+      "title": "The Fall of Hyperion (Hyperion Cantos, #2)",
+      "author": "Dan Simmons",
+      "type": "book",
+      "status": "reading",
+      "rating": 0,
+      "dateAdded": "2026-08-25",
+      "pageCount": 0,
+      "coverImage": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1541174620l/77565._SY475_.jpg",
+      "description": "",
+      "genres": [],
+      "platform": "goodreads",
+      "notes": ""
+    },
+    {
+      "id": "285449855",
+      "title": "East of Eden",
+      "author": "John Steinbeck",
+      "type": "book",
+      "status": "toread",
+      "rating": 0,
+      "dateAdded": "2026-08-25",
+      "pageCount": 0,
+      "coverImage": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1639969375l/4406.jpg",
       "description": "",
       "genres": [],
       "platform": "goodreads",

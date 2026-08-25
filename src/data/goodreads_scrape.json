@@ -1,5 +1,12 @@
 [
     {
+        "title": "Hyperion (Hyperion Cantos, #1)",
+        "author": "Dan Simmons",
+        "dateRead": "Mon, 24 Aug 2026 00:00:00 +0000",
+        "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1746983261l/77566._SY475_.jpg",
+        "shelf": "read"
+    },
+    {
         "title": "Woodcutters",
         "author": "Thomas Bernhard",
         "dateRead": "Tue, 4 Aug 2026 00:00:00 +0000",
@@ -952,11 +959,18 @@
         "shelf": "read"
     },
     {
-        "title": "Hyperion (Hyperion Cantos, #1)",
+        "title": "The Fall of Hyperion (Hyperion Cantos, #2)",
         "author": "Dan Simmons",
         "dateRead": "",
-        "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1746983261l/77566._SY475_.jpg",
+        "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1541174620l/77565._SY475_.jpg",
         "shelf": "currently-reading"
+    },
+    {
+        "title": "East of Eden",
+        "author": "John Steinbeck",
+        "dateRead": "",
+        "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1639969375l/4406.jpg",
+        "shelf": "to-read"
     },
     {
         "title": "Wool Omnibus (Silo, #1)",
