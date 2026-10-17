@@ -29,6 +29,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        {/* The passage between our sites: early, so an arriving page opens inside it. */}
+        <script src="https://sardistic.com/wp-content/sardize/transit.js?v=2" />
+      </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <MobileMotionProvider>{children}</MobileMotionProvider>
         {/* Self-hosted analytics. No cookies, no cross-site identifiers, and
