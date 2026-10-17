@@ -30,6 +30,7 @@ export function MobileMotionProvider({ children }: { children: React.ReactNode }
             setAvailable(supported);
             if (!supported) {
                 setEnabled(false);
+                setStatus('idle');
                 gravity.current = { x: 0, y: 1, active: false };
             }
         };
@@ -41,6 +42,27 @@ export function MobileMotionProvider({ children }: { children: React.ReactNode }
             reduced.removeEventListener('change', update);
         };
     }, []);
+
+    useEffect(() => {
+        if (!available) return;
+        let cancelled = false;
+        const enableByDefault = async () => {
+            const api = window.DeviceOrientationEvent as OrientationAPI;
+            try {
+                // Previously granted access can be reused without a gesture.
+                // Browsers requiring a first-time tap reject here; keep the button.
+                if (api.requestPermission && await api.requestPermission() !== 'granted') return;
+                if (!cancelled) {
+                    setStatus('waiting');
+                    setEnabled(true);
+                }
+            } catch {
+                // Leave permission requests that need a gesture to the button.
+            }
+        };
+        void enableByDefault();
+        return () => { cancelled = true; };
+    }, [available]);
 
     useEffect(() => {
         if (!enabled || !available) return;
