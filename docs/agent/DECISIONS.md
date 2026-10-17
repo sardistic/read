@@ -10,10 +10,11 @@ Decision: A client-side `MobileMotionProvider` at the root owns one device-orien
 
 Consequences: Background sand follows projected gravity; red card/anti-sand remains buoyant and travels in the opposite direction. A shared grid step supports all gravity directions, collisions and boundaries. Existing desktop background physics remains the fallback. Card animations pause offscreen and honor reduced motion. Phone tilt is intentionally session-only; no sensor readings or permission state are stored. `npm run test:motion` covers projection and grid invariants. Real-device Safari/Android feel remains a manual check.
 
-### Date — Decision title
+### 2026-10-16 — Bound sand physics by elapsed time
 
-Context:
+Context: One physics step per animation callback made high-refresh phones run the sand simulation faster.
 
-Decision:
+Decision: Share a timestamp-based limiter across the background and card simulations: 30 steps/second on coarse-pointer devices, 60 on desktop. Discard missed steps after pauses. Mobile cells are 3px for background sand and 2px for card sand (desktop retains 5px/4px). Keep interaction radii in CSS pixels and obstacle refresh at approximately 150ms.
 
-Consequences:
+Consequences: Grain movement, emission and simulated wind are independent of display refresh at or above the target rate. Mobile grains are finer and travel more slowly. Grid scans run only on accepted steps to limit the cost of the finer grid. Timing regressions cover 30/60/90/120/144Hz inputs and pause/resume.
+

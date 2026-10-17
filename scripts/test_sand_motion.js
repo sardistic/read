@@ -10,9 +10,40 @@ const compiled = ts.transpileModule(source, {
 }).outputText;
 const physics = { exports: {} };
 new Function('exports', 'module', compiled)(physics.exports, physics);
-const { orientationGravity, stepTiltedSand } = physics.exports;
+const { createSandFrameLimiter, orientationGravity, stepTiltedSand } = physics.exports;
 
 const close = (actual, expected) => assert.ok(Math.abs(actual - expected) < 1e-8);
+
+test('mobile speed stays at 30 steps per second on 60/90/120/144Hz displays', () => {
+    for (const refreshRate of [30, 60, 90, 120, 144]) {
+        const shouldStep = createSandFrameLimiter(30);
+        let count = 0;
+        for (let frame = 0; frame < refreshRate * 10; frame++) {
+            if (shouldStep(frame * 1000 / refreshRate)) count++;
+        }
+        assert.equal(count, 300, `simulation steps at ${refreshRate}Hz`);
+    }
+});
+
+test('desktop speed stays at 60 steps per second on high-refresh displays', () => {
+    for (const refreshRate of [60, 120, 144]) {
+        const shouldStep = createSandFrameLimiter(60);
+        let count = 0;
+        for (let frame = 0; frame < refreshRate; frame++) {
+            if (shouldStep(frame * 1000 / refreshRate)) count++;
+        }
+        assert.equal(count, 60);
+    }
+});
+
+test('paused animations skip missed steps instead of catching up', () => {
+    const shouldStep = createSandFrameLimiter(30);
+    assert.equal(shouldStep(0), true);
+    assert.equal(shouldStep(10000), true);
+    assert.equal(shouldStep(10001), false);
+    assert.equal(shouldStep(10016), false);
+    assert.equal(shouldStep(10034), true);
+});
 
 test('gravity projects portrait, landscape and inverted poses into the screen', () => {
     for (const [beta, gamma, angle, x, y] of [

@@ -3,7 +3,7 @@
 import React, { useEffect, useRef } from 'react';
 import styles from './AtmosphericBackground.module.css';
 import { useSandGravity } from './MobileMotion';
-import { stepTiltedSand } from '@/lib/sandMotion';
+import { createSandFrameLimiter, stepTiltedSand } from '@/lib/sandMotion';
 
 interface AtmosphericBackgroundProps {
     image?: string;
@@ -22,13 +22,16 @@ export const AtmosphericBackground: React.FC<AtmosphericBackgroundProps> = ({ im
         if (!ctx) return;
 
         // Configuration
-        const CELL_SIZE = 5;
+        const isMobile = window.matchMedia('(any-pointer: coarse)').matches;
+        const CELL_SIZE = isMobile ? 3 : 5;
+        const shouldStep = createSandFrameLimiter(isMobile ? 30 : 60);
         let cols = 0;
         let rows = 0;
         let grid: Uint8Array; // 0=Empty, 1=Sand, 2=Anti-Sand
         let obstacleGrid: Uint8Array; // 1=Obstacle
         let animationFrameId: number;
         let frame = 0;
+        let lastObstacleUpdate = -Infinity;
         const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
         const resize = () => {
@@ -84,15 +87,21 @@ export const AtmosphericBackground: React.FC<AtmosphericBackgroundProps> = ({ im
             });
         };
 
-        const update = () => {
+        const update = (timestamp: number) => {
             if (reducedMotion.matches) {
                 draw();
                 return;
             }
+            if (!shouldStep(timestamp)) {
+                animationFrameId = requestAnimationFrame(update);
+                return;
+            }
             frame++;
-            // getBoundingClientRect forces layout, so only remap obstacles a few
-            // times a second — sand reacts to scrolled cards within ~150ms.
-            if (frame % 10 === 1) updateObstacles();
+            // Keep obstacle tracking responsive even with slower mobile physics.
+            if (timestamp - lastObstacleUpdate >= 150) {
+                updateObstacles();
+                lastObstacleUpdate = timestamp;
+            }
 
             // 1. Emitter: Waves
             const stormIntensity = (Math.sin(frame * 0.01) + 1) / 2;
@@ -137,7 +146,7 @@ export const AtmosphericBackground: React.FC<AtmosphericBackgroundProps> = ({ im
                 const mx = Math.floor(mouseRef.current.x / CELL_SIZE);
                 const my = Math.floor(mouseRef.current.y / CELL_SIZE);
                 // Larger brush for global effect
-                const radius = 3; // Reduced from 6
+                const radius = Math.ceil(15 / CELL_SIZE);
 
                 for (let dy = -radius; dy <= radius; dy++) {
                     for (let dx = -radius; dx <= radius; dx++) {
@@ -368,7 +377,7 @@ export const AtmosphericBackground: React.FC<AtmosphericBackgroundProps> = ({ im
             // Explosion Logic
             const mx = Math.floor(e.clientX / CELL_SIZE);
             const my = Math.floor(e.clientY / CELL_SIZE);
-            const radius = 20; // Explosion radius
+            const radius = Math.ceil(100 / CELL_SIZE);
 
             for (let dy = -radius; dy <= radius; dy++) {
                 for (let dx = -radius; dx <= radius; dx++) {
@@ -394,7 +403,7 @@ export const AtmosphericBackground: React.FC<AtmosphericBackgroundProps> = ({ im
         const onReducedMotion = () => {
             cancelAnimationFrame(animationFrameId);
             if (reducedMotion.matches) draw();
-            else update();
+            else animationFrameId = requestAnimationFrame(update);
         };
 
         window.addEventListener('resize', resize);
@@ -411,7 +420,7 @@ export const AtmosphericBackground: React.FC<AtmosphericBackgroundProps> = ({ im
         if (reducedMotion.matches) {
             draw(); // static dunes, no animation loop
         } else {
-            update();
+            animationFrameId = requestAnimationFrame(update);
         }
 
         return () => {

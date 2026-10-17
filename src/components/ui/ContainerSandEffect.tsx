@@ -3,7 +3,7 @@
 import React, { useEffect, useRef } from 'react';
 import styles from './ContainerSandEffect.module.css';
 import { useSandGravity } from './MobileMotion';
-import { stepTiltedSand } from '@/lib/sandMotion';
+import { createSandFrameLimiter, stepTiltedSand } from '@/lib/sandMotion';
 
 interface ContainerSandEffectProps {
     color?: string;
@@ -31,7 +31,9 @@ export const ContainerSandEffect: React.FC<ContainerSandEffectProps> = ({
         const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
         let cols = 0;
         let rows = 0;
-        const CELL_SIZE = 4;
+        const isMobile = window.matchMedia('(any-pointer: coarse)').matches;
+        const CELL_SIZE = isMobile ? 2 : 4;
+        const shouldStep = createSandFrameLimiter(isMobile ? 30 : 60);
         let grid: Uint8Array; // 0=Empty, 1=Sand
 
         // Sand only exists after the mouse visits the card, so the loop parks
@@ -54,9 +56,13 @@ export const ContainerSandEffect: React.FC<ContainerSandEffectProps> = ({
             }
         };
 
-        const update = () => {
+        const update = (timestamp: number) => {
             if (!visible || reducedMotion.matches) {
                 running = false;
+                return;
+            }
+            if (!shouldStep(timestamp)) {
+                animationFrameId = requestAnimationFrame(update);
                 return;
             }
             const gravity = gravityRef.current;
@@ -70,7 +76,7 @@ export const ContainerSandEffect: React.FC<ContainerSandEffectProps> = ({
             if (mouseRef.current.x >= 0 && mouseRef.current.y >= 0) {
                 const mx = Math.floor(mouseRef.current.x / CELL_SIZE);
                 const my = Math.floor(mouseRef.current.y / CELL_SIZE);
-                const radius = 2; // Brush size
+                const radius = Math.ceil(8 / CELL_SIZE);
 
                 for (let dy = -radius; dy <= radius; dy++) {
                     for (let dx = -radius; dx <= radius; dx++) {
@@ -145,7 +151,7 @@ export const ContainerSandEffect: React.FC<ContainerSandEffectProps> = ({
 
             const mx = Math.floor(x / CELL_SIZE);
             const my = Math.floor(y / CELL_SIZE);
-            const radius = 15; // Explosion radius
+            const radius = Math.ceil(60 / CELL_SIZE);
 
             for (let dy = -radius; dy <= radius; dy++) {
                 for (let dx = -radius; dx <= radius; dx++) {

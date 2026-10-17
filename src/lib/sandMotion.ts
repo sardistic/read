@@ -4,6 +4,23 @@ export interface SandGravity {
     active: boolean;
 }
 
+// Physics follows elapsed time rather than the display's 60/90/120Hz refresh.
+// Missed steps are discarded so resuming a hidden tab never causes a burst.
+export function createSandFrameLimiter(stepsPerSecond: number) {
+    const interval = 1000 / stepsPerSecond;
+    let lastStep: number | undefined;
+    return (timestamp: number) => {
+        if (lastStep === undefined) {
+            lastStep = timestamp;
+            return true;
+        }
+        const steps = Math.floor((timestamp - lastStep + 0.01) / interval);
+        if (steps < 1) return false;
+        lastStep += steps * interval;
+        return true;
+    };
+}
+
 // Project earth gravity into CSS screen coordinates, including landscape rotation.
 export function orientationGravity(beta: number, gamma: number, angle: number) {
     const radians = Math.PI / 180;
