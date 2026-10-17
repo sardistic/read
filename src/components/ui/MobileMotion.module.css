@@ -1,0 +1,45 @@
+.control {
+    position: fixed;
+    right: max(1rem, env(safe-area-inset-right));
+    bottom: max(1rem, env(safe-area-inset-bottom));
+    z-index: 1001;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.button {
+    min-height: 44px;
+    padding: 0.65rem 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 999px;
+    background: rgba(18, 18, 18, 0.92);
+    color: var(--ink-primary, #fff);
+    font: inherit;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+.button[aria-pressed='true'] {
+    border-color: rgba(255, 80, 80, 0.7);
+}
+
+.button:focus-visible {
+    outline: 2px solid #ff5050;
+    outline-offset: 3px;
+}
+
+.button:disabled {
+    opacity: 0.65;
+    cursor: wait;
+}
+
+.message {
+    max-width: min(17rem, calc(100vw - 2rem));
+    padding: 0.6rem 0.8rem;
+    border-radius: 0.5rem;
+    background: rgba(18, 18, 18, 0.95);
+    color: var(--ink-primary, #fff);
+    font-size: 0.8rem;
+}

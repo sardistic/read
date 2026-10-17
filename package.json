@@ -10,7 +10,8 @@
     "metrics:external": "node scripts/enrich_external_metrics.js",
     "metrics:audio": "node scripts/enrich_external_metrics.js --audio-all --audio-only",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "test:motion": "node --test scripts/test_sand_motion.js"
   },
   "dependencies": {
     "next": "^15.1.11",

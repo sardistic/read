@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { MobileMotionProvider } from '@/components/ui/MobileMotion';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,7 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {children}
+        <MobileMotionProvider>{children}</MobileMotionProvider>
         {/* Self-hosted analytics. No cookies, no cross-site identifiers, and
             the data never leaves our own box. */}
         <Script

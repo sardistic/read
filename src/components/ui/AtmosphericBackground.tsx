@@ -2,6 +2,8 @@
 
 import React, { useEffect, useRef } from 'react';
 import styles from './AtmosphericBackground.module.css';
+import { useSandGravity } from './MobileMotion';
+import { stepTiltedSand } from '@/lib/sandMotion';
 
 interface AtmosphericBackgroundProps {
     image?: string;
@@ -10,6 +12,7 @@ interface AtmosphericBackgroundProps {
 export const AtmosphericBackground: React.FC<AtmosphericBackgroundProps> = ({ image }) => {
     const canvasRef = useRef<HTMLCanvasElement>(null);
     const mouseRef = useRef<{ x: number, y: number }>({ x: -1, y: -1 });
+    const gravityRef = useSandGravity();
 
     useEffect(() => {
         const canvas = canvasRef.current;
@@ -26,6 +29,7 @@ export const AtmosphericBackground: React.FC<AtmosphericBackgroundProps> = ({ im
         let obstacleGrid: Uint8Array; // 1=Obstacle
         let animationFrameId: number;
         let frame = 0;
+        const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
         const resize = () => {
             canvas.width = window.innerWidth;
@@ -36,6 +40,7 @@ export const AtmosphericBackground: React.FC<AtmosphericBackgroundProps> = ({ im
             grid = new Uint8Array(cols * rows).fill(0);
             obstacleGrid = new Uint8Array(cols * rows).fill(0);
             initGrid();
+            if (reducedMotion.matches) draw();
         };
 
         const initGrid = () => {
@@ -80,6 +85,10 @@ export const AtmosphericBackground: React.FC<AtmosphericBackgroundProps> = ({ im
         };
 
         const update = () => {
+            if (reducedMotion.matches) {
+                draw();
+                return;
+            }
             frame++;
             // getBoundingClientRect forces layout, so only remap obstacles a few
             // times a second — sand reacts to scrolled cards within ~150ms.
@@ -107,9 +116,19 @@ export const AtmosphericBackground: React.FC<AtmosphericBackgroundProps> = ({ im
                 if (x >= cols) x -= cols;
                 x = Math.max(0, Math.min(cols - 1, x));
 
-                // Spawn only if empty and not obstacle
-                if (grid[x] === 0 && obstacleGrid[x] === 0) {
-                    grid[x] = 1;
+                // Emit from the edge opposite gravity when the phone is tilted.
+                const gravity = gravityRef.current;
+                let source = x;
+                if (gravity.active) {
+                    if (Math.abs(gravity.x) > Math.abs(gravity.y)) {
+                        const y = Math.floor(Math.random() * rows);
+                        source = y * cols + (gravity.x > 0 ? 0 : cols - 1);
+                    } else if (gravity.y < 0) {
+                        source = (rows - 1) * cols + x;
+                    }
+                }
+                if (grid[source] === 0 && obstacleGrid[source] === 0) {
+                    grid[source] = 1;
                 }
             }
 
@@ -153,6 +172,12 @@ export const AtmosphericBackground: React.FC<AtmosphericBackgroundProps> = ({ im
             }
 
             // 4. Physics Update
+
+            const gravity = gravityRef.current;
+            if (gravity.active) {
+                stepTiltedSand(grid, cols, rows, gravity, 1, obstacleGrid);
+                stepTiltedSand(grid, cols, rows, { x: -gravity.x, y: -gravity.y }, 2, obstacleGrid);
+            } else {
 
             // Pass 1: Sand (Down)
             for (let y = rows - 2; y >= 0; y--) {
@@ -293,6 +318,8 @@ export const AtmosphericBackground: React.FC<AtmosphericBackgroundProps> = ({ im
                 }
             }
 
+            }
+
             draw();
             animationFrameId = requestAnimationFrame(update);
         };
@@ -364,15 +391,24 @@ export const AtmosphericBackground: React.FC<AtmosphericBackgroundProps> = ({ im
         };
 
         const onMouseLeave = () => { mouseRef.current = { x: -1, y: -1 }; };
+        const onReducedMotion = () => {
+            cancelAnimationFrame(animationFrameId);
+            if (reducedMotion.matches) draw();
+            else update();
+        };
 
         window.addEventListener('resize', resize);
         window.addEventListener('mousemove', onMouseMove);
         window.addEventListener('mousedown', handleClick); // Trigger on click
-        window.addEventListener('touchmove', onTouchMove);
+        window.addEventListener('touchstart', onTouchMove, { passive: true });
+        window.addEventListener('touchmove', onTouchMove, { passive: true });
+        window.addEventListener('touchend', onMouseLeave);
+        window.addEventListener('touchcancel', onMouseLeave);
         document.addEventListener('mouseleave', onMouseLeave);
+        reducedMotion.addEventListener('change', onReducedMotion);
 
         resize();
-        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        if (reducedMotion.matches) {
             draw(); // static dunes, no animation loop
         } else {
             update();
@@ -382,11 +418,15 @@ export const AtmosphericBackground: React.FC<AtmosphericBackgroundProps> = ({ im
             window.removeEventListener('resize', resize);
             window.removeEventListener('mousemove', onMouseMove);
             window.removeEventListener('mousedown', handleClick);
+            window.removeEventListener('touchstart', onTouchMove);
             window.removeEventListener('touchmove', onTouchMove);
+            window.removeEventListener('touchend', onMouseLeave);
+            window.removeEventListener('touchcancel', onMouseLeave);
             document.removeEventListener('mouseleave', onMouseLeave);
+            reducedMotion.removeEventListener('change', onReducedMotion);
             cancelAnimationFrame(animationFrameId);
         };
-    }, []);
+    }, [gravityRef]);
 
     return (
         <div className={styles.wrapper}>

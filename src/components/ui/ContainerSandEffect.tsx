@@ -2,6 +2,8 @@
 
 import React, { useEffect, useRef } from 'react';
 import styles from './ContainerSandEffect.module.css';
+import { useSandGravity } from './MobileMotion';
+import { stepTiltedSand } from '@/lib/sandMotion';
 
 interface ContainerSandEffectProps {
     color?: string;
@@ -14,6 +16,7 @@ export const ContainerSandEffect: React.FC<ContainerSandEffectProps> = ({
 }) => {
     const canvasRef = useRef<HTMLCanvasElement>(null);
     const mouseRef = useRef<{ x: number, y: number }>({ x: -1, y: -1 });
+    const gravityRef = useSandGravity();
 
     useEffect(() => {
         const canvas = canvasRef.current;
@@ -24,6 +27,8 @@ export const ContainerSandEffect: React.FC<ContainerSandEffectProps> = ({
 
         let animationFrameId: number;
         let running = false;
+        let visible = false;
+        const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
         let cols = 0;
         let rows = 0;
         const CELL_SIZE = 4;
@@ -32,7 +37,7 @@ export const ContainerSandEffect: React.FC<ContainerSandEffectProps> = ({
         // Sand only exists after the mouse visits the card, so the loop parks
         // itself whenever the grid is empty and the pointer is gone.
         const start = () => {
-            if (running) return;
+            if (running || reducedMotion.matches || !visible) return;
             running = true;
             animationFrameId = requestAnimationFrame(update);
         };
@@ -45,10 +50,22 @@ export const ContainerSandEffect: React.FC<ContainerSandEffectProps> = ({
                 cols = Math.ceil(canvas.width / CELL_SIZE);
                 rows = Math.ceil(canvas.height / CELL_SIZE);
                 grid = new Uint8Array(cols * rows).fill(0);
+                start();
             }
         };
 
         const update = () => {
+            if (!visible || reducedMotion.matches) {
+                running = false;
+                return;
+            }
+            const gravity = gravityRef.current;
+            // Phone motion supplies a few red grains without requiring a hover.
+            if (gravity.active && Math.hypot(gravity.x, gravity.y) > 0.12 && Math.random() < density) {
+                const x = Math.floor(Math.random() * cols);
+                const y = Math.floor(Math.random() * rows);
+                grid[y * cols + x] = 1;
+            }
             // Mouse Spawning Logic
             if (mouseRef.current.x >= 0 && mouseRef.current.y >= 0) {
                 const mx = Math.floor(mouseRef.current.x / CELL_SIZE);
@@ -77,63 +94,14 @@ export const ContainerSandEffect: React.FC<ContainerSandEffectProps> = ({
                 }
             }
 
-            // Physics Passing (Rising)
-            for (let y = 1; y < rows; y++) {
-                for (let x = 0; x < cols; x++) {
-                    const idx = y * cols + x;
-                    if (grid[idx] !== 1) continue;
-
-                    const above = (y - 1) * cols + x;
-                    const aboveLeft = (y - 1) * cols + (x - 1);
-                    const aboveRight = (y - 1) * cols + (x + 1);
-
-                    // If at top, disappear (or stick? User said "accumulating inside")
-                    // If we want accumulation, they should stick to the top?
-                    // Or maybe just stick to the bottom of "obstacles" inside.
-                    // But here the container IS the boundary.
-                    // Let's assume they float up and disappear, or accumulate at top?
-                    // "Accumulating inside the divs" -> probably filling up from bottom or clustering?
-                    // Wait, "red accumulating inside divs".
-                    // Global red sand was "anti-sand" (rising).
-                    // Maybe they mean it should look like it's trapped?
-                    // Let's try rising and accumulating at the TOP edge of the card.
-
-                    if (y === 0) {
-                        grid[idx] = 1; // Accumulate at ceiling
-                        continue;
-                    }
-
-                    if (grid[above] === 1) {
-                        // Hit sand above (pile up)
-                        grid[idx] = 1;
-                        continue;
-                    }
-
-                    if (grid[above] === 0) {
-                        grid[above] = 1;
-                        grid[idx] = 0;
-                    } else {
-                        // Sliding
-                        const tryLeft = Math.random() > 0.5;
-                        if (tryLeft) {
-                            if (x > 0 && grid[aboveLeft] === 0) {
-                                grid[aboveLeft] = 1;
-                                grid[idx] = 0;
-                            }
-                        } else {
-                            if (x < cols - 1 && grid[aboveRight] === 0) {
-                                grid[aboveRight] = 1;
-                                grid[idx] = 0;
-                            }
-                        }
-                    }
-                }
-            }
+            // Red grains retain their buoyancy and travel opposite phone gravity.
+            stepTiltedSand(grid, cols, rows, gravity.active
+                ? { x: -gravity.x, y: -gravity.y } : { x: 0, y: -1 }, 1);
 
             const sandCount = draw();
 
             // Park the loop once the card is sand-free and un-hovered.
-            if (sandCount > 0 || mouseRef.current.x >= 0) {
+            if (sandCount > 0 || mouseRef.current.x >= 0 || gravity.active) {
                 animationFrameId = requestAnimationFrame(update);
             } else {
                 running = false;
@@ -157,7 +125,7 @@ export const ContainerSandEffect: React.FC<ContainerSandEffectProps> = ({
             return sandCount;
         };
 
-        const handleMouseMove = (e: MouseEvent) => {
+        const handleMouseMove = (e: PointerEvent) => {
             const rect = canvas.getBoundingClientRect();
             mouseRef.current = {
                 x: e.clientX - rect.left,
@@ -170,7 +138,7 @@ export const ContainerSandEffect: React.FC<ContainerSandEffectProps> = ({
             mouseRef.current = { x: -1, y: -1 };
         };
 
-        const handleClick = (e: MouseEvent) => {
+        const handleClick = (e: PointerEvent) => {
             const rect = canvas.getBoundingClientRect();
             const x = e.clientX - rect.left;
             const y = e.clientY - rect.top;
@@ -194,24 +162,45 @@ export const ContainerSandEffect: React.FC<ContainerSandEffectProps> = ({
         resize();
         start();
 
+        const observer = new IntersectionObserver(([entry]) => {
+            visible = entry.isIntersecting;
+            if (visible) start();
+        });
+        observer.observe(canvas);
+        const handleOrientation = () => {
+            if (gravityRef.current.active) start();
+        };
+        const handlePointerUp = (event: PointerEvent) => {
+            if (event.pointerType !== 'mouse') handleMouseLeave();
+        };
+        window.addEventListener('deviceorientation', handleOrientation, { passive: true });
+        window.addEventListener('pointerup', handlePointerUp);
+        reducedMotion.addEventListener('change', start);
+
         const ro = new ResizeObserver(resize);
         if (canvas.parentElement) {
             ro.observe(canvas.parentElement);
-            canvas.parentElement.addEventListener('mousemove', handleMouseMove);
-            canvas.parentElement.addEventListener('mouseleave', handleMouseLeave);
-            canvas.parentElement.addEventListener('mousedown', handleClick);
+            canvas.parentElement.addEventListener('pointermove', handleMouseMove, { passive: true });
+            canvas.parentElement.addEventListener('pointerleave', handleMouseLeave);
+            canvas.parentElement.addEventListener('pointercancel', handleMouseLeave);
+            canvas.parentElement.addEventListener('pointerdown', handleClick);
         }
 
         return () => {
             cancelAnimationFrame(animationFrameId);
             ro.disconnect();
+            observer.disconnect();
+            window.removeEventListener('deviceorientation', handleOrientation);
+            window.removeEventListener('pointerup', handlePointerUp);
+            reducedMotion.removeEventListener('change', start);
             if (canvas.parentElement) {
-                canvas.parentElement.removeEventListener('mousemove', handleMouseMove);
-                canvas.parentElement.removeEventListener('mouseleave', handleMouseLeave);
-                canvas.parentElement.removeEventListener('mousedown', handleClick);
+                canvas.parentElement.removeEventListener('pointermove', handleMouseMove);
+                canvas.parentElement.removeEventListener('pointerleave', handleMouseLeave);
+                canvas.parentElement.removeEventListener('pointercancel', handleMouseLeave);
+                canvas.parentElement.removeEventListener('pointerdown', handleClick);
             }
         };
-    }, [color, density]);
+    }, [color, density, gravityRef]);
 
     return (
         <canvas

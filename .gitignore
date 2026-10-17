@@ -42,3 +42,7 @@ next-env.d.ts
 
 # local enrichment cache
 .metrics-cache.json
+
+# local agent working state
+/docs/agent/HANDOFF.md
+/.agent/runtime/
