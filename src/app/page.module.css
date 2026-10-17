@@ -32,8 +32,49 @@
 
 .contentGrid {
   display: grid;
-  grid-template-columns: 1fr 340px;
+  grid-template-columns: minmax(0, 1fr) 340px;
   gap: 64px;
+  align-items: start;
+}
+
+.mainColumn,
+.sidebar {
+  min-width: 0;
+}
+
+.toReadHeading {
+  margin: 0;
+}
+
+.toReadList {
+  display: grid;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.toReadList > a,
+.historyList > a {
+  display: block;
+  min-width: 0;
+}
+
+.contentGrid .toReadCard {
+  padding: 16px;
+  min-height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.toReadTitle {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.toReadAuthor {
+  display: block;
+  font-size: 0.85rem;
 }
 
 /* ... rest of the file ... */
@@ -155,4 +196,99 @@
 .listAuthor {
   font-size: 0.8rem;
   color: var(--ink-secondary);
+}
+
+@media (max-width: 900px) {
+  .contentGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .historyRow {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 6px;
+  }
+
+  .historyTitle {
+    grid-column: 1 / -1;
+    overflow-wrap: anywhere;
+  }
+
+  .rating {
+    margin: 0;
+    white-space: nowrap;
+  }
+
+  .date {
+    justify-self: end;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 600px) {
+  .contentGrid {
+    gap: 12px;
+  }
+
+  .contentGrid .toReadPanel {
+    padding: 0;
+    background: none;
+    border: 0;
+    box-shadow: none;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+
+  .sectionHeader {
+    margin: 0 0 12px;
+  }
+
+  .sectionHeader h2,
+  .toReadHeading {
+    font-size: 1.1rem;
+    line-height: 1.3;
+  }
+
+  .toReadList {
+    margin-top: 12px;
+    gap: 8px;
+  }
+
+  .contentGrid .historyCard,
+  .contentGrid .toReadCard {
+    padding: 10px;
+    min-height: 80px;
+  }
+
+  .historyCard {
+    margin-bottom: 8px;
+  }
+
+  .historyTitle,
+  .toReadTitle {
+    font-size: 0.8125rem;
+    line-height: 1.35;
+    overflow-wrap: anywhere;
+  }
+
+  .toReadAuthor {
+    font-size: 0.75rem;
+    line-height: 1.35;
+    overflow-wrap: anywhere;
+  }
+
+  .historyRow {
+    gap: 6px 4px;
+  }
+
+  .date,
+  .rating {
+    font-size: 0.625rem;
+    line-height: 1.4;
+  }
+
+  .readingList {
+    margin-bottom: 0;
+  }
 }

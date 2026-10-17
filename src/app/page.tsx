@@ -118,13 +118,14 @@ export default async function Home() {
 
           {/* Sidebar / Stats */}
           <div className={styles.sidebar}>
-            <PaperCard elevation="md">
-              <h3>To Read ({toReadCount})</h3>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', marginTop: '16px' }}>
+            <PaperCard elevation="md" className={styles.toReadPanel}>
+              <h3 className={styles.toReadHeading}>To Read ({toReadCount})</h3>
+              <div className={styles.toReadList}>
                 {works.filter(w => w.status === 'toread').slice(0, 5).map(work => (
                   <Link href={`/book/${work.id}`} key={work.id} style={{ textDecoration: 'none' }}>
                     <PaperCard
                       elevation="sm"
+                      className={styles.toReadCard}
                       interactive
                       enableSand
                       style={{
@@ -132,26 +133,16 @@ export default async function Home() {
                           ? `linear-gradient(to right, rgba(15, 15, 20, 0.95) 0%, rgba(15, 15, 20, 0.7) 100%), url(${work.coverImage})`
                           : undefined,
                         backgroundSize: 'cover',
-                        backgroundPosition: 'center center',
-                        padding: '16px',
-                        minHeight: '80px',
-                        display: 'flex',
-                        flexDirection: 'column',
-                        justifyContent: 'center'
+                        backgroundPosition: 'center center'
                       }}
                     >
                       <div style={{ position: 'relative', zIndex: 2 }}>
-                        <span style={{
-                          display: 'block',
-                          fontWeight: 500,
-                          color: work.coverImage ? '#e0e0e0' : 'var(--ink-primary)',
-                          marginBottom: '4px'
+                        <span className={styles.toReadTitle} style={{
+                          color: work.coverImage ? '#e0e0e0' : 'var(--ink-primary)'
                         }}>
                           {work.title}
                         </span>
-                        <span style={{
-                          display: 'block',
-                          fontSize: '0.85rem',
+                        <span className={styles.toReadAuthor} style={{
                           color: work.coverImage ? '#aaaaaa' : 'var(--ink-secondary)'
                         }}>
                           {work.author}
