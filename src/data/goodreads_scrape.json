@@ -1,5 +1,12 @@
 [
     {
+        "title": "The Heart Is a Lonely Hunter",
+        "author": "Carson McCullers",
+        "dateRead": "Thu, 22 Oct 2026 00:00:00 +0000",
+        "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1385265834l/37380.jpg",
+        "shelf": "read"
+    },
+    {
         "title": "The Rise of Endymion (Hyperion Cantos, #4)",
         "author": "Dan Simmons",
         "dateRead": "Mon, 12 Oct 2026 00:00:00 +0000",
@@ -980,10 +987,10 @@
         "shelf": "read"
     },
     {
-        "title": "The Heart Is a Lonely Hunter",
-        "author": "Carson McCullers",
+        "title": "The Lathe of Heaven",
+        "author": "Ursula K. Le Guin",
         "dateRead": "",
-        "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1385265834l/37380.jpg",
+        "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1433084322l/59924.jpg",
         "shelf": "currently-reading"
     },
     {
@@ -1012,13 +1019,6 @@
         "author": "Osamu Dazai",
         "dateRead": "",
         "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1422638843l/194746.jpg",
-        "shelf": "to-read"
-    },
-    {
-        "title": "The Lathe of Heaven",
-        "author": "Ursula K. Le Guin",
-        "dateRead": "",
-        "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1433084322l/59924.jpg",
         "shelf": "to-read"
     },
     {

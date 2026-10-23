@@ -10155,7 +10155,7 @@
       "title": "The Lathe of Heaven",
       "author": "Ursula K. Le Guin",
       "type": "book",
-      "status": "toread",
+      "status": "reading",
       "rating": 0,
       "dateAdded": "2026-06-26",
       "pageCount": 176,
@@ -10195,7 +10195,7 @@
       "title": "The Heart Is a Lonely Hunter",
       "author": "Carson McCullers",
       "type": "book",
-      "status": "reading",
+      "status": "read",
       "rating": 0,
       "dateAdded": "2026-08-03",
       "pageCount": 0,
@@ -10203,7 +10203,8 @@
       "description": "",
       "genres": [],
       "platform": "goodreads",
-      "notes": ""
+      "notes": "",
+      "dateRead": "2026-10-22"
     },
     {
       "id": "78883172",
