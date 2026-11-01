@@ -44,7 +44,7 @@ export const RecentHistory: React.FC<RecentHistoryProps> = ({ works }) => {
                             <div className={styles.historyRow}>
                                 <span className={styles.historyTitle} style={{ color: work.coverImage ? '#e0e0e0' : undefined }}>{work.title}</span>
                                 <span className={styles.rating}>{'★'.repeat(work.rating || 0)}</span>
-                                <span className={styles.date} style={{ color: work.coverImage ? '#aaaaaa' : undefined }}>{work.dateRead}</span>
+                                <span className={styles.date} style={{ color: work.coverImage ? '#aaaaaa' : undefined }} title={work.dateReadEstimated ? 'Estimated from Goodreads reading order' : undefined}>{work.dateReadEstimated ? `~${work.dateRead}` : work.dateRead}</span>
                             </div>
                         </PaperCard>
                     </Link>

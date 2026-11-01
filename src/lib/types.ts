@@ -10,6 +10,7 @@ export interface Work {
   status: WorkStatus;
   rating?: number; // 0-5 stars
   dateRead?: string; // ISO date string
+  dateReadEstimated?: boolean; // Public Goodreads fallback gives order but no exact finish date
   dateAdded: string; // ISO date string
   coverImage?: string; // URL
   description?: string; // Book summary/blurb

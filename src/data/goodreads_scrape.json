@@ -1,1 +1,340 @@
-[]
+[
+    {
+        "title": "Wind and Truth (The Stormlight Archive, #5)",
+        "author": "Brandon Sanderson",
+        "dateRead": "",
+        "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1724944713l/203578847._SY475_.jpg",
+        "shelf": "read"
+    },
+    {
+        "title": "Howling Dark (The Sun Eater, #2)",
+        "author": "Christopher Ruocchio",
+        "dateRead": "",
+        "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1554659319l/41564599._SY475_.jpg",
+        "shelf": "read"
+    },
+    {
+        "title": "Demon in White (The Sun Eater, #3)",
+        "author": "Christopher Ruocchio",
+        "dateRead": "",
+        "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1576102130l/50156751._SX318_SY475_.jpg",
+        "shelf": "read"
+    },
+    {
+        "title": "Kingdoms of Death (The Sun Eater, #4)",
+        "author": "Christopher Ruocchio",
+        "dateRead": "",
+        "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1616007067l/57443696._SY475_.jpg",
+        "shelf": "read"
+    },
+    {
+        "title": "Ashes of Man (The Sun Eater, #5)",
+        "author": "Christopher Ruocchio",
+        "dateRead": "",
+        "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1644986472l/60427253.jpg",
+        "shelf": "read"
+    },
+    {
+        "title": "Disquiet Gods (The Sun Eater, #6)",
+        "author": "Christopher Ruocchio",
+        "dateRead": "",
+        "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1690034659l/176443792._SY475_.jpg",
+        "shelf": "read"
+    },
+    {
+        "title": "The Sunlit Man (Cosmere)",
+        "author": "Brandon Sanderson",
+        "dateRead": "",
+        "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1696146860l/60531420._SY475_.jpg",
+        "shelf": "read"
+    },
+    {
+        "title": "The Will of the Many (Hierarchy, #1)",
+        "author": "James Islington",
+        "dateRead": "",
+        "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1670363463l/58416952._SY475_.jpg",
+        "shelf": "read"
+    },
+    {
+        "title": "The Devils (The Devils, #1)",
+        "author": "Joe Abercrombie",
+        "dateRead": "",
+        "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1746869112l/212276037._SY475_.jpg",
+        "shelf": "read"
+    },
+    {
+        "title": "The Failures (The Wanderlands, #1)",
+        "author": "Benjamin Liar",
+        "dateRead": "",
+        "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1697601643l/200115264._SY475_.jpg",
+        "shelf": "read"
+    },
+    {
+        "title": "Dungeon Crawler Carl (Dungeon Crawler Carl, #1)",
+        "author": "Matt Dinniman",
+        "dateRead": "",
+        "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1734203042l/56791389._SY475_.jpg",
+        "shelf": "read"
+    },
+    {
+        "title": "Carl's Doomsday Scenario (Dungeon Crawler Carl, #2)",
+        "author": "Matt Dinniman",
+        "dateRead": "",
+        "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1608612407l/56377548._SY475_.jpg",
+        "shelf": "read"
+    },
+    {
+        "title": "Project Hail Mary",
+        "author": "Andy Weir",
+        "dateRead": "",
+        "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1764703833l/54493401._SY475_.jpg",
+        "shelf": "read"
+    },
+    {
+        "title": "The Infinite and the Divine (Warhammer 40,000)",
+        "author": "Robert  Rath",
+        "dateRead": "",
+        "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1602284468l/55610829._SY475_.jpg",
+        "shelf": "read"
+    },
+    {
+        "title": "Old Goriot",
+        "author": "Honoré de Balzac",
+        "dateRead": "",
+        "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1397873613l/578367.jpg",
+        "shelf": "read"
+    },
+    {
+        "title": "The Dungeon Anarchist's Cookbook (Dungeon Crawler Carl, #3)",
+        "author": "Matt Dinniman",
+        "dateRead": "",
+        "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1612814290l/57001971._SY475_.jpg",
+        "shelf": "read"
+    },
+    {
+        "title": "The Gate of the Feral Gods (Dungeon Crawler Carl, #4)",
+        "author": "Matt Dinniman",
+        "dateRead": "",
+        "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1619824560l/57905101._SY475_.jpg",
+        "shelf": "read"
+    },
+    {
+        "title": "The Butcher's Masquerade (Dungeon Crawler Carl, #5)",
+        "author": "Matt Dinniman",
+        "dateRead": "",
+        "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1734202962l/60233239._SY475_.jpg",
+        "shelf": "read"
+    },
+    {
+        "title": "The Eye of the Bedlam Bride (Dungeon Crawler Carl, #6)",
+        "author": "Matt Dinniman",
+        "dateRead": "",
+        "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1680906599l/125887685._SY475_.jpg",
+        "shelf": "read"
+    },
+    {
+        "title": "This Inevitable Ruin (Dungeon Crawler Carl, #7)",
+        "author": "Matt Dinniman",
+        "dateRead": "",
+        "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1721753342l/216017751._SY475_.jpg",
+        "shelf": "read"
+    },
+    {
+        "title": "Dark Age (Red Rising Saga, #5)",
+        "author": "Pierce Brown",
+        "dateRead": "",
+        "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1525464420l/29226553._SY475_.jpg",
+        "shelf": "read"
+    },
+    {
+        "title": "The Strength of the Few (Hierarchy, #2)",
+        "author": "James Islington",
+        "dateRead": "",
+        "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1742965949l/169485073._SY475_.jpg",
+        "shelf": "read"
+    },
+    {
+        "title": "Light Bringer (Red Rising Saga, #6)",
+        "author": "Pierce Brown",
+        "dateRead": "",
+        "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1667655583l/29227774._SY475_.jpg",
+        "shelf": "read"
+    },
+    {
+        "title": "Pale Fire",
+        "author": "Vladimir Nabokov",
+        "dateRead": "",
+        "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1388155863l/7805.jpg",
+        "shelf": "read"
+    },
+    {
+        "title": "The Beauty of Dusk",
+        "author": "Frank Bruni",
+        "dateRead": "",
+        "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1646255914l/58438448._SY475_.jpg",
+        "shelf": "read"
+    },
+    {
+        "title": "Between Two Fires",
+        "author": "Christopher Buehlman",
+        "dateRead": "",
+        "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1710293039l/13543121._SY475_.jpg",
+        "shelf": "read"
+    },
+    {
+        "title": "A Deadly Education (The Scholomance, #1)",
+        "author": "Naomi Novik",
+        "dateRead": "",
+        "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1596909044l/50548197._SY475_.jpg",
+        "shelf": "read"
+    },
+    {
+        "title": "Notes from Underground",
+        "author": "Fyodor Dostoevsky",
+        "dateRead": "",
+        "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1657562670l/49455._SY475_.jpg",
+        "shelf": "read"
+    },
+    {
+        "title": "Consider Phlebas (Culture, #1)",
+        "author": "Iain M. Banks",
+        "dateRead": "",
+        "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1327951890l/8935689.jpg",
+        "shelf": "read"
+    },
+    {
+        "title": "The Player of Games (Culture, #2)",
+        "author": "Iain M. Banks",
+        "dateRead": "",
+        "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1386922873l/18630.jpg",
+        "shelf": "read"
+    },
+    {
+        "title": "Use of Weapons (Culture, #3)",
+        "author": "Iain M. Banks",
+        "dateRead": "",
+        "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1587400756l/12007.jpg",
+        "shelf": "read"
+    },
+    {
+        "title": "The State of the Art (Culture, #4)",
+        "author": "Iain M. Banks",
+        "dateRead": "",
+        "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1388240598l/129131.jpg",
+        "shelf": "read"
+    },
+    {
+        "title": "Excession (Culture, #5)",
+        "author": "Iain M. Banks",
+        "dateRead": "",
+        "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1288930712l/12013.jpg",
+        "shelf": "read"
+    },
+    {
+        "title": "A Parade of Horribles (Dungeon Crawler Carl, #8)",
+        "author": "Matt Dinniman",
+        "dateRead": "",
+        "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1768406680l/228928465._SY475_.jpg",
+        "shelf": "read"
+    },
+    {
+        "title": "Inversions (Culture, #6)",
+        "author": "Iain M. Banks",
+        "dateRead": "",
+        "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1288930844l/12017.jpg",
+        "shelf": "read"
+    },
+    {
+        "title": "Look to Windward (Culture, #7)",
+        "author": "Iain M. Banks",
+        "dateRead": "",
+        "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1288930978l/12016.jpg",
+        "shelf": "read"
+    },
+    {
+        "title": "Matter (Culture, #8)",
+        "author": "Iain M. Banks",
+        "dateRead": "",
+        "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1742831881l/886066._SY475_.jpg",
+        "shelf": "read"
+    },
+    {
+        "title": "Surface Detail (Culture, #9)",
+        "author": "Iain M. Banks",
+        "dateRead": "",
+        "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1287893375l/7937744.jpg",
+        "shelf": "read"
+    },
+    {
+        "title": "The Hydrogen Sonata (Culture, #10)",
+        "author": "Iain M. Banks",
+        "dateRead": "",
+        "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1340894566l/13497991.jpg",
+        "shelf": "read"
+    },
+    {
+        "title": "Woodcutters",
+        "author": "Thomas Bernhard",
+        "dateRead": "",
+        "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1328874375l/92576.jpg",
+        "shelf": "read"
+    },
+    {
+        "title": "Hyperion (Hyperion Cantos, #1)",
+        "author": "Dan Simmons",
+        "dateRead": "",
+        "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1792011177l/77566._SY475_.jpg",
+        "shelf": "read"
+    },
+    {
+        "title": "The Fall of Hyperion (Hyperion Cantos, #2)",
+        "author": "Dan Simmons",
+        "dateRead": "",
+        "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1541174620l/77565._SY475_.jpg",
+        "shelf": "read"
+    },
+    {
+        "title": "Endymion (Hyperion Cantos, #3)",
+        "author": "Dan Simmons",
+        "dateRead": "",
+        "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1329611385l/3977.jpg",
+        "shelf": "read"
+    },
+    {
+        "title": "The Rise of Endymion (Hyperion Cantos, #4)",
+        "author": "Dan Simmons",
+        "dateRead": "",
+        "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1329609799l/11289.jpg",
+        "shelf": "read"
+    },
+    {
+        "title": "The Heart Is a Lonely Hunter",
+        "author": "Carson McCullers",
+        "dateRead": "",
+        "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1385265834l/37380.jpg",
+        "shelf": "read"
+    },
+    {
+        "title": "The Lathe of Heaven",
+        "author": "Ursula K. Le Guin",
+        "dateRead": "2026-10-30",
+        "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1433084322l/59924.jpg",
+        "shelf": "read",
+        "dateReadEstimated": true
+    },
+    {
+        "title": "Dawn (Xenogenesis, #1)",
+        "author": "Octavia E. Butler",
+        "dateRead": "2026-10-31",
+        "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1717091024l/60929._SY475_.jpg",
+        "shelf": "read",
+        "dateReadEstimated": true
+    },
+    {
+        "title": "Columbus Day (Expeditionary Force, #1)",
+        "author": "Craig Alanson",
+        "dateRead": "",
+        "imageUrl": "",
+        "shelf": "currently-reading"
+    }
+]

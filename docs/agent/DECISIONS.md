@@ -2,6 +2,14 @@
 
 Record durable architectural and operational decisions here.
 
+### 2026-10-31 — Fall back to public Goodreads reading pages
+
+Context: Goodreads shelf RSS feeds began returning HTTP 404 on 2026-10-28, including for other public accounts. The scraper previously interpreted HTTP failures as empty shelves, committed an empty scrape, and let the daily Pages deployment report success while reading status stayed stale.
+
+Decision: Treat invalid RSS responses as failures. When RSS is unavailable, read the public profile for currently reading books and the current/previous Year in Books pages for completed books. Match their cover book IDs to existing library entries, preserve known finish dates, and assign approximate dates in reading order only for newly completed books after the last dated entry. Mark those dates as estimated and replace them when exact RSS dates become available. Fail the workflow without overwriting data if both sources are invalid.
+
+Consequence: Finished and current books can continue to update daily while public profile pages remain accessible. The fallback cannot discover new To Read entries or exact finish dates; those resume when shelf RSS returns. Site labels estimated dates.
+
 ### 2026-10-16 — Share mobile tilt input across sand effects
 
 Context: The global falling pixel sand and card sand only responded to pointer/touch coordinates.

@@ -9936,7 +9936,7 @@
       "title": "Columbus Day (Expeditionary Force, #1)",
       "author": "Craig Alanson",
       "type": "book",
-      "status": "toread",
+      "status": "reading",
       "rating": 0,
       "dateAdded": "2026-05-31",
       "pageCount": 299,
@@ -9960,7 +9960,7 @@
       "title": "Dawn (Xenogenesis, #1)",
       "author": "Octavia E. Butler",
       "type": "book",
-      "status": "toread",
+      "status": "read",
       "rating": 0,
       "dateAdded": "2026-05-31",
       "pageCount": 248,
@@ -9975,7 +9975,9 @@
         "pageCount": "howlongtoread:242442",
         "wordCount": "howlongtoread:242442:estimated-narration",
         "durationMinutes": "estimated-from-words"
-      }
+      },
+      "dateRead": "2026-10-31",
+      "dateReadEstimated": true
     },
     {
       "id": "543053509",
@@ -10155,7 +10157,7 @@
       "title": "The Lathe of Heaven",
       "author": "Ursula K. Le Guin",
       "type": "book",
-      "status": "reading",
+      "status": "read",
       "rating": 0,
       "dateAdded": "2026-06-26",
       "pageCount": 176,
@@ -10172,7 +10174,9 @@
         "durationMinutes": "estimated-from-words",
         "audiobookDurationMinutes": "howlongtoread:528782"
       },
-      "audiobookDurationMinutes": 408
+      "audiobookDurationMinutes": 408,
+      "dateRead": "2026-10-30",
+      "dateReadEstimated": true
     },
     {
       "id": "668746967",

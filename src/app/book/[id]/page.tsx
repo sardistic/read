@@ -75,7 +75,7 @@ export default async function BookDetail({ params }: { params: Promise<{ id: str
                         ← Back to Library
                     </Link>
                     <div style={{ fontSize: '0.9rem', color: 'var(--ink-secondary)' }}>
-                        {work.dateRead ? `Read on ${work.dateRead}` : 'Unread'}
+                        {work.dateRead ? `${work.dateReadEstimated ? 'Read by approximately' : 'Read on'} ${work.dateRead}` : 'Unread'}
                     </div>
                 </div>
 

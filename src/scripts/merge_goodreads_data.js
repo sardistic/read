@@ -43,14 +43,16 @@ scraped.forEach(scrapedBook => {
             updated = true;
         }
 
-        // Update dateRead if missing
-        if (!existingBook.dateRead && scrapedBook.dateRead) {
+        // Replace an estimated date when the RSS feed supplies the exact finish date.
+        if (scrapedBook.dateRead && (!existingBook.dateRead || (existingBook.dateReadEstimated && !scrapedBook.dateReadEstimated))) {
             // scraped date is "Wed, 11 Feb 2026 00:00:00 +0000"
             // convert to YYYY-MM-DD
             try {
                 const d = new Date(scrapedBook.dateRead);
                 if (!isNaN(d.getTime())) {
                     existingBook.dateRead = d.toISOString().split('T')[0];
+                    if (scrapedBook.dateReadEstimated) existingBook.dateReadEstimated = true;
+                    else delete existingBook.dateReadEstimated;
                     updated = true;
                 }
             } catch (e) {
@@ -95,6 +97,7 @@ scraped.forEach(scrapedBook => {
                 const d = new Date(scrapedBook.dateRead);
                 if (!isNaN(d.getTime())) {
                     newBook.dateRead = d.toISOString().split('T')[0];
+                    if (scrapedBook.dateReadEstimated) newBook.dateReadEstimated = true;
                 }
             } catch (e) { }
         }
