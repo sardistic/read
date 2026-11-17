@@ -9936,7 +9936,7 @@
       "title": "Columbus Day (Expeditionary Force, #1)",
       "author": "Craig Alanson",
       "type": "book",
-      "status": "reading",
+      "status": "read",
       "rating": 0,
       "dateAdded": "2026-05-31",
       "pageCount": 299,
@@ -9953,7 +9953,9 @@
         "durationMinutes": "estimated-from-words",
         "audiobookDurationMinutes": "howlongtoread:13645799"
       },
-      "audiobookDurationMinutes": 983
+      "audiobookDurationMinutes": 983,
+      "dateRead": "2026-11-17",
+      "dateReadEstimated": true
     },
     {
       "id": "350596207",
@@ -10333,6 +10335,21 @@
       "platform": "goodreads",
       "notes": "",
       "dateRead": "2026-10-12"
+    },
+    {
+      "id": "501312582",
+      "title": "The Poppy War (The Poppy War, #1)",
+      "author": "R.F. Kuang",
+      "type": "book",
+      "status": "reading",
+      "rating": 0,
+      "dateAdded": "2026-11-17",
+      "pageCount": 0,
+      "coverImage": "",
+      "description": "",
+      "genres": [],
+      "platform": "goodreads",
+      "notes": ""
     }
   ]
 }
