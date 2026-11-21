@@ -10350,6 +10350,38 @@
       "genres": [],
       "platform": "goodreads",
       "notes": ""
+    },
+    {
+      "id": "399312183",
+      "title": "The Poppy War",
+      "author": "R.F. Kuang",
+      "type": "book",
+      "status": "read",
+      "rating": 0,
+      "dateAdded": "2026-11-21",
+      "pageCount": 0,
+      "coverImage": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1515691735l/35068705.jpg",
+      "description": "",
+      "genres": [],
+      "platform": "goodreads",
+      "notes": "",
+      "dateRead": "2026-11-21",
+      "dateReadEstimated": true
+    },
+    {
+      "id": "91900823",
+      "title": "The Dragon Republic (The Poppy War, #2)",
+      "author": "R.F. Kuang",
+      "type": "book",
+      "status": "reading",
+      "rating": 0,
+      "dateAdded": "2026-11-21",
+      "pageCount": 0,
+      "coverImage": "",
+      "description": "",
+      "genres": [],
+      "platform": "goodreads",
+      "notes": ""
     }
   ]
 }

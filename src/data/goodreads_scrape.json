@@ -339,7 +339,15 @@
         "dateReadEstimated": true
     },
     {
-        "title": "The Poppy War (The Poppy War, #1)",
+        "title": "The Poppy War",
+        "author": "R.F. Kuang",
+        "dateRead": "2026-11-21",
+        "imageUrl": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1515691735l/35068705.jpg",
+        "shelf": "read",
+        "dateReadEstimated": true
+    },
+    {
+        "title": "The Dragon Republic (The Poppy War, #2)",
         "author": "R.F. Kuang",
         "dateRead": "",
         "imageUrl": "",
